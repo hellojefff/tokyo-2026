@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>🍁 2026 東京深秋・8天7夜隨身手冊</title>
+<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v4 減法美學定案版)</title>
+<meta name="theme-color" content="#9a3412">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="東京秋旅手冊">
+<link rel="manifest" href="./manifest.json">
+<link rel="apple-touch-icon" href="./icon-192.png">
 <style>
   :root {
     --bg: #faf8f5;
@@ -16,6 +22,8 @@
     --taxi-text: #92400e;
     --food-bg: #fef2f2;
     --food-border: #ef4444;
+    --shop-bg: #f0fdf4;
+    --shop-border: #16a34a;
     --text: #1f2937;
     --muted: #6b7280;
     --border: #e5e7eb;
@@ -29,23 +37,35 @@
     line-height: 1.6;
     padding-bottom: 70px;
   }
+  .offline-badge {
+    display: none;
+    background: #fef3c7;
+    color: #92400e;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  body.is-offline .offline-badge { display: block; }
   header {
     background: linear-gradient(135deg, #9a3412 0%, #d97706 100%);
     color: #fff;
-    padding: 20px 16px 16px;
+    padding: 18px 16px 14px;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0,0,0,0.15);
   }
   header h1 {
-    font-size: 1.15rem;
+    font-size: 1.12rem;
     font-weight: 700;
     letter-spacing: 0.3px;
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
   header p {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     opacity: 0.92;
   }
   .toolbar {
@@ -60,7 +80,7 @@
     color: #fff;
     padding: 5px 11px;
     border-radius: 20px;
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
@@ -77,18 +97,18 @@
     background: #fff;
     border-bottom: 1px solid var(--border);
     position: sticky;
-    top: 96px;
+    top: 94px;
     z-index: 90;
     scrollbar-width: none;
   }
   .day-nav::-webkit-scrollbar { display: none; }
   .day-tab {
     flex: 0 0 auto;
-    padding: 6px 12px;
+    padding: 6px 11px;
     border-radius: 16px;
     background: #f3f4f6;
     color: #374151;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     font-weight: 600;
     text-decoration: none;
     border: 1px solid transparent;
@@ -112,7 +132,7 @@
     font-size: 0.85rem;
   }
   .quick-info h3 {
-    font-size: 0.95rem;
+    font-size: 0.94rem;
     color: var(--primary);
     margin-bottom: 8px;
     display: flex;
@@ -153,7 +173,7 @@
     margin-bottom: 16px;
     box-shadow: var(--shadow);
     overflow: hidden;
-    scroll-margin-top: 150px;
+    scroll-margin-top: 148px;
   }
   .day-header {
     background: var(--primary-light);
@@ -165,19 +185,20 @@
     align-items: center;
   }
   .day-title {
-    font-size: 1rem;
+    font-size: 0.98rem;
     font-weight: 700;
     color: #7c2d12;
   }
   .day-sub {
-    font-size: 0.8rem;
+    font-size: 0.79rem;
     color: #9a3412;
-    margin-top: 2px;
+    margin-top: 3px;
   }
   .toggle-icon {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--primary);
     transition: transform 0.2s;
+    margin-left: 8px;
   }
   .day-card.collapsed .day-body { display: none; }
   .day-card.collapsed .toggle-icon { transform: rotate(-90deg); }
@@ -203,7 +224,7 @@
   }
   .time-badge {
     display: inline-block;
-    font-size: 0.82rem;
+    font-size: 0.81rem;
     font-weight: 700;
     color: var(--primary);
     background: var(--primary-light);
@@ -212,7 +233,7 @@
     margin-bottom: 5px;
   }
   .item-content {
-    font-size: 0.9rem;
+    font-size: 0.89rem;
     color: #1f2937;
   }
   .item-content ul {
@@ -226,7 +247,7 @@
     border-radius: 10px;
     padding: 10px 12px;
     margin-top: 8px;
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     color: var(--taxi-text);
   }
   .taxi-box strong { color: #78350f; }
@@ -236,7 +257,15 @@
     border-radius: 8px;
     padding: 10px 12px;
     margin-top: 6px;
-    font-size: 0.86rem;
+    font-size: 0.85rem;
+  }
+  .shop-box {
+    background: var(--shop-bg);
+    border-left: 3px solid var(--shop-border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-top: 6px;
+    font-size: 0.85rem;
   }
   .alert-box {
     background: #fef2f2;
@@ -244,7 +273,7 @@
     border-radius: 10px;
     padding: 10px 12px;
     margin-top: 6px;
-    font-size: 0.86rem;
+    font-size: 0.85rem;
     color: #991b1b;
   }
   .map-link {
@@ -252,12 +281,13 @@
     align-items: center;
     gap: 4px;
     margin-top: 6px;
+    margin-right: 6px;
     padding: 4px 10px;
     background: #eff6ff;
     color: #1d4ed8;
     border: 1px solid #bfdbfe;
     border-radius: 6px;
-    font-size: 0.78rem;
+    font-size: 0.77rem;
     font-weight: 600;
     text-decoration: none;
   }
@@ -267,7 +297,7 @@
     gap: 8px;
     padding: 6px 0;
     border-bottom: 1px dashed var(--border);
-    font-size: 0.86rem;
+    font-size: 0.84rem;
   }
   .checklist-item:last-child { border-bottom: none; }
   .checklist-item input[type="checkbox"] {
@@ -275,6 +305,7 @@
     width: 17px;
     height: 17px;
     accent-color: var(--primary);
+    flex-shrink: 0;
   }
   .checklist-item.done span {
     text-decoration: line-through;
@@ -301,8 +332,9 @@
 <body>
 
 <header id="top">
+  <div class="offline-badge">📴 目前為離線模式（已從手機快取載入完整行程與車站導航）</div>
   <h1>🍁 2026 東京深秋・8天7夜隨身手冊</h1>
-  <p>11/24(二) – 12/01(二)｜雙軌交通・錯峰美食・銀杏點燈</p>
+  <p>11/24(二) – 12/01(二)｜減法美學・九品佛禪意・藏前水岸・丸之內至銀座慢步</p>
   <div class="toolbar">
     <button class="btn-pill" id="btnTaxiFilter" onclick="toggleTaxiOnly()">🚕 只看計程車替代</button>
     <button class="btn-pill" onclick="toggleAllDays(false)">📂 全部展開</button>
@@ -324,35 +356,39 @@
 
 <div class="container">
 
-  <!-- 速查卡片 -->
+  <!-- 速查卡片（無精確門牌版） -->
   <div class="quick-info" id="info">
-    <h3>🏠 住宿與關鍵地址（點右側一鍵複製給司機/導航）</h3>
+    <h3>🏠 住宿與關鍵車站（點右側一鍵複製給司機/導航）</h3>
     <div class="copy-box">
-      <div class="copy-text"><strong>板橋民宿：</strong>東京都板橋区清水町79-8（本蓮沼站步行5分）</div>
-      <button class="copy-btn" onclick="copyAddr(this, '東京都板橋区清水町79-8')">複製</button>
+      <div class="copy-text"><strong>板橋民宿：</strong>都營三田線「本蓮沼站」步行約 5 分（板橋區清水町一帶）</div>
+      <button class="copy-btn" onclick="copyAddr(this, '都営三田線 本蓮沼駅')">複製</button>
     </div>
     <div class="copy-box">
-      <div class="copy-text"><strong>Day2 秦野探友：</strong>神奈川県秦野市本町3-13-6 県営秦野団地6号棟205室</div>
-      <button class="copy-btn" onclick="copyAddr(this, '神奈川県秦野市本町3-13-6 県営秦野団地6号棟205室')">複製</button>
+      <div class="copy-text"><strong>Day2 秦野探友：</strong>小田急線「秦野站」北口步行約 10 分（秦野市本町一帶）</div>
+      <button class="copy-btn" onclick="copyAddr(this, '小田急線 秦野駅 北口')">複製</button>
     </div>
-    <div style="margin-top:10px; font-size:0.82rem; color:#4b5563;">
+    <div style="margin-top:10px; font-size:0.81rem; color:#4b5563;">
       ✈️ <strong>去程 11/24：</strong>酷航 TR874（14:30 桃園T1 ➔ 18:30 成田T1，無託運）<br>
-      ✈️ <strong>回程 12/01：</strong>酷航 TR867（已購 25kg 託運，<strong>先退稅核銷再託運！</strong>）
+      ✈️ <strong>回程 12/01：</strong>酷航 TR867（12:10 成田T1 ➔ 15:25 桃園T1，已購 25kg 託運，<strong>先退稅核銷再託運！</strong>）<br>
+      💴 <strong>現金提醒：</strong>備妥 3～5 萬日圓現鈔（寿司元、田や、自由之丘金田、遠州屋、根津鯛魚燒為純現金店）
     </div>
   </div>
 
-  <!-- 代購與任務清單 -->
+  <!-- 精準型號代購與任務清單 -->
   <div class="quick-info" style="border-left-color:#16a34a;">
-    <h3 style="color:#15803d;">🛍️ 必買代購＆關鍵任務勾選清單</h3>
+    <h3 style="color:#15803d;">🛍️ 精準型號採購＆關鍵任務勾選清單</h3>
     <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 1 全家清水町店：</strong>換洗純棉內褲、襪子、發熱衣</span></label>
-    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 御徒町 UNIQLO/GU：</strong>一週保暖衣物、發熱衣褲、外套</span></label>
-    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 多慶屋：</strong>28～30吋輕量大行李箱</span></label>
-    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 多慶屋藥妝：</strong>明治膠原蛋白金色增強版 × 3 包</span></label>
-    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 多慶屋藥妝：</strong>DHC 極纖對策 × 2 包</span></label>
-    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 4 東京站茅乃舍：</strong>經典高湯包、野菜高湯包、伴手禮</span></label>
-    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 7 新宿京王 1F 肌膚之鑰：</strong>光采無瑕妝前凝霜 × 2 支</span></label>
-    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 7 新宿京王 1F 黛珂：</strong>AQ 緊緻賦活眼霜 × 2 罐</span></label>
-    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 7 新宿京王 4F 朵茉麗蔻：</strong>憑預約領取全套保養品（2F合併退稅）</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 UNIQLO 御徒町：</strong>ソフトリブT（NAVY 69 / M號 1件、OFF WHITE 01 / M號 1件）</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 UNIQLO 御徒町：</strong>極暖棉質圓領T #485833（BLACK 09 / L號 1件、WINE 19 / M號 1件）</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 UNIQLO 御徒町：</strong>極暖喀什米爾混紡亨利領T（WINE 18、OFF WHITE 01、LIGHT GRAY 02、BLACK 09 各1件，L或XL）</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 mont-bell 御徒町：</strong>側背包 ベルニナフラップショルダー M（#1123898，BK25）</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 mont-bell 御徒町：</strong>短夾 ジップワレット（#1133372，BK 黑色優先）</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 多慶屋：</strong>28～30吋超輕量硬殼大箱 ＋ 明治膠原蛋白粉 PREMIUM 金色版 × 3包</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 2 多慶屋藥妝：</strong>UHA 鐵 &amp; 葉酸 × 2罐、DHC 極纖對策 × 1包、Ophtecs 人工淚液 × 2盒</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 6 東京站茅乃舍：</strong>經典柴魚高湯包、鮮甜野菜高湯包、特選調味醬汁包</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 7 澀谷 LOFT：</strong>Owala 保溫水壺（備案：新宿東口 Alpen TOKYO 5F）</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 7 新宿京王 1F：</strong>肌膚之鑰 光采無瑕妝前凝霜 × 2支 ＋ 黛珂 AQ 緊緻賦活眼霜 × 2罐</span></label>
+    <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 7 新宿京王 4F：</strong>朵茉麗蔻專櫃憑預約領取全套保養品（2F合併退稅，封箱 24.0～24.5kg）</span></label>
     <label class="checklist-item"><input type="checkbox" onchange="toggleCheck(this)"><span><strong>Day 8 成田 T1 4F：</strong>先掃免稅 KIOSK 綠燈/海關蓋章，再託運 25kg 行李！</span></label>
   </div>
 
@@ -360,42 +396,41 @@
   <div class="day-card" id="day1">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">🗓️ Day 1｜2026/11/24（二）抵達東京 ➔ 民宿 ➔ 接風宵夜</div>
-        <div class="day-sub">酷航 TR874 ・超商緊急備品・65年老舖壽司元</div>
+        <div class="day-title">🗓️ Day 1｜2026/11/24（二）入境整備 ➔ 板橋民宿 ➔ 老舖壽司接風</div>
+        <div class="day-sub">酷航 TR874 ・高速巴士・超商緊急備品・65年江戶前壽司元</div>
       </div>
       <span class="toggle-icon">▼</span>
     </div>
     <div class="day-body">
       <div class="timeline-item">
         <span class="time-badge">14:30 🛫 18:30</span>
-        <div class="item-content">桃園機場 T1 搭乘酷航 <strong>TR 874</strong> 飛往成田機場 T1。兩人去程無托運行李，免等行李轉盤快速通關。</div>
+        <div class="item-content">桃園機場 T1 搭乘酷航 <strong>TR 874</strong> 飛抵成田機場 T1。兩人隨身登機箱／背包登機，免等行李轉盤極速通關。</div>
       </div>
       <div class="timeline-item">
         <span class="time-badge">19:15 - 20:30｜成田 T1 ➔ 東京站</span>
-        <div class="item-content std-transit">成田 T1 入境大廳 LCB 櫃台購票，搭 <strong>TYO-NRT 機場高速巴士</strong> 直達「東京站日本橋口」（約 65 分鐘，1,300 日圓/人）。</div>
+        <div class="item-content std-transit">成田 T1 入境大廳 LCB 櫃台購票，搭乘 <strong>TYO-NRT 機場高速巴士</strong> 直達「東京站日本橋口」（車程約 65 分鐘，1,300 日圓／人）。</div>
       </div>
       <div class="timeline-item">
         <span class="time-badge">20:35 - 21:15｜東京站 ➔ 板橋清水町 Airbnb</span>
         <div class="item-content">
-          <div class="std-transit"><strong>標準交通：</strong>步行至「大手町站」，搭 <strong>都營三田線</strong> 直達「本蓮沼站」（約 22 分鐘，Suica 280 日圓），出站步行 5 分鐘抵達。</div>
+          <div class="std-transit"><strong>標準地鐵方案：</strong>東京站地下通道步行至「大手町站」，搭乘 <strong>都營三田線</strong> 直達「本蓮沼站」（車程約 22 分鐘，刷 Suica 280 日圓），A1/A2 出口步行 5 分鐘抵達。</div>
           <div class="taxi-box">
-            <strong>🚕 計程車替代方案（東京站直達民宿）：</strong><br>
-            東京站日本橋口下巴士後直接搭計程車，走白山通り/中山道直達民宿門口（約 11 公里，25～30 分鐘）。<br>
-            <strong>預估車資：</strong>約 4,200～4,800 日圓（兩人平分每人約 2,100～2,400 日圓）。
+            <strong>🚕 計程車替代方案（東京站直達本蓮沼站旁民宿）：</strong><br>
+            東京站日本橋口排班處上車，沿白山通直行至都營三田線「本蓮沼站」旁民宿（車程約 25～30 分鐘）。<br>
+            <strong>預估車資：</strong>約 4,200～4,800 日圓（<strong>兩人平分每人約 2,100～2,400 日圓</strong>）。
           </div>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=東京都板橋区清水町79-8" target="_blank">📍 Google Maps 民宿導航</a>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=本蓮沼駅" target="_blank">📍 Google Maps 本蓮沼站導航</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">21:30 - 21:45｜🏪 第一階段緊急採購</span>
-        <div class="item-content">自助密碼鎖入住放下隨身包後，步行至旁 <strong>FamilyMart 清水町店</strong> 採購今晚換洗純棉內褲、襪子與發熱衣（Convenience Wear 系列 24 小時販售）。</div>
+        <span class="time-badge">21:15 - 21:45｜🏪 入住與應急採購</span>
+        <div class="item-content">密碼鎖入住安置隨身小包後，步行至鄰近 <strong>FamilyMart 清水町店</strong> 採購 Convenience Wear 純棉內褲、襪子與發熱衣備用（24 小時販售）。</div>
       </div>
       <div class="timeline-item">
         <span class="time-badge">21:50 - 23:00｜🍣 接風宵夜：寿司元（本蓮沼站旁）</span>
         <div class="food-box">
-          <strong>特色：</strong>板橋在地超過 65 年正統老舖壽司屋，免預約直接入座板前（營業 17:00～23:30，L.O. 23:00，週三休）。<br>
-          <strong>交通：</strong>出民宿步行 5～8 分鐘（往本蓮沼站 A1/A2 出口方向）。<br>
-          <strong>必點：</strong>當季刺身盛合、剝皮魚肝拌刺身（カワハギ刺身肝和え）、特選握壽司配生啤。
+          <strong>餐廳特色：</strong>板橋在地超過 65 年正統江戶前老舖（營業 17:00～23:30，L.O. 23:00，週三休），21:50 銜接當地居民第二輪晚酌，免預約直接入座。<br>
+          <strong>必點推薦：</strong>時令刺身盛合、剝皮魚肝拌刺身（カワハギ刺身肝和え）、特選握壽司佐生啤酒。23:00 後散步 5 分鐘回民宿休息。
           <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=寿司元+本蓮沼" target="_blank">📍 Google Maps 寿司元</a>
         </div>
       </div>
@@ -406,72 +441,81 @@
   <div class="day-card" id="day2">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">🗓️ Day 2｜2026/11/25（三）秦野探友 ➔ 御徒町治裝買箱 ➔ 和牛吃到飽</div>
-        <div class="day-sub">核心探友任務・立吞壽司・多慶屋買箱代購・牛スター燒肉</div>
+        <div class="day-title">🗓️ Day 2｜2026/11/25（三）秦野探友 ➔ 御徒町重裝採購 ➔ 黑毛和牛燒肉</div>
+        <div class="day-sub">秦野探友・魚がし日本一・UNIQLO＋mont-bell＋多慶屋買箱・牛スター</div>
       </div>
       <span class="toggle-icon">▼</span>
     </div>
     <div class="day-body">
       <div class="timeline-item">
-        <span class="time-badge">08:00 - 09:50｜板橋 ➔ 新宿 ➔ 小田急秦野站</span>
+        <span class="time-badge">07:30 - 09:50｜板橋 ➔ 新宿 ➔ 小田急秦野站</span>
         <div class="item-content std-transit">
           <ul>
-            <li><strong>08:00-08:35：</strong>三田線「本蓮沼」➔「巢鴨」轉 <strong>JR 山手線</strong> 至「新宿」（Suica 約 350 日圓）。</li>
-            <li><strong>08:45-09:50：</strong>小田急小田原線 <strong>快速急行</strong> 直達「秦野站」（約 65 分鐘，Suica 約 730 日圓）。</li>
+            <li><strong>07:30-08:35：</strong>本蓮沼站搭三田線至巢鴨站，轉 <strong>JR 山手線</strong> 直達新宿站。</li>
+            <li><strong>08:45-09:50：</strong>新宿站轉乘小田急小田原線 <strong>快速急行</strong> 直達「秦野站」（車程約 65 分鐘，刷 Suica 約 730 日圓）。</li>
           </ul>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">10:00 - 11:30｜🤝 核心任務：探視朋友＆溫馨敘舊</span>
+        <span class="time-badge">10:00 - 11:30｜🤝 核心任務：探視友人</span>
         <div class="item-content">
-          秦野站北口步行約 10 分鐘，抵達 <strong>神奈川縣秦野市本町 3-13-6 県営秦野団地 6 号棟 205 室</strong>。最牽掛的大事一早圓滿達成！
-          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=神奈川県秦野市本町3-13-6" target="_blank">📍 Google Maps 秦野探友地址</a>
+          自秦野站北口步行約 10 分鐘，抵達 <strong>秦野市本町友人住處</strong>，溫馨敘舊與致意。
+          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=秦野駅" target="_blank">📍 Google Maps 秦野站導航</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">11:45 - 12:45｜秦野 ➔ 新宿 ➔ 御徒町</span>
-        <div class="item-content std-transit">小田急快速急行回「新宿」，站內轉乘 <strong>JR 山手線</strong> 直達「御徒町站」（約 18 分鐘）。</div>
+        <span class="time-badge">11:45 - 12:45｜秦野 ➔ 御徒町</span>
+        <div class="item-content std-transit">小田急快速急行回新宿，原月台轉 <strong>JR 山手線</strong> 直達「御徒町站」。</div>
       </div>
       <div class="timeline-item">
         <span class="time-badge">13:00 - 13:45｜🍣 錯峰午餐：立喰い寿司 魚がし日本一（御徒町站前店）</span>
         <div class="food-box">
-          <strong>特色：</strong>築地批發直營立吞握壽司，13:00 午休人潮散去免排隊（11:00～23:00 無中休）。JR 御徒町站北口步行 1 分鐘。<br>
-          <strong>必點：</strong>黑鮪魚中腹（中トロ）、海膽軍艦、炙燒比目魚緣側、生干貝。
+          <strong>餐廳特色：</strong>築地直送現捏握壽司（11:00～23:00），13:00 避開上班族午餐尖峰隨到隨吃。<br>
+          <strong>必點推薦：</strong>黑鮪魚中腹（中トロ）、海膽軍艦、炙燒比目魚緣側、生干貝。
           <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=立喰い寿司+魚がし日本一+御徒町" target="_blank">📍 Google Maps 魚がし日本一</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">14:00 - 15:45｜🛍️ 全面治裝 ＆ 買行李箱 ＆ 代購藥妝</span>
-        <div class="item-content">
+        <span class="time-badge">14:00 - 16:00｜🛍️ 御徒町核心購物戰役（三站全集中）</span>
+        <div class="shop-box">
           <ul>
-            <li><strong>治裝：</strong><strong>UNIQLO ＆ GU 御徒町店</strong> 買一週保暖衣物、發熱衣褲與外套。</li>
-            <li><strong>買箱＆代購：</strong>步行 2 分鐘至 <strong>多慶屋（TAKEYA）</strong> 買 28～30 吋輕量大行李箱；順手買齊<strong>「明治膠原蛋白金色增強版 3 包」＋「DHC 極纖對策 2 包」</strong>。</li>
-            <li><strong>現場裝箱：</strong>直接在多慶屋拆標把戰利品全裝入新箱！</li>
+            <li><strong>第 1 站｜UNIQLO 御徒町店（吉池大樓）：</strong><br>
+              ・<strong>ソフトリブT：</strong>NAVY 69 / M號 1件、OFF WHITE 01 / M號 1件<br>
+              ・<strong>極暖棉質圓領T（#485833）：</strong>BLACK 09 / L號 1件、WINE 19 / M號 1件<br>
+              ・<strong>極暖喀什米爾混紡亨利領T：</strong>WINE 18、OFF WHITE 01、LIGHT GRAY 02、BLACK 09 各 1 件（L 或 XL），享日本感謝祭免稅。
+            </li>
+            <li><strong>第 2 站｜mont-bell 御徒町店（南口步行 2 分鐘旗艦店）：</strong><br>
+              ・🎒 側背包 <strong>ベルニナフラップショルダー M</strong>（品番 #1123898，BK25）<br>
+              ・👛 短夾 <strong>ジップワレット</strong>（品番 #1133372，BK 黑色優先）
+            </li>
+            <li><strong>第 3 站｜多慶屋（TAKEYA 3 樓箱包與藥妝部）：</strong><br>
+              ・購入 28～30 吋超輕量硬殼大行李箱一只；掃齊 <strong>明治金色膠原蛋白粉（3 包）</strong>、<strong>UHA 鐵葉酸軟糖（2 罐）</strong>、<strong>DHC 極纖對策（1 包）</strong>、<strong>Ophtecs Teare W 人工淚液（2 盒）</strong>。<br>
+              ・<strong>現場裝箱：</strong>於店內整理台直接將戰利品拆標全數裝入新大箱並拉上拉鍊！
+            </li>
           </ul>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=多慶屋+御徒町" target="_blank">📍 Google Maps 多慶屋</a>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=ユニクロ+御徒町店" target="_blank">📍 UNIQLO</a>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=モンベル+御徒町店" target="_blank">📍 mont-bell</a>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=多慶屋+御徒町" target="_blank">📍 多慶屋</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">15:50 - 16:30｜🚨 推大箱回民宿交通（已鎖定方案 A）</span>
+        <span class="time-badge">16:00 - 16:30｜🚨 行李回送戰略（鎖定方案 A）</span>
         <div class="item-content">
-          <div class="std-transit"><strong>原全大眾運輸：</strong>山手線到巢鴨轉三田線到本蓮沼再拖箱走 5 分鐘（下地底月台極累）。</div>
+          <div class="std-transit"><strong>電車接駁段：</strong>自多慶屋推行李箱步行 2 分鐘至 JR 御徒町站，搭大型電梯直上月台，搭 <strong>JR 山手線</strong> 10 分鐘直達「巢鴨站」（刷 Suica 170 日圓）。</div>
           <div class="taxi-box">
-            <strong>🚕 方案 A【鎖定推薦・高CP值】：山手線到巢鴨 ➔ 計程車直達民宿</strong><br>
-            1. JR 御徒町搭 <strong>山手線</strong> 10 分鐘到「巢鴨站」（Suica 170 日圓，兩站皆有大電梯）。<br>
-            2. 巢鴨站搭電梯出北口，招呼站上計程車直達民宿門口（約 3.6 公里，10～12 分鐘）。<br>
-            <strong>車資：</strong>約 1,500～1,800 日圓（<strong>每人僅約 750～900 日圓</strong>）。<br><br>
-            <strong>🚕 方案 B（極致省力）：多慶屋門口直達民宿</strong><br>
-            約 10 公里（25～30 分鐘），車資約 3,800～4,200 日圓（每人約 1,900～2,100 日圓）。
+            <strong>🚕 計程車段（巢鴨站 ➔ 本蓮沼站旁民宿）：</strong><br>
+            巢鴨站搭電梯出北口，排班處直接上車，司機協助置入後車廂，一路直達都營三田線「本蓮沼站」旁民宿。<br>
+            <strong>預估車資：</strong>車程 10～12 分鐘，車資約 1,500～1,800 日圓（<strong>雙人平分每人僅 750～900 日圓，約台幣 170 元</strong>）。
           </div>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">17:30 - 19:15｜🥩 錯峰晚餐：和牛燒肉 牛スター（上野店）</span>
+        <span class="time-badge">17:30 - 19:15｜🥩 晚餐【和牛第 1 彈】：和牛燒肉 牛スター（上野店）</span>
         <div class="item-content">
-          16:30 回房放箱換輕便小包，17:00 搭三田線轉山手線至「上野站」3 號出口步行 1 分鐘。
+          16:30-17:00 回房放箱換隨身輕便小包，17:00 搭三田線至巢鴨轉山手線直達「上野站」。
           <div class="food-box">
-            <strong>特色：</strong>岩手牛黑毛和牛燒肉吃到飽（17:00～23:30），17:30 首波免排隊。<br>
-            <strong>必點：</strong>特選黑毛和牛五花、上等橫膈膜（ハラミ）、厚切牛舌。19:30 搭電車回本蓮沼休息。
+            <strong>餐廳特色：</strong>日本頂級銘柄「岩手牛」黑毛和牛燒肉吃到飽（17:00～23:30，L.O. 22:30），17:30 準時第一輪入座免排隊。<br>
+            <strong>必點推薦：</strong>特選黑毛和牛牛五花、上等橫膈膜（ハラミ）、厚切牛舌。19:30 後搭車返回民宿休息。
             <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=和牛焼肉+牛スター+上野" target="_blank">📍 Google Maps 牛スター</a>
           </div>
         </div>
@@ -483,46 +527,48 @@
   <div class="day-card" id="day3">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">🗓️ Day 3｜2026/11/26（四・見頃首日）神宮外苑銀杏 ➔ 六本木聖誕點燈</div>
-        <div class="day-sub">300m金黃銀杏隧道・表參道和牛・六本木52F暮色・三州屋割烹</div>
+        <div class="day-title">🗓️ Day 3｜2026/11/26（四・滿開見頃日）外苑銀杏 ➔ 職人烏龍麵 ➔ 六本木夕景與昭和割烹</div>
+        <div class="day-sub">銀杏名所1・裏原宿麵散清爽轉換・MIDTOWN聖誕首日・三州屋割烹</div>
       </div>
       <span class="toggle-icon">▼</span>
     </div>
     <div class="day-body">
       <div class="timeline-item">
-        <span class="time-badge">07:30 - 10:30｜🍂 銀杏名所 1：明治神宮外苑銀杏大道</span>
+        <span class="time-badge">07:30 - 10:30｜🍂 銀杏巡禮第一景：明治神宮外苑銀杏並木</span>
         <div class="item-content">
-          <div class="std-transit"><strong>交通：</strong>07:30 出門，都營三田線「本蓮沼」直達「青山一丁目站」（約 35 分鐘，Suica 280 日圓）。</div>
-          <strong>亮點：</strong>今日正式滿開見頃！146 棵尖塔狀純金黃銀杏隧道，清晨陽光穿透樹冠且遊客稀少，超好拍。
+          <div class="std-transit"><strong>交通：</strong>07:30 出門，本蓮沼站搭都營三田線直達「青山一丁目站」（車程約 35 分鐘，刷 Suica 280 日圓），出站即達銀杏大道起點。</div>
+          <strong>景觀亮點：</strong>滿開見頃首日！長達 300 公尺、146 棵尖塔狀純金黃並木隧道，清晨遊客稀落，晨光穿透樹冠攝影極佳。
           <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=明治神宮外苑+いちょう並木" target="_blank">📍 Google Maps 明治神宮外苑</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">10:45 - 14:30｜🥩 錯峰午餐：表參道／原宿 平價黑毛和牛或牛舌定食</span>
-        <div class="food-box">
-          <strong>推薦：</strong>燒肉 Like 原宿店 或 表參道平價和牛午間套餐（11:00 開門第一波免排隊）。<br>
-          <strong>必點：</strong>黑毛和牛特選牛五花定食、厚切鹽蔥牛舌定食。餐後 12:30-14:30 表參道林蔭大道散步喝咖啡。
+        <span class="time-badge">11:30 - 12:30｜🥢 錯峰午餐【清爽轉換】：麵散（Menchirashi 裏原宿店）</span>
+        <div class="item-content">
+          10:45-11:30 自外苑往原宿方向悠閒漫步約 15 分鐘穿過神宮前街區。
+          <div class="food-box">
+            <strong>餐廳特色：</strong>落地窗前可見職人現場揉切生烏龍麵（11:30～23:00），完美隔開連日和牛油膩感，11:15 抵達排第一輪入場。<br>
+            <strong>必點推薦：</strong>厚切培根奶油明太子烏龍麵（カルボナーラうどん）、出汁高湯大蝦天婦羅烏龍麵。12:30-14:30 表參道林蔭大道散策與咖啡歇息。
+            <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=麺散+原宿" target="_blank">📍 Google Maps 麵散</a>
+          </div>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">14:45 - 17:00｜✨ 六本木都會暮色 ✕ MIDTOWN CHRISTMAS 2026</span>
+        <span class="time-badge">14:45 - 17:15｜✨ 六本木都會夕景 ✕ 聖誕點燈首日</span>
         <div class="item-content">
-          <div class="std-transit"><strong>標準交通：</strong>表參道搭千代田線/銀座線轉日比谷線至「六本木站」（約 15 分鐘，需走深層地下道）。</div>
           <div class="taxi-box">
-            <strong>🚕 計程車替代方案（表參道 ➔ 六本木之丘）【推薦！】：</strong><br>
-            路邊攔車沿六本木通直達六本木之丘森大樓 2 樓車道（約 2.5 公里，8～10 分鐘）。<br>
-            <strong>預估車資：</strong>約 1,100～1,300 日圓（<strong>兩人平分每人僅約 550～650 日圓</strong>）。
+            <strong>🚕 計程車戰略接駁（表參道 ➔ 六本木之丘森大樓）：</strong><br>
+            於表參道青山通攔車，沿六本木通直達六本木之丘森大樓 2 樓迎賓車道（車程 8～10 分鐘，車資約 1,100～1,300 日圓，<strong>雙人平分每人僅 550～650 日圓，約台幣 120 元</strong>），免爬深層地鐵月台。
           </div>
-          登上 <strong>六本木之丘 52 樓</strong> 看東京鐵塔暮色；傍晚漫步至 Tokyo Midtown 朝聖今日開幕的 <strong>MIDTOWN CHRISTMAS 2026</strong> 聖誕點燈！
+          登上 <strong>森大樓 52 樓室內展望台</strong> 遠眺東京鐵塔與夕陽天際線；隨後漫步至 Tokyo Midtown，朝聖今日正式開幕之 <strong>MIDTOWN CHRISTMAS 2026</strong> 戶外夢幻燈海。
           <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=六本木ヒルズ+東京シティビュー" target="_blank">📍 Google Maps 六本木之丘</a>
         </div>
       </div>
       <div class="timeline-item">
         <span class="time-badge">17:30 - 19:00｜🐟 錯峰晚餐：大衆割烹 三州屋（六本木店）</span>
         <div class="food-box">
-          <strong>特色：</strong>50 年老派昭和大眾割烹（17:00～22:30，週日休），六本木站 4b/7 號出口步行 3 分鐘。<br>
-          <strong>必點：</strong>名物鳥豆腐、當季厚切生魚片盛合、冬令極鮮鰤魚刺身（寒ブリ刺し）。<br>
-          <strong>回程：</strong>19:15 大江戶線「六本木」➔「春日」轉三田線直達「本蓮沼」（約 35 分鐘，Suica 330 日圓）。
+          <strong>餐廳特色：</strong>50 年昭和風大眾割烹名店（17:00～22:30，週日及國定假日休），17:30 入座避開白領下班人潮。<br>
+          <strong>必點推薦：</strong>名物鳥豆腐、當日白身魚刺身盛合、冬季極鮮鰤魚刺身（寒ブリ刺し）。<br>
+          <strong>19:15-19:50 回程：</strong>大江戶線「六本木站」搭至「春日站」，同站轉都營三田線直達「本蓮沼站」（車程約 35 分鐘，刷 Suica 約 330 日圓）。
           <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=大衆割烹+三州屋+六本木" target="_blank">📍 Google Maps 三州屋六本木</a>
         </div>
       </div>
@@ -533,64 +579,58 @@
   <div class="day-card" id="day4">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">🗓️ Day 4｜2026/11/27（五）東大銀杏 ➔ 東京站聖誕市集 ➔ 根室花まる ➔ 田や宵夜</div>
-        <div class="day-sub">本鄉銀杏・日本橋壽喜燒・丸之內香檳金燈海・孤獨美食家割烹</div>
+        <div class="day-title">🗓️ Day 4｜2026/11/27（五・減法美學・古剎禪意 ✕ 法式生活）東大銀杏 ➔ 和牛壽喜燒 ➔ 九品佛淨真寺 ➔ 自由之丘 ➔ 居酒屋金田</div>
+        <div class="day-sub">銀杏名所2・赤門直送・和牛第2彈・京都級紅葉銀杏古剎・目黑線直達返宿</div>
       </div>
       <span class="toggle-icon">▼</span>
     </div>
     <div class="day-body">
       <div class="timeline-item">
-        <span class="time-badge">07:30 - 10:15｜🍂 銀杏名所 2：東京大學（本鄉校區）</span>
+        <span class="time-badge">07:30 - 10:15｜🍂 銀杏巡禮第二景：東京大學（本鄉校區）</span>
         <div class="item-content">
-          <div class="std-transit"><strong>交通：</strong>07:30 出門，三田線「本蓮沼」直達「春日站」（15 分鐘，220 日圓），步行 8 分鐘進正門。</div>
-          <strong>亮點：</strong>安田講堂前百年參天銀杏並木與哥德式紅磚古蹟，清晨靜謐絕美。
+          <div class="std-transit"><strong>交通：</strong>07:30 出門，本蓮沼站搭都營三田線直達「春日站」（車程僅 15 分鐘，刷 Suica 220 日圓），A6 出口步行 8 分鐘由正門進入。</div>
+          <strong>景觀亮點：</strong>漫步安田講堂前與工學院廣場「飯糰銀杏」，百年金黃巨木與哥德式紅磚校舍交織出深厚學術沉靜感。
           <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=東京大学+安田講堂" target="_blank">📍 Google Maps 東京大學安田講堂</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">10:30 - 12:00｜🍲 錯峰午餐：黑毛和牛壽喜燒 日本橋 ichiri（三越前）</span>
+        <span class="time-badge">10:30 - 12:15｜🍲 錯峰午餐【和牛第 2 彈】：黑毛和牛壽喜燒 日本橋 ichiri（三越前）</span>
         <div class="item-content">
-          <div class="std-transit"><strong>標準交通：</strong>丸之內線「本鄉三丁目」➔「大手町」轉半藏門線至「三越前站」A1 出口步行 2 分鐘（180 日圓）。</div>
           <div class="taxi-box">
-            <strong>🚕 計程車替代方案（東大赤門 ➔ 日本橋 ichiri）：</strong><br>
-            沿中央通り直開約 3.5 公里（10～12 分鐘），預估車資約 1,500～1,700 日圓（每人約 750～850 日圓）。
+            <strong>🚕 東大赤門前計程車直送小抄：</strong><br>
+            走出東大「赤門」，站在門口右側大馬路「本鄉通」路邊上車（順向往南完全免迴轉）。使用「GO」App 搜尋上車點「東京大学 赤門」、目的地「黒毛和牛すき焼き 日本橋 一厘」（東京都中央区日本橋室町 1-12-10）。<br>
+            <strong>預估車資：</strong>約 3.5 公里（10～12 分鐘），車資約 1,500～1,700 日圓（<strong>雙人平分每人約 750～850 日圓，約台幣 160 元</strong>）。
           </div>
           <div class="food-box">
-            <strong>11:00 開門第一波免排隊：</strong>千元日圓享受現煎炙燒 A4～A5 黑毛和牛一人一鍋壽喜燒定食。
+            <strong>11:00 準時第一輪入座：</strong>現煎 A4～A5 黑毛和牛一人一鍋壽喜燒定食，甜鹹醬汁裹滿滑嫩蛋液。
             <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=黒毛和牛すき焼き+日本橋+ichiri" target="_blank">📍 Google Maps 日本橋 ichiri</a>
           </div>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">12:30 - 16:30｜🍂 行幸通り銀杏 ➔ 抽壽司號碼牌 ➔ 茅乃舍 ➔ 聖誕市集</span>
+        <span class="time-badge">12:25 - 14:45｜🍁 深秋禪意・名剎漫步：九品佛淨真寺（紅葉 ✕ 銀杏名剎）</span>
         <div class="item-content">
-          <ul>
-            <li><strong>12:30-14:15：</strong>漫步 12 分鐘至 <strong>東京車站行幸通り</strong> 拍紅磚大樓＋金黃銀杏，登 <strong>KITTE 6F 屋頂花園</strong> 免費俯瞰全景。</li>
-            <li><strong>14:30-15:30：</strong>先上 KITTE 5F <strong>抽「根室花まる」號碼牌</strong> ➔ 走 B1 連通道 2 分鐘到 JR 東京站丸之內地下中央口（改札外）<strong>茅乃舍 グランスタ丸の内店</strong> 買高湯包。</li>
-            <li><strong>15:30-16:30：</strong>看 KITTE 1F <strong>WHITE KITTE</strong> 雪白真杉木聖誕樹 ➔ 漫步 <strong>丸之內仲通り聖誕市集</strong>，16:00 點亮香檳金 LED 燈海！</li>
-          </ul>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KITTE丸の内" target="_blank">📍 Google Maps KITTE丸之內</a>
+          <div class="std-transit"><strong>雙手淨空極速移動（12:25-13:10）：</strong>茅乃舍已順移至 Day 6，雙手完全無負重！三越前站搭半藏門線直達澀谷，原月台轉東急東橫線特急直達「自由之丘站」（約 35 分鐘，刷 Suica 約 450 日圓）。</div>
+          <strong>美感聚焦（13:15-14:45）：</strong>自自由之丘漫步約 10 分鐘走入幽靜古寺。境內三座佛堂供奉九尊阿彌陀如來佛像，數百年古木參天，巨大金黃銀杏與滿山火紅楓葉交錯，展現一秒穿越至京都古寺的深秋極致禪意。
+          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=九品仏浄真寺" target="_blank">📍 Google Maps 九品佛淨真寺</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">16:30 - 19:45｜🍣 錯峰晚餐：根室花まる（KITTE 5F）＆ 銀座伴手禮</span>
-        <div class="food-box">
-          <strong>必點：</strong>特大生干貝、牡丹蝦、生海膽、秋刀魚刺身、爆量鮭魚卵軍艦（11:00～22:00 全天營業）。<br>
-          餐後 18:15-19:45 漫步銀座買 <strong>銀座あけぼの 本店</strong> 米果伴手禮，19:50 大手町搭三田線直達本蓮沼放戰利品。
-          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=回転寿司+根室花まる+KITTE丸の内店" target="_blank">📍 Google Maps 根室花まる</a>
+        <span class="time-badge">14:45 - 17:15｜🛍️ 生活美學散策：自由之丘洋菓子 ✕ 巷弄雜貨漫遊</span>
+        <div class="item-content">
+          漫步於南口綠道與美觀街周邊，造訪法式洋菓子名店（如 <strong>Mont St. Clair</strong> 或 <strong>Patisserie Paris S'eveille</strong>）享用下午茶，悠閒穿梭於生活選物店、香氛店與木造道具舖之間。
+          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=自由が丘+ラ・ヴィータ" target="_blank">📍 Google Maps 自由之丘散步</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">20:45 - 22:30｜🏮 深夜宵夜場：大衆割烹 田や（十條）</span>
+        <span class="time-badge">17:30 - 20:10｜🏮 晚餐：居酒屋 金田（Kaneda 自由之丘）➔ 一車直達返宿</span>
         <div class="food-box">
-          <strong>特色：</strong>《孤獨的美食家》第二季登場的下町傳奇割烹！免預約推門入座（16:00～23:30，週一休）。<br>
-          <strong>交通：</strong>民宿散步 12～15 分鐘穿過十條銀座商店街至 JR 十條站北口。<br>
-          <strong>必點：</strong><strong>鯖のくんせい刺（煙燻鯖魚刺身）</strong>、當季刺身盛合、熱關東小火鍋配地酒。
-          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=大衆割烹+田や+十条" target="_blank">📍 Google Maps 大衆割烹 田や</a>
+          <strong>餐廳特色：</strong>創業逾 80 年在地老派大眾割烹，被譽為「自由之丘居酒屋學校」。17:30 第一輪入座乾淨典雅的 U 字型木造吧台。<br>
+          <strong>必點推薦：</strong>時令刺身盛合、燉煮通透的大根關東煮（おでん）、名物肉豆腐、手寫黑板時令煮魚佐溫熱清酒（熱燗）。
+          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=居酒屋+金田+自由が丘" target="_blank">📍 Google Maps 居酒屋 金田</a>
         </div>
-        <div class="taxi-box">
-          <strong>🚕 22:30 後返宿計程車替代方案（十條「田や」➔ 民宿門口）【推薦！】：</strong><br>
-          冬夜氣溫約 8 度微醺時，店門口攔車 5 分鐘直送民宿門口（約 1.8 公里），車資約 800～1,200 日圓（<strong>每人僅約 500～600 日圓</strong>）。
+        <div class="item-content std-transit" style="margin-top:8px;">
+          <strong>🚇 19:25-20:10 一車直達返宿：</strong>吃飽步行 2 分鐘進自由之丘站，搭乘 <strong>東急目黑線（直通都營三田線）列車</strong>，中途<strong>完全免下車換線</strong>，一車直達「本蓮沼站」（車程約 42 分鐘，刷 Suica 480 日圓）！
         </div>
       </div>
     </div>
@@ -600,56 +640,51 @@
   <div class="day-card" id="day5">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">🗓️ Day 5｜2026/11/28（六）築地黑鮪魚 ➔ 清澄庭園楓紅 ➔ 晴空塔落日 ➔ 淺草鮮魚</div>
-        <div class="day-sub">24H壽司三昧・築地本願寺・人形町老街・清澄白河咖啡・遠州屋百年老店</div>
+        <div class="day-title">🗓️ Day 5｜2026/11/28（六・減法美學・水岸、庭園與下町職人）築地黑鮪魚 ➔ 清澄庭園 ➔ 藏前水岸夕景 ➔ 淺草遠州屋</div>
+        <div class="day-sub">24H壽司三昧・古印度宮殿寺院・池泉楓紅・隅田川遠眺晴空塔・百年鮮魚</div>
       </div>
       <span class="toggle-icon">▼</span>
     </div>
     <div class="day-body">
       <div class="timeline-item">
-        <span class="time-badge">07:30 - 09:45｜🐟 晨間免排：すしざんまい 築地本店 ＆ 築地本願寺</span>
+        <span class="time-badge">07:30 - 09:45｜🐟 晨間免排：すしざんまい 本店 ＆ 築地本願寺</span>
         <div class="item-content">
-          <div class="std-transit"><strong>交通：</strong>07:30 出門，三田線「本蓮沼」➔「日比谷」轉日比谷線至「築地站」1/2 號出口步行 3 分鐘（330 日圓）。</div>
+          <div class="std-transit"><strong>交通：</strong>07:30 出門，本蓮沼站搭三田線至日比谷站，轉 <strong>日比谷線</strong> 直達「築地站」（車程約 35 分鐘，刷 Suica 330 日圓）。</div>
           <div class="food-box">
-            <strong>08:00-09:15 壽司三昧本店：</strong>24 小時營業清晨免排隊！必點黑鮪魚大腹（大トロ）、鮪魚五貫拼盤、馬糞海膽、生牡丹蝦。
+            <strong>08:00-09:15 壽司三昧 築地本店：</strong>24 小時營業、席次眾多，清晨八點無須排隊入座。必點：極鮮鮪魚五貫拼盤、黑鮪魚大腹（大トロ）、炙燒海鮮握壽司。
           </div>
-          <strong>09:20-09:45 築地本願寺：</strong>步行 3 分鐘參拜罕見古印度石造宮殿寺院，欣賞彩繪玻璃與德國管風琴。
-          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=すしざんまい+本店+築地" target="_blank">📍 Google Maps 壽司三昧本店</a>
+          <strong>09:20-09:45 築地本願寺（步行 3 分鐘）：</strong>日本國家重要文化財，罕見古印度阿育王石造宮殿風格，挑高本堂配置彩繪玻璃與德國巨型管風琴。
+          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=すしざんまい+本店+築地" target="_blank">📍 壽司三昧</a>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=築地本願寺" target="_blank">📍 築地本願寺</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">09:50 - 11:30｜🍡 江戶老街散策：人形町</span>
+        <span class="time-badge">10:00 - 13:30｜🍁 清澄白河慢活散策：清澄庭園楓紅與文青咖啡</span>
         <div class="item-content">
-          <span class="std-transit">築地站搭日比谷線 6 分鐘直達「人形町站」（180 日圓）。</span>漫步甘酒橫丁，外帶名物 <strong>小川軒葡萄乾奶油夾心餅乾</strong>。
+          <span class="std-transit">築地站搭日比谷線至水天宮前轉半藏門線直達「清澄白河站」。</span><br>
+          <ul>
+            <li><strong>清澄庭園（門票 150 日圓）：</strong>漫步池泉回遊式名石庭園，欣賞名石倒影與 11 月下旬楓紅。</li>
+            <li><strong>咖啡時光：</strong>出園後漫步文青街區，在藍瓶旗艦店（Blue Bottle）或巷弄特色烘焙館品嚐手沖單品咖啡與甜點。</li>
+          </ul>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 Google Maps 清澄庭園</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">11:45 - 14:45｜🍁 避人潮秘境：清澄庭園 ✕ 清澄白河職人咖啡</span>
+        <span class="time-badge">13:45 - 16:30｜☕ 職人街區 ✕ 隅田川水岸夕景遠眺晴空塔：藏前（Kuramae）</span>
         <div class="item-content">
-          <span class="std-transit">水天宮前站搭半藏門線 4 分鐘直達「清澄白河站」（180 日圓）。</span><br>
-          入園 <strong>清澄庭園</strong>（門票 150 日圓）賞池水倒影與 11 月下旬楓紅；出園後在咖啡街區找間烘焙咖啡館慢活小憩。
-          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 Google Maps 清澄庭園</a>
+          <span class="std-transit">自清澄白河搭乘都營大江戶線（僅 2 站約 4 分鐘）抵達「藏前站」。</span><br>
+          <ul>
+            <li><strong>美感減法：</strong>避開人潮洶湧之商場內部，漫步「東京布魯克林」藏前手作皮革工房、文具雜貨店（如 <strong>Kakimori</strong>）與極簡巧克力工坊（<strong>Dandelion Chocolate</strong>）。</li>
+            <li><strong>水岸夕陽：</strong>傍晚走到 <strong>隅田川水岸步道（隅田川テラス）</strong>，在深秋微風中看斜陽將對岸東京晴空塔染成金黃色，享受遠觀地標的壯闊與寧靜。</li>
+          </ul>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 Google Maps 藏前隅田川水岸</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">15:00 - 16:45｜🌇 晴空塔 Solamachi 30F/31F 免費高空落日</span>
-        <div class="item-content">
-          <div class="std-transit"><strong>標準交通：</strong>半藏門線「清澄白河」直達終點「押上站」（7 分鐘，需走地下長廊）。</div>
-          <div class="taxi-box">
-            <strong>🚕 計程車替代方案（清澄白河 ➔ 晴空塔門口）【推薦！】：</strong><br>
-            沿清澄通一路往北欣賞晴空塔全景，直達 Solamachi 1 樓門口（約 3.8 公里，10～12 分鐘）。<br>
-            <strong>預估車資：</strong>約 1,500～1,800 日圓（<strong>每人約 750～900 日圓</strong>）。
-          </div>
-          搭電梯直上 30F/31F 免費觀景餐廳層，俯瞰東京都會夕陽暮色。
-          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=東京ソラマチ" target="_blank">📍 Google Maps 晴空塔 Solamachi</a>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <span class="time-badge">17:00 - 18:30｜🐟 錯峰晚餐：魚料理 遠州屋（田原町站／淺草）</span>
+        <span class="time-badge">16:45 - 18:30｜🐟 錯峰晚餐：魚料理 遠州屋（田原町站／淺草）</span>
         <div class="food-box">
-          <strong>特色：</strong>淺草創業近百年活魚海鮮老店（17:00～22:30，週日休），17:00 一開門準時入座免排隊。<br>
-          <strong>交通：</strong>東武晴空塔線或銀座線回「田原町站」2 號出口步行 1 分鐘（計程車約 1,000 日圓）。<br>
-          <strong>必點：</strong>每日直送鮮魚刺身定食、現煮海鮮小火鍋、鹽烤時令魚下巴。18:45 淺草線轉三田線回板橋。
+          <strong>餐廳特色：</strong>自藏前沿江戶通向北散步 10 分鐘即達。淺草經營近百年活魚海鮮料理名店，17:00 晚市開門準時入座第一輪。<br>
+          <strong>必點推薦：</strong>當日市場直送鮮魚刺身定食、現煮海鮮小火鍋、烤魚下巴。18:45 後搭都營淺草線至三田站轉三田線返回板橋民宿。
           <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚料理+遠州屋+田原町" target="_blank">📍 Google Maps 魚料理 遠州屋</a>
         </div>
       </div>
@@ -660,54 +695,70 @@
   <div class="day-card" id="day6">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">🗓️ Day 6｜2026/11/29（日・燈光秀閉幕日）光之丘銀杏 ➔ 昭和紀念公園閉幕夜燈</div>
-        <div class="day-sub">百年野生銀杏遮穹・新宿厚切牛舌・昭和公園秋夜最終場・立川第一海鮮</div>
+        <div class="day-title">🗓️ Day 6｜2026/11/29（日・減法美學・都會精華漫步）根津千本鳥居 ➔ 東京站牛舌與銀杏 ➔ 茅乃舍 ➔「丸之內 ➔ 銀座」黃金慢步 ➔ 田や宵夜</div>
+        <div class="day-sub">銀杏名所3・消除新宿折返跑・16:00香檳金燈海慢步・日比谷直達卸貨</div>
       </div>
       <span class="toggle-icon">▼</span>
     </div>
     <div class="day-body">
       <div class="timeline-item">
-        <span class="time-badge">07:45 - 10:15｜🍃✨ 私房巨木名所：光之丘公園</span>
+        <span class="time-badge">08:15 - 10:30｜⛩️ 晨間秘境與私房早餐：根津神社千本鳥居 ✕ 谷根千老町家</span>
         <div class="item-content">
-          <div class="std-transit"><strong>原大眾運輸：</strong>三田線轉山手線/公車繞大圈需 35～45 分鐘，清晨耗體力。</div>
-          <div class="taxi-box">
-            <strong>🚕 計程車替代方案（板橋民宿 ➔ 光之丘公園門口）【強烈推薦！】：</strong><br>
-            07:45 Airbnb 門口用 Uber/GO 叫車橫向直切開往光之丘公園（約 5.5～6 公里，僅 15～18 分鐘）。<br>
-            <strong>預估車資：</strong>約 2,200～2,600 日圓（<strong>每人約 1,100～1,300 日圓</strong>）。
-          </div>
-          <strong>亮點：</strong>超過 40 棵樹齡百年野生銀杏巨木交錯成金黃天然遮穹，清晨無人搶鏡超夢幻！
-          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=都立光が丘公園+いちょう並木" target="_blank">📍 Google Maps 光之丘公園</a>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <span class="time-badge">10:25 - 12:15｜🥩 錯峰午餐：新宿站西口 炭火現烤牛舌定食</span>
-        <div class="item-content">
-          <span class="std-transit">10:25「光之丘站」搭 <strong>都營大江戶線一線直達「新宿站」</strong>（24 分鐘，280 日圓）。</span>
-          <div class="food-box">
-            <strong>推薦：</strong>「味の牛たん 喜助」或「牛たん ねぎし」新宿西口店（11:15 剛開門入座避開週末排隊潮）。<br>
-            <strong>必點：</strong>炭烤厚切牛舌定食（搭香蔥麥飯、山藥泥、熱牛尾湯）。
-          </div>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <span class="time-badge">12:45 - 17:30｜🍁✨ 國營昭和紀念公園（白天銀杏毯 ➔ 閉幕最終夜燈光秀！）</span>
-        <div class="item-content">
-          <span class="std-transit"><strong>交通：</strong>12:45 兩手空空從 JR 新宿站搭 <strong>JR 中央線快速</strong> 至「立川站」，轉青梅線 1 站至<strong>「西立川站」</strong>步行 2 分鐘進西立川口（約 45 分鐘，500 日圓）。</span>
+          <div class="std-transit"><strong>極速直達（08:15-08:35）：</strong>本蓮沼站搭都營三田線直達「白山站」（車程僅 13 分鐘，刷 Suica 220 日圓），A1 出口步行 8～10 分鐘由後門進入。</div>
           <ul>
-            <li><strong>13:45-16:30（白天場）：</strong>漫步運河兩側與運動廣場，腳踩厚實金黃落葉地毯。</li>
-            <li><strong>16:30-17:30（✨ 閉幕壓軸最終夜）：</strong>今日為年度夜間點燈<strong>最後一天閉幕日</strong>！天黑瞬間亮燈，搶先拍完 300 公尺光影音樂「談笑銀杏並木」與「運河水鏡倒影」。</li>
+            <li><strong>千本鳥居空景：</strong>清晨遊客稀落，穿過朱紅色千本鳥居拍無人搶鏡空靈晨光大景，參拜江戶時代權現造本殿。</li>
+            <li><strong>私房朝食：</strong>漫步至 1938 年大正木造町家 <strong>カヤバ珈琲（Kayaba Coffee）</strong> 享用「極厚滑嫩煎蛋三明治」搭熱美式；或外帶 10:00 出爐之「根津鯛魚燒」。</li>
           </ul>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=国営昭和記念公園+西立川口" target="_blank">📍 Google Maps 昭和紀念公園西立川口</a>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=根津神社+千本鳥居" target="_blank">📍 根津神社</a>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=カヤバ珈琲" target="_blank">📍 カヤバ珈琲</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">17:45 - 19:30｜🐟 錯峰晚餐：魚トの旨い店 ひのき（立川站南口 步行 3 分）</span>
-        <div class="food-box">
-          <strong>特色：</strong>立川在地排名第一高人氣產地直送海鮮居酒屋（17:00～23:00）。西立川搭青梅線 1 站（3 分鐘）回立川站南口。<br>
-          <strong>錯峰實戰：</strong>17:45 出園直接吃飽第一波入座，不用餓肚子擠車回市區！<br>
-          <strong>必點：</strong>特選當季生魚片 7 點盛合、現烤生蠔/扇貝、現炸海鮮天婦羅配純米地酒。<br>
-          <strong>回程：</strong>19:45 JR 中央線快速回「新宿」轉山手線至「巢鴨」換三田線回「本蓮沼」（約 850 日圓）。
-          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚トの旨い店+ひのき+立川" target="_blank">📍 Google Maps 魚トの旨い店 ひのき</a>
+        <span class="time-badge">10:45 - 12:15｜🥩 減法直奔東京車站 ➔ 炭火現烤牛舌定食（八重洲地下街 喜助）</span>
+        <div class="item-content">
+          <span class="std-transit"><strong>取消新宿折返跑（10:45-11:15）：</strong>根津站搭千代田線至「大手町站」，地下連通道步行直通「東京車站」（僅 8 分鐘，刷 Suica 180 日圓）。</span>
+          <div class="food-box">
+            <strong>11:15 錯峰入座（牛料理第 3 彈）：</strong>東京站八重洲地下街「味の牛たん 喜助」，炭火厚切純瘦極上牛舌定食，佐香蔥麥飯、山藥泥與牛尾熱湯。
+            <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 Google Maps 喜助東京站</a>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="time-badge">12:30 - 15:40｜🍂 銀杏名所 3：行幸通り銀杏 ➔ WHITE KITTE ➔ 🛍️ 茅乃舍採購</span>
+        <div class="item-content">
+          <ul>
+            <li><strong>12:30-13:45 行幸通り銀杏並木：</strong>漫步拍攝紅磚站房前寬闊金黃銀杏大道；登 <strong>KITTE 6 樓空中花園</strong> 免費俯瞰全景。</li>
+            <li><strong>14:00-15:00 WHITE KITTE：</strong>回到 KITTE 1 樓中庭欣賞白色冷杉巨型聖誕樹與每半小時播放之音效燈光秀。</li>
+            <li><strong>15:00-15:40 茅乃舍 Gransta 丸之內店：</strong>自 KITTE B1 出門，順指標「JR 丸の内地下中央口」步行 2～3 分鐘至大廳（改札外免進站），採購經典柴魚高湯包、野菜高湯包與調味醬汁包。</li>
+          </ul>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KITTE丸の内" target="_blank">📍 KITTE丸之內</a>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=茅乃舎+グランスタ丸の内店" target="_blank">📍 茅乃舍東京站</a>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="time-badge">15:45 - 17:30｜🌟 東京散步美學之巔：「丸之內 ➔ 銀座」黃金慢步路線</span>
+        <div class="item-content">
+          約 1.5 公里平坦大道（耗時約 90 分鐘），正好跨越 <strong>16:00 點燈初上至 16:30 暮色全黑</strong> 魔幻時刻：
+          <ul>
+            <li><strong>起點・丸之內仲通り：</strong>16:00 整兩側數百棵行道樹瞬間點亮溫暖「香檳金 LED 燈海」，歐風木屋聖誕市集品嚐熱紅酒。</li>
+            <li><strong>中繼・三菱一號館 ＆ 有樂町磚橋：</strong>穿過英式磚紅庭院與 JR 紅磚拱形高架橋下。</li>
+            <li><strong>終點・銀座中央通：</strong>欣賞 Cartier、Tiffany、Bvlgari 與和光鐘樓奢華櫥窗及立體外牆燈飾。</li>
+          </ul>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 Google Maps 丸之內仲通り</a>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="time-badge">17:40 - 20:45｜🚇 採購卸貨直達線 ➔ 🏮 晚餐：大衆割烹 田や（十條）</span>
+        <div class="item-content">
+          <span class="std-transit"><strong>17:40-18:20 卸貨直達線：</strong>自銀座漫步至相通的「日比谷站」，搭 <strong>都營三田線直達「本蓮沼站」</strong>（約 25 分鐘，刷 Suica 280 日圓），回民宿放下茅乃舍高湯包休整。</span>
+          <div class="food-box">
+            <strong>18:45-20:45 大衆割烹 田や（十條）：</strong>《孤獨的美食家》名店，散步約 15 分鐘至十條銀座商店街老字號居酒屋，大啖煙燻鯖魚刺身、關東煮雜煮小火鍋搭溫清酒。
+            <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=大衆割烹+田や+十条" target="_blank">📍 Google Maps 大衆割烹 田や</a>
+          </div>
+          <div class="taxi-box">
+            <strong>🚕 返宿計程車（十條居酒屋田や ➔ 本蓮沼站旁民宿）：</strong><br>
+            店門口叫車 5 分鐘直達民宿（車資約 1,000～1,200 日圓含深夜加成，<strong>雙人平分每人僅 500～600 日圓，約台幣 110 元</strong>），冬夜微醺免受寒風！
+          </div>
         </div>
       </div>
     </div>
@@ -717,57 +768,63 @@
   <div class="day-card" id="day7">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">🗓️ Day 7｜2026/11/30（一）澀谷活美登利 ➔ 京王專櫃取貨退稅 ➔ 惠比壽水晶燈</div>
-        <div class="day-sub">睡飽充電・西武百貨壽司・朵茉麗蔻/肌鑰/黛珂免稅封箱・魚真居酒屋</div>
+        <div class="day-title">🗓️ Day 7｜2026/11/30（一・🚨 預約日完全不動）活美登利 ➔ 澀谷 LOFT ➔ 京王履約退稅 ➔ 封箱秤重 ➔ 惠比壽水晶燈 ➔ 魚真割烹</div>
+        <div class="day-sub">睡到自然醒・Owala水壺・朵茉麗蔻/肌鑰/黛珂免稅封箱(24.0～24.5kg)・冷熱對流</div>
       </div>
       <span class="toggle-icon">▼</span>
     </div>
     <div class="day-body">
       <div class="timeline-item">
-        <span class="time-badge">08:30 - 12:15｜🍣 睡飽出發 ➔ 澀谷打卡 ➔ 回轉壽司 活 美登利</span>
+        <span class="time-badge">08:30 - 12:15｜🍣 睡到自然醒 ➔ 澀谷打卡 ➔ 回轉壽司 活 美登利</span>
         <div class="item-content">
-          <span class="std-transit">09:45 三田線「本蓮沼」➔「巢鴨」轉 <strong>JR 山手線</strong> 直達「澀谷站」（40 分鐘，350 日圓），八公口打卡十字路口。</span>
+          <span class="std-transit">09:45-10:25 本蓮沼搭三田線至巢鴨站，轉 JR 山手線直達「澀谷站」，八公口出站拍攝全向十字路口。</span>
           <div class="food-box">
-            <strong>11:00-12:15 西武百貨澀谷店 A 館 8 樓：</strong>10:50 抽第一輪號碼牌，11:00 準時第一批入座！<br>
-            <strong>必點：</strong>特大一條炙燒鰻魚、炙燒比目魚緣側、爆量海膽軍艦、特盛牡丹蝦。
+            <strong>11:00-12:15 澀谷西武百貨 A 館 8 樓：</strong>10:50 抽取第一輪號碼牌，11:00 準時首波入座。必點：整條炙燒穴子星鰻、爆量海膽軍艦、炙燒比目魚緣側、牡丹蝦。
             <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=回し寿司+活+西武渋谷店" target="_blank">📍 Google Maps 活 美登利澀谷</a>
           </div>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">12:45 - 15:00｜🛍️ 新宿京王百貨 一站式專櫃採購與免稅手續</span>
-        <div class="item-content">
-          <span class="std-transit">12:45 JR 山手線「澀谷」3 站直達「新宿站」（6 分鐘，170 日圓），走西口地下通道直通京王百貨。</span>
-          <ul>
-            <li><strong>第 1 站（1 樓專櫃代購）：</strong><strong>肌膚之鑰</strong>買「光采無瑕妝前凝霜 2 支」；旁邊<strong>黛珂</strong>買「AQ 緊緻賦活眼霜 2 罐」。</li>
-            <li><strong>第 2 站（4 樓專櫃取貨）：</strong><strong>朵茉麗蔻專櫃</strong>憑預約領取太太全套保養品。</li>
-            <li><strong>第 3 站（2 樓退稅櫃台）：</strong>合併 1 樓與 4 樓發票、護照辦理免稅手續！</li>
-          </ul>
-          <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=京王百貨店+新宿店" target="_blank">📍 Google Maps 京王百貨新宿店</a>
+        <span class="time-badge">12:15 - 12:40｜🛍️ 水壺採購第一站：澀谷 LOFT 旗艦店</span>
+        <div class="shop-box">
+          出西武百貨步行 2 分鐘進 LOFT 旗艦店，挑選 <strong>Owala 保溫水壺</strong>，享現場外國旅客免稅服務。
+          <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=渋谷ロフト" target="_blank">📍 Google Maps 澀谷 LOFT</a>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">15:15 - 16:00｜🚨 提沉重保養品回民宿封箱（確認 ≤ 25kg）</span>
+        <span class="time-badge">13:15 - 14:45｜🛍️ 🚨 京王百貨專櫃預約履約、代購與退稅（嚴格鎖定不可異動）</span>
         <div class="item-content">
-          <div class="std-transit"><strong>標準交通：</strong>新宿搭都營新宿線至神保町轉三田線回本蓮沼（28 分鐘，提重物轉乘較累）。</div>
-          <div class="taxi-box">
-            <strong>🚕 方案 A（山手線到巢鴨 ➔ 計程車門對門）【推薦高CP值！】：</strong><br>
-            新宿搭山手線 13 分鐘到「巢鴨站」，出站直接搭計程車回民宿（約 3.5 公里，10 分鐘），車資約 1,500～1,800 日圓（<strong>每人僅約 750～900 日圓</strong>）。<br><br>
-            <strong>🚕 方案 B（京王百貨門口叫車直達民宿大門口）：</strong><br>
-            玻璃瓶完全無碰撞，約 10 公里（25～30 分鐘），車資約 3,800～4,200 日圓（每人約 1,900～2,100 日圓）。
+          <span class="std-transit">12:45-13:00 搭乘 JR 山手線僅 3 站（6 分鐘）抵達新宿站，地下連通道直通京王百貨。</span>
+          <div class="shop-box">
+            <ul>
+              <li><strong>一樓專櫃代購：</strong><strong>肌膚之鑰（CPB）</strong>購入光采無瑕妝前凝霜 2 支；<strong>黛珂（DECORTE）</strong>購入 AQ 緊緻賦活眼霜 2 罐。</li>
+              <li><strong>四樓專櫃預約取貨（核心任務）：</strong>準時前往 4 樓 <strong>朵茉麗蔻專櫃</strong>，憑預約憑證提領太太全套精油保養品實物。</li>
+              <li><strong>二樓外國顧客退稅櫃台：</strong>將 1 樓與 4 樓全部單據、發票與護照整合，一次性辦理退稅手續。</li>
+              <li><em>（備案：若中午在澀谷未選中心儀水壺顏色，穿過新宿地下通道至東口站前 Alpen TOKYO 5 樓露營區選購）</em></li>
+            </ul>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=京王百貨店+新宿店" target="_blank">📍 京王百貨新宿店</a>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alpen+TOKYO" target="_blank">📍 備案：Alpen TOKYO</a>
           </div>
-          <strong>重要動作：</strong>把所有保養品、化妝品裝入大行李箱拉好拉鍊，<strong>最終秤重確認在 25kg 以內！</strong>
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">16:30 - 20:00｜✨ 惠比壽花園廣場水晶燈 ➔ 🐟 魚真 惠比壽店</span>
+        <span class="time-badge">15:15 - 16:00｜🚨 護送戰利品返宿與裝箱（計程車方案 A）</span>
         <div class="item-content">
-          <span class="std-transit">16:30 三田線「本蓮沼」➔「巢鴨」轉 JR 山手線直達「惠比壽站」（35 分鐘）。</span><br>
-          <strong>17:15-18:00：</strong>兩手空空漫步紅毯大道，欣賞世界最大級 <strong>Baccarat ETERNAL LIGHTS 2026</strong> 奢華水晶吊燈與聖誕樹。
+          <div class="taxi-box">
+            <strong>🚕 方案 A 接駁（新宿山手線至巢鴨 ➔ 計程車直達民宿）：</strong><br>
+            新宿搭山手線至巢鴨站，出北口跳上排班計程車直達本蓮沼站旁民宿（車資約 1,500～1,800 日圓，<strong>雙人平分每人僅 750～900 日圓</strong>），防碰撞且零體力消耗。
+          </div>
+          <strong>🚨 封箱秤重標準程序：</strong>將全部玻璃瓶保養品、朵茉麗蔻與水壺以 UNIQLO 極暖厚衣物交叉包裹放入 28 吋大箱正中心；使用隨身電子秤實測，<strong>嚴格確認總重控制於 24.0 至 24.5 公斤以內（不超過 25kg 限額）</strong>，拉上拉鍊上鎖！
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="time-badge">16:30 - 20:00｜✨ 惠比壽花園廣場水晶燈 ➔ 🐟 魚真 惠比壽店（冷熱對流享受）</span>
+        <div class="item-content">
+          <span class="std-transit">16:30-17:15 本蓮沼搭三田線至巢鴨轉山手線直達「惠比壽站」，東口搭電動步道 Skywalk 漫步至惠比壽花園廣場。</span><br>
+          <strong>17:15-18:00（先看點燈・拍空景）：</strong>天剛全黑、人潮尚未達峰值時抵達，漫步紅毯大道觀賞世界最大規模 <strong>Baccarat ETERNAL LIGHTS 2026</strong> 奢華水晶吊燈與聖誕真樹。
           <div class="food-box">
-            <strong>18:15-20:00 魚真 惠比壽店（Uoshin Ebisu）：</strong>鮮魚批發商直營老饕名店（17:00～23:30），惠比壽站西口步行 3 分鐘。<br>
-            <strong>必點：</strong>當日現流刺身盛合、鹽烤金目鯛/魚頭（かぶと焼き）、爆汁海膽鮭魚卵手卷、白子橙醋。<br>
-            <strong>20:15 回程：</strong>山手線至巢鴨轉三田線回板橋民宿，早早入睡準備明早返台。
+            <strong>18:15-20:00 魚真 惠比壽店（Uoshin Ebisu）：</strong>戶外微涼賞燈後鑽進溫暖居酒屋，完美避開 17:00 第一輪客滿，剛好承接 18:30 離場空位。<br>
+            <strong>必點推薦：</strong>當日現流刺身盛合、鹽烤金目鯛魚頭、爆漿海膽鮭魚卵手卷、時令白子橙醋佐溫清酒。20:15 後搭車回民宿早早安歇。
             <br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚真+恵比寿店" target="_blank">📍 Google Maps 魚真惠比壽店</a>
           </div>
         </div>
@@ -779,37 +836,40 @@
   <div class="day-card" id="day8">
     <div class="day-header" onclick="toggleDay(this)">
       <div>
-        <div class="day-title">🗓️ Day 8｜2026/12/01（二）退房 ➔ Skyliner 直達成田 T1 ➔ 退稅託運返台</div>
+        <div class="day-title">🗓️ Day 8｜2026/12/01（二）退房 ➔ 計程車直達日暮里 ➔ Skyliner ➔ 成田 T1 先核銷後託運 25kg ➔ 平安返台</div>
         <div class="day-sub">07:30 退房・日暮里飆速36分達成田・先掃KIOSK退稅再託運25kg・酷航TR867</div>
       </div>
       <span class="toggle-icon">▼</span>
     </div>
     <div class="day-body">
       <div class="timeline-item">
-        <span class="time-badge">07:30 - 08:35｜板橋民宿 ➔ 日暮里站 ➔ Skyliner 直達成田 T1</span>
+        <span class="time-badge">07:30 - 08:46｜板橋民宿 ➔ 日暮里站 ➔ Skyliner 直達成田 T1</span>
         <div class="item-content">
-          07:30 推著已封箱 25kg 大行李箱辦理退房。
-          <div class="std-transit"><strong>原大眾運輸段：</strong>本蓮沼搭三田線至巢鴨，拖 25kg 重箱轉山手線至日暮里（早晨尖峰擠電梯較吃力）。</div>
+          07:30 確認室內無遺漏物品，依指示將鑰匙放回密碼箱並上鎖。
           <div class="taxi-box">
-            <strong>🚕 計程車替代方案（民宿門口 ➔ 日暮里站大門口）【強烈推薦！】：</strong><br>
-            07:40 在 Airbnb 門口用 Uber/GO 叫車，司機把 25kg 大箱放後車廂，走明治通り直達「日暮里站東口」（約 8.5～9 公里，20～25 分鐘）。<br>
-            <strong>預估車資：</strong>約 3,200～3,600 日圓（<strong>兩人平分每人僅約 1,600～1,800 日圓</strong>），從容抵達 Skyliner 改札口！
+            <strong>🚕 強烈推薦計程車方案（民宿門口 ➔ 日暮里站東口）：</strong><br>
+            07:40 於民宿門口用 Uber 或 GO App 叫車，司機協助將 25kg 行李箱平穩置入後車廂，經明治通直達「日暮里站東口」（約 8.8 公里，車程約 20～25 分鐘）。<br>
+            <strong>預估車資：</strong>約 3,200～3,600 日圓（<strong>雙人平分每人約 1,600～1,800 日圓，約台幣 350 元</strong>），免除早晨通勤尖峰在巢鴨站等電梯與推大箱轉乘之狼狽！
           </div>
-          <strong>京成電鐵 Skyliner 段：</strong>日暮里站搭 Skyliner（最快 <strong>36 分鐘</strong> 無停靠飆速直達成田機場第一航廈地下月台，票價約 2,570 日圓/人）。
+          <strong>08:10-08:46 京成電鐵 Skyliner：</strong>日暮里站刷票進站搭乘 Skyliner 高速特急，<strong>36 分鐘</strong>無停靠直達成田機場第一航廈地下月台（票價每人約 2,570 日圓）。
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">09:00 - 09:20｜🚨 退稅核心鐵律：切勿先去託運行李！</span>
+        <span class="time-badge">09:00 - 09:20｜🚨 關鍵作業：免稅手續 KIOSK 自助機台核銷（絕對不可先去託運行李）</span>
         <div class="alert-box">
-          08:40 抵達成田 T1 搭大電梯上 4 樓國際線出境大廳，<strong>推大行李箱直奔「免稅手續 KIOSK 自助機台」掃描護照</strong>：<br>
-          🟢 <strong>綠燈通過：</strong>系統自動核准放行！稅款離境後退回信用卡，此時才可去櫃檯託運。<br>
-          🔴 <strong>紅燈查驗：</strong>至海關櫃檯出示保養品實物（單瓶 &gt;100ml 液體不可手提登機），海關蓋章解鎖後拉好拉鍊。
+          08:50 搭航廈大型電梯直升四樓國際線出境大廳，<strong>推著未託運之 25kg 大行李箱直奔海關專區 KIOSK 自助機台掃描護照</strong>：<br>
+          🟢 <strong>綠燈通過：</strong>系統自動審查通過，此時方可前往酷航櫃台託運。<br>
+          🔴 <strong>紅燈查驗：</strong>若遇海關抽檢，因保養品實物仍在身旁箱內，可立即出示受檢解鎖後再託運（單瓶大於 100ml 液體依法不可隨身手提登機）。
         </div>
       </div>
       <div class="timeline-item">
-        <span class="time-badge">09:25 - 11:40｜託運 25kg 戰利品 ➔ 機場午餐＆最後伴手禮 ➔ 酷航返台</span>
+        <span class="time-badge">09:25 - 15:25｜酷航報到託運 ➔ 免稅區午餐與伴手禮 ➔ 酷航 TR 867 返抵桃園</span>
         <div class="item-content">
-          09:25 至 <strong>酷航 TR 867</strong> 櫃檯報到，將裝滿 25kg 戰利品的行李箱送上輸送帶託運；10:15 - 11:40 輕鬆享用機場午餐與採購免稅伴手禮，圓滿返台！
+          <ul>
+            <li><strong>09:25-10:15：</strong>至酷航 TR 867 櫃台出示護照，將 25kg 大行李箱送上行李秤託運並領取登機證。</li>
+            <li><strong>10:15-11:40：</strong>通過安檢與自動通關，於免稅管制區享用現煮熱拉麵或和食，補足 ROYCE 生巧克力等伴手禮，11:40 抵達登機門。</li>
+            <li><strong>12:10 🛫 15:25：</strong>搭乘酷航 <strong>TR 867</strong> 起飛，平安返抵台北桃園機場 T1！</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -820,8 +880,7 @@
 <button class="floating-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到頂部">↑</button>
 
 <script>
-  // LocalStorage 儲存勾選狀態
-  const STORAGE_KEY = 'tokyo_2026_checklist_v1';
+  const STORAGE_KEY = 'tokyo_2026_checklist_v4';
   function loadChecks() {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
@@ -842,7 +901,6 @@
     } catch (e) {}
   }
 
-  // 一鍵複製地址
   function copyAddr(btn, text) {
     navigator.clipboard.writeText(text).then(() => {
       const orig = btn.textContent;
@@ -853,11 +911,10 @@
         btn.classList.remove('copied');
       }, 1800);
     }).catch(() => {
-      prompt('請長按複製以下地址：', text);
+      prompt('請長按複製以下資訊：', text);
     });
   }
 
-  // 展開/收合單日
   function toggleDay(header) {
     header.closest('.day-card').classList.toggle('collapsed');
   }
@@ -867,19 +924,17 @@
     });
   }
 
-  // 切換只看計程車方案
   function toggleTaxiOnly() {
     document.body.classList.toggle('taxi-only');
     document.getElementById('btnTaxiFilter').classList.toggle('active');
   }
 
-  // 滾動自動高亮導覽列
   const navLinks = document.querySelectorAll('.day-tab');
   const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
   window.addEventListener('scroll', () => {
     let current = sections[0]?.id;
     for (const sec of sections) {
-      if (sec.getBoundingClientRect().top <= 170) {
+      if (sec.getBoundingClientRect().top <= 165) {
         current = sec.id;
       }
     }
@@ -889,6 +944,18 @@
   }, { passive: true });
 
   loadChecks();
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW registration failed:', err));
+    });
+  }
+  function updateOnlineStatus() {
+    document.body.classList.toggle('is-offline', !navigator.onLine);
+  }
+  window.addEventListener('online', updateOnlineStatus);
+  window.addEventListener('offline', updateOnlineStatus);
+  updateOnlineStatus();
 </script>
 </body>
 </html>

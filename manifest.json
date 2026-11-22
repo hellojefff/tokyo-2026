@@ -1,0 +1,24 @@
+{
+  "name": "2026 東京深秋・8天7夜隨身手冊",
+  "short_name": "東京秋旅手冊",
+  "description": "11/24–12/01 東京深秋減法美學定案版：九品佛禪意、藏前水岸、丸之內至銀座慢步與雙軌交通手冊",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#9a3412",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
