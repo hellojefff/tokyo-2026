@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v10 三語定案版)</title>
+<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v11 智慧隨行版)</title>
 <meta name="theme-color" content="#9a3412">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -497,6 +497,234 @@
   .modal-btn-primary { background: #b85d19; color: #fff; }
   .modal-btn-map { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
   .modal-btn-copy { background: #f3f4f6; color: #1f2937; border: 1px solid #d1d5db; }
+
+  /* v11 Weather, Traffic & Tax/Receipt Styles */
+  .weather-card {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+    border: 1px solid #fed7aa;
+    font-size: 0.84rem;
+  }
+  .weather-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .weather-locs {
+    display: inline-flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .w-loc-btn {
+    background: #fff;
+    border: 1px solid #fdba74;
+    color: #9a3412;
+    padding: 3px 9px;
+    border-radius: 14px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .w-loc-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+  .w-refresh-btn {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .weather-now {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .weather-main-temp {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #7c2d12;
+  }
+  .weather-meta {
+    font-size: 0.79rem;
+    color: #4b5563;
+  }
+  .weather-tip {
+    margin-top: 6px;
+    padding: 5px 9px;
+    background: #fef3c7;
+    color: #92400e;
+    border-radius: 8px;
+    font-size: 0.77rem;
+    font-weight: 600;
+  }
+  .day-weather-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #fff;
+    border: 1px solid #fdba74;
+    color: #9a3412;
+    font-size: 0.73rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 12px;
+    margin-top: 4px;
+  }
+  .modal-card.wide { max-width: 540px; }
+  .section-box {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 11px 12px;
+    margin-bottom: 12px;
+    font-size: 0.83rem;
+  }
+  .section-box h4 {
+    font-size: 0.88rem;
+    color: #7c2d12;
+    margin-bottom: 8px;
+  }
+  .traffic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .traffic-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    background: #fff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+  .traffic-link:active { background: #f3f4f6; }
+  .form-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .form-input, .form-select {
+    flex: 1 1 110px;
+    padding: 7px 9px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.84rem;
+    background: #fff;
+    color: #111827;
+  }
+  .calc-result {
+    background: #ecfdf5;
+    border: 1px solid #6ee7b7;
+    border-radius: 8px;
+    padding: 9px 11px;
+    color: #065f46;
+    font-size: 0.82rem;
+    margin-top: 6px;
+  }
+  .calc-result.warn {
+    background: #fffbeb;
+    border-color: #fcd34d;
+    color: #92400e;
+  }
+  .scan-btn-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 9px 12px;
+    background: linear-gradient(135deg, #9a3412 0%, #d97706 100%);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 8px;
+  }
+  .receipt-item {
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 9px 10px;
+    margin-bottom: 8px;
+    font-size: 0.8rem;
+  }
+  .receipt-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .receipt-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    align-items: center;
+  }
+  .tag-btn {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 3px 7px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: #374151;
+  }
+  .tag-btn.on {
+    background: #dcfce7;
+    border-color: #86efac;
+    color: #166534;
+  }
+  .tag-btn.bag {
+    background: #eff6ff;
+    border-color: #bfdbfe;
+    color: #1d4ed8;
+  }
+  .tag-btn.del {
+    margin-left: auto;
+    color: #b91c1c;
+    background: #fef2f2;
+    border-color: #fecaca;
+  }
+  .summary-bar {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    background: #fdf2e9;
+    border: 1px solid #fed7aa;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 0.79rem;
+    font-weight: 700;
+    color: #7c2d12;
+    margin-bottom: 10px;
+  }
+
 </style>
 </head>
 <body>
@@ -518,6 +746,8 @@
     <button class="btn-pill" id="btnTaxiFilter" onclick="toggleTaxiOnly()">🚕 只看計程車替代</button>
     <button class="btn-pill" id="btnExpandAll" onclick="toggleAllDays(false)">📂 全部展開</button>
     <button class="btn-pill" id="btnCollapseAll" onclick="toggleAllDays(true)">📁 全部收合</button>
+    <button class="btn-pill" id="btnTraffic" onclick="openTrafficModal()">🚦 路況</button>
+    <button class="btn-pill" id="btnTax" onclick="openTaxModal()">🧾 退稅/收據</button>
   </div>
 </header>
 
@@ -534,6 +764,7 @@
 </nav>
 
 <div class="container">
+  <div id="weatherArea"></div>
   <div id="quickInfoArea"></div>
   <div id="checklistArea"></div>
   <div id="itineraryArea"></div>
@@ -552,6 +783,29 @@
     <div class="modal-spec-box" id="mSpecs"></div>
     <div class="modal-store-box" id="mStore"></div>
     <div class="modal-actions" id="mActions"></div>
+  </div>
+</div>
+
+
+<!-- 即時路況戰情彈窗 -->
+<div class="modal-backdrop" id="trafficModal" onclick="if(event.target===this) closeTrafficModal()">
+  <div class="modal-card wide">
+    <div class="modal-header">
+      <div class="modal-title" id="tModalTitle">🚦 即時路況與鐵路運行狀態</div>
+      <button type="button" class="modal-close" onclick="closeTrafficModal()">✕</button>
+    </div>
+    <div id="trafficModalBody"></div>
+  </div>
+</div>
+
+<!-- 退稅計算機＆收據掃描彈窗 -->
+<div class="modal-backdrop" id="taxModal" onclick="if(event.target===this) closeTaxModal()">
+  <div class="modal-card wide">
+    <div class="modal-header">
+      <div class="modal-title" id="xModalTitle">🧾 2026/11 新制退稅計算 ＆ 收據掃描</div>
+      <button type="button" class="modal-close" onclick="closeTaxModal()">✕</button>
+    </div>
+    <div id="taxModalBody"></div>
   </div>
 </div>
 
@@ -582,7 +836,7 @@
 
   const I18N = {
     zh: {
-      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v10 三語定案版)",
+      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v11 智慧隨行版)",
       offline: "📴 目前為離線模式（已從手機快取載入完整行程與車站導航）",
       title: "🍁 2026 東京深秋・8天7夜隨身手冊",
       subtitle: "11/24(二) – 12/01(二)｜減法美學・九品佛禪意・藏前水岸・丸之內至銀座慢步",
@@ -1326,7 +1580,7 @@
   };
 
   let currentLang = localStorage.getItem('tokyo_2026_lang') || 'zh';
-  const STORAGE_KEY = 'tokyo_2026_checklist_v10';
+  const STORAGE_KEY = 'tokyo_2026_checklist_v11';
 
   function setLang(lang) {
     if (!I18N[lang]) lang = 'zh';
@@ -1497,6 +1751,476 @@
   window.addEventListener('online', updateOnlineStatus);
   window.addEventListener('offline', updateOnlineStatus);
   updateOnlineStatus();
+
+  // ===== v11: Weather, Traffic, Tax-Free & AI Receipt Scanner =====
+  const V11_I18N = {"zh": {"trafficBtn": "🚦 路況", "taxBtn": "🧾 退稅/收據", "wLocs": {"itabashi": "板橋民宿", "shinjuku": "新宿/澀谷", "hadano": "秦野(D2)"}, "wRefresh": "🔄 更新", "wLoading": "正在載入東京即時天氣...", "wOffline": "離線顯示快取天氣", "wUpdated": "更新：", "wFeels": "體感", "wRain": "降雨", "wTipCold": "🧥 氣溫低於 10°C，建議加穿 UNIQLO 極暖發熱衣與防風外套。", "wTipCool": "🧣 深秋微涼（10–16°C），洋蔥式穿搭＋輕便圍巾最舒適。", "wTipMild": "🌤️ 氣候溫和舒適，適合長時間銀杏散步！", "wTipRain": "☔ 今日降雨機率較高，出門記得帶摺疊傘。", "wCodes": {"0": "☀️ 晴朗", "1": "🌤️ 晴時多雲", "2": "⛅ 多雲", "3": "☁️ 陰天", "45": "🌫️ 霧", "51": "🌦️ 毛毛雨", "61": "🌧️ 小雨", "63": "🌧️ 中雨", "65": "🌧️ 大雨", "80": "🌦️ 陣雨", "95": "⛈️ 雷雨"}, "tTitle": "🚦 東京即時路況與鐵路運行狀態", "tRailTitle": "🚃 4 條主力鐵路官方即時運行狀態（點選直達）", "tTaxiTitle": "🚕 行程關鍵計程車路線（點開看 Google Maps 即時車流）", "tNote": "💡 離線時無法查詢即時路況，建議出門前連 Wi-Fi 或行動網路點開確認。", "xTitle": "🧾 2026/11 新制退稅計算 ＆ 收據掃描", "xCalcTitle": "🧮 結帳前免稅試算器（2026/11 新制：全品項合併未稅滿 ¥5,000）", "xAmountPh": "輸入含稅金額 (¥)", "xRateLbl": "匯率(TWD)", "xFeeLbl": "手續費(%)", "xNeedMore": "還差 ¥{diff}（未稅）達免稅門檻！", "xEligible": "✅ 已達免稅門檻！預估退稅 ¥{ref}（約 NT$ {refTwd}）｜實付約 ¥{net}（NT$ {netTwd}）", "xScanTitle": "📷 AI 掃描收據 / 手動記帳（僅存文字，不佔手機空間）", "xKeyPh": "貼上 Gemini API Key（僅存於本機，不上傳 GitHub）", "xSaveKey": "儲存 Key", "xKeySaved": "已儲存 ✓", "xScanBtn": "📸 拍照或選取收據（gemini-flash-latest 自動解析）", "xScanning": "⏳ AI 正在辨識收據內容...", "xNoKeyWarn": "尚未設定 Gemini API Key 或目前離線，可直接於下方手動輸入。", "xManualAdd": "➕ 手動新增收據", "xStorePh": "店名（如：UNIQLO 御徒町）", "xItemsPh": "品項摘要（如：極暖發熱衣×4）", "xPlatformPh": "退稅平台/備註（如：京王2F / J-TaxRefund）", "xAddBtn": "加入清單", "xSumSpent": "總花費", "xSumRefund": "預估總退稅", "xSumReg": "已登錄", "xRegOn": "✅ 已登錄退稅", "xRegOff": "⬜ 未登錄退稅", "xBagCheck": "🧳 託運大箱", "xBagCarry": "🎒 隨身手提", "xEmpty": "尚無收據紀錄。買完東西拍一張或手動輸入，Day 8 成田海關核銷一秒對帳！"}, "ja": {"trafficBtn": "🚦 運行・渋滞", "taxBtn": "🧾 免税・領収書", "wLocs": {"itabashi": "板橋(宿)", "shinjuku": "新宿/渋谷", "hadano": "秦野(D2)"}, "wRefresh": "🔄 更新", "wLoading": "東京の天気を取得中...", "wOffline": "オフライン（キャッシュ表示）", "wUpdated": "更新：", "wFeels": "体感", "wRain": "降水", "wTipCold": "🧥 10°C未満の冷え込み。極暖インナーと防風アウター推奨。", "wTipCool": "🧣 晩秋らしい肌寒さ（10–16°C）。重ね着が快適です。", "wTipMild": "🌤️ 過ごしやすい気候でいちょう散策に最適です！", "wTipRain": "☔ 降水確率が高めです。折りたたみ傘をお持ちください。", "wCodes": {"0": "☀️ 快晴", "1": "🌤️ 晴れ", "2": "⛅ 一部曇り", "3": "☁️ 曇り", "45": "🌫️ 霧", "51": "🌦️ 霧雨", "61": "🌧️ 小雨", "63": "🌧️ 雨", "65": "🌧️ 大雨", "80": "🌦️ にわか雨", "95": "⛈️ 雷雨"}, "tTitle": "🚦 鉄道運行情報 ＆ 道路渋滞ナビ", "tRailTitle": "🚃 利用4路線の公式運行状況", "tTaxiTitle": "🚕 タクシー移動ルートのリアルタイム渋滞（Googleマップ）", "tNote": "💡 オフライン時は確認できません。出発前にオンラインでご確認ください。", "xTitle": "🧾 2026年11月新制度 免税計算 ＆ レシート管理", "xCalcTitle": "🧮 免税シミュレーター（合算・税抜 ¥5,000以上）", "xAmountPh": "税込金額を入力 (¥)", "xRateLbl": "為替(TWD)", "xFeeLbl": "手数料(%)", "xNeedMore": "免税まであと ¥{diff}（税抜）不足しています", "xEligible": "✅ 免税対象！還付目安 ¥{ref}（約 NT$ {refTwd}）｜実質 ¥{net}（NT$ {netTwd}）", "xScanTitle": "📷 AIレシート読取 / 手動記録（テキストのみ保存）", "xKeyPh": "Gemini APIキー（端末のlocalStorageのみに保存）", "xSaveKey": "保存", "xKeySaved": "保存済 ✓", "xScanBtn": "📸 レシート撮影・選択（AI自動解析）", "xScanning": "⏳ AIがレシートを解析中...", "xNoKeyWarn": "APIキー未設定またはオフラインのため、手動入力をご利用ください。", "xManualAdd": "➕ 手動でレシート追加", "xStorePh": "店舗名（例：ユニクロ 御徒町）", "xItemsPh": "購入品メモ（例：極暖ヒートテック×4）", "xPlatformPh": "免税手続き場所・メモ（例：京王2F）", "xAddBtn": "リストに追加", "xSumSpent": "合計金額", "xSumRefund": "還付見込", "xSumReg": "登録済", "xRegOn": "✅ 免税登録済", "xRegOff": "⬜ 未登録", "xBagCheck": "🧳 預けスーツケース", "xBagCarry": "🎒 機内持込", "xEmpty": "レシート記録はまだありません。成田税関KIOSK確認用に記録しましょう。"}, "en": {"trafficBtn": "🚦 Traffic", "taxBtn": "🧾 Tax/Receipts", "wLocs": {"itabashi": "Itabashi", "shinjuku": "Shinjuku", "hadano": "Hadano(D2)"}, "wRefresh": "🔄 Refresh", "wLoading": "Loading Tokyo weather...", "wOffline": "Offline (Cached Weather)", "wUpdated": "Updated: ", "wFeels": "Feels", "wRain": "Rain", "wTipCold": "🧥 Under 10°C — wear UNIQLO Extra Warm HEATTECH & windproof coat.", "wTipCool": "🧣 Crisp autumn weather (10–16°C) — layers & light scarf recommended.", "wTipMild": "🌤️ Mild and pleasant — ideal for ginkgo foliage walks!", "wTipRain": "☔ High chance of rain today — pack a folding umbrella.", "wCodes": {"0": "☀️ Clear", "1": "🌤️ Mainly Clear", "2": "⛅ Partly Cloudy", "3": "☁️ Overcast", "45": "🌫️ Fog", "51": "🌦️ Drizzle", "61": "🌧️ Light Rain", "63": "🌧️ Rain", "65": "🌧️ Heavy Rain", "80": "🌦️ Showers", "95": "⛈️ Thunderstorm"}, "tTitle": "🚦 Live Transit Status & Taxi Traffic", "tRailTitle": "🚃 4 Key Railway Lines Official Live Status", "tTaxiTitle": "🚕 Key Taxi Routes (Live Traffic on Google Maps)", "tNote": "💡 Requires internet connection. Check right before heading out.", "xTitle": "🧾 Nov 2026 Tax-Free Calculator & Receipt Scanner", "xCalcTitle": "🧮 Tax-Free Estimator (Nov 2026 Rules: Combined ¥5,000+ ex-tax)", "xAmountPh": "Tax-incl. amount (¥)", "xRateLbl": "FX (TWD)", "xFeeLbl": "Fee (%)", "xNeedMore": "Need ¥{diff} more (ex-tax) to qualify for tax-free!", "xEligible": "✅ Eligible! Est. Refund ¥{ref} (~NT$ {refTwd}) | Net ¥{net} (NT$ {netTwd})", "xScanTitle": "📷 AI Receipt Scan / Manual Ledger (Text-only storage)", "xKeyPh": "Gemini API Key (saved locally on device only)", "xSaveKey": "Save Key", "xKeySaved": "Saved ✓", "xScanBtn": "📸 Scan / Upload Receipt (gemini-flash-latest)", "xScanning": "⏳ AI is reading the receipt...", "xNoKeyWarn": "No API Key or offline — use manual entry below.", "xManualAdd": "➕ Add Receipt Manually", "xStorePh": "Store (e.g. UNIQLO Okachimachi)", "xItemsPh": "Items summary (e.g. HEATTECH ×4)", "xPlatformPh": "Tax-free platform / note (e.g. Keio 2F)", "xAddBtn": "Add to List", "xSumSpent": "Total Spent", "xSumRefund": "Est. Refund", "xSumReg": "Registered", "xRegOn": "✅ Registered", "xRegOff": "⬜ Not Reg.", "xBagCheck": "🧳 Checked Bag", "xBagCarry": "🎒 Carry-on", "xEmpty": "No receipts yet. Scan or add receipts for fast Narita Customs verification!"}};
+  const WEATHER_LOCS = {
+    itabashi: { lat: 35.7640, lon: 139.7010 },
+    shinjuku: { lat: 35.6895, lon: 139.6917 },
+    hadano:   { lat: 35.3744, lon: 139.2244 }
+  };
+  const TRIP_DATES = {
+    day1: '2026-11-24', day2: '2026-11-25', day3: '2026-11-26', day4: '2026-11-27',
+    day5: '2026-11-28', day6: '2026-11-29', day7: '2026-11-30', day8: '2026-12-01'
+  };
+  let currentWLoc = localStorage.getItem('tokyo_2026_wloc') || 'itabashi';
+  let weatherCache = null;
+  try { weatherCache = JSON.parse(localStorage.getItem('tokyo_2026_weather_v11') || 'null'); } catch(e) {}
+
+  function mapWmoCode(code) {
+    const map = V11_I18N[currentLang].wCodes;
+    if (code === 0) return map['0'];
+    if (code === 1) return map['1'];
+    if (code === 2) return map['2'];
+    if (code === 3) return map['3'];
+    if (code >= 45 && code <= 48) return map['45'];
+    if (code >= 51 && code <= 57) return map['51'];
+    if (code === 61 || code === 66) return map['61'];
+    if (code === 63) return map['63'];
+    if (code === 65 || code === 67) return map['65'];
+    if (code >= 80 && code <= 82) return map['80'];
+    if (code >= 95) return map['95'];
+    return map['2'];
+  }
+
+  async function fetchWeather(force) {
+    const loc = WEATHER_LOCS[currentWLoc] || WEATHER_LOCS.itabashi;
+    const now = Date.now();
+    if (!force && weatherCache && weatherCache.loc === currentWLoc && (now - weatherCache.ts) < 1800000) {
+      renderWeather();
+      injectDayWeatherBadges();
+      return;
+    }
+    if (!navigator.onLine) {
+      renderWeather();
+      injectDayWeatherBadges();
+      return;
+    }
+    try {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&current=temperature_2m,apparent_temperature,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=10`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      weatherCache = { loc: currentWLoc, ts: now, data };
+      localStorage.setItem('tokyo_2026_weather_v11', JSON.stringify(weatherCache));
+    } catch (e) {
+      console.log('Weather fetch fallback:', e);
+    }
+    renderWeather();
+    injectDayWeatherBadges();
+  }
+
+  function setWeatherLoc(loc) {
+    currentWLoc = loc;
+    localStorage.setItem('tokyo_2026_wloc', loc);
+    fetchWeather(true);
+  }
+
+  function renderWeather() {
+    const el = document.getElementById('weatherArea');
+    if (!el) return;
+    const w = V11_I18N[currentLang];
+    const locBtns = ['itabashi', 'shinjuku', 'hadano'].map(k =>
+      `<button type="button" class="w-loc-btn ${currentWLoc === k ? 'active' : ''}" onclick="setWeatherLoc('${k}')">${w.wLocs[k]}</button>`
+    ).join('');
+
+    if (!weatherCache || !weatherCache.data || !weatherCache.data.current) {
+      el.innerHTML = `<div class="weather-card"><div class="weather-top"><div class="weather-locs">${locBtns}</div><button type="button" class="w-refresh-btn" onclick="fetchWeather(true)">${w.wRefresh}</button></div><div class="weather-meta">${w.wLoading}</div></div>`;
+      return;
+    }
+    const cur = weatherCache.data.current;
+    const daily = weatherCache.data.daily;
+    const temp = Math.round(cur.temperature_2m);
+    const feels = Math.round(cur.apparent_temperature);
+    const rain0 = daily && daily.precipitation_probability_max ? daily.precipitation_probability_max[0] : 0;
+    const tMin0 = daily ? Math.round(daily.temperature_2m_min[0]) : temp;
+    const tMax0 = daily ? Math.round(daily.temperature_2m_max[0]) : temp;
+    const dt = new Date(weatherCache.ts);
+    const timeStr = `${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
+    let tip = temp < 10 ? w.wTipCold : (temp <= 16 ? w.wTipCool : w.wTipMild);
+    if (rain0 >= 40) tip = w.wTipRain;
+
+    el.innerHTML = `
+      <div class="weather-card">
+        <div class="weather-top">
+          <div class="weather-locs">${locBtns}</div>
+          <button type="button" class="w-refresh-btn" onclick="fetchWeather(true)">${w.wRefresh} ${timeStr}</button>
+        </div>
+        <div class="weather-now">
+          <div>
+            <span class="weather-main-temp">${mapWmoCode(cur.weather_code)} ${temp}°C</span>
+          </div>
+          <div class="weather-meta">
+            ${w.wFeels} ${feels}°C ｜ ${tMin0}°–${tMax0}°C ｜ 💧${w.wRain} ${rain0}%
+          </div>
+        </div>
+        <div class="weather-tip">${tip}</div>
+      </div>`;
+  }
+
+  function injectDayWeatherBadges() {
+    if (!weatherCache || !weatherCache.data || !weatherCache.data.daily) return;
+    const daily = weatherCache.data.daily;
+    const times = daily.time || [];
+    Object.keys(TRIP_DATES).forEach(dayId => {
+      const card = document.getElementById(dayId);
+      if (!card) return;
+      const sub = card.querySelector('.day-sub');
+      if (!sub) return;
+      const old = card.querySelector('.day-weather-badge');
+      if (old) old.remove();
+      const idx = times.indexOf(TRIP_DATES[dayId]);
+      if (idx !== -1) {
+        const icon = mapWmoCode(daily.weather_code[idx]);
+        const lo = Math.round(daily.temperature_2m_min[idx]);
+        const hi = Math.round(daily.temperature_2m_max[idx]);
+        const rain = daily.precipitation_probability_max[idx];
+        const badge = document.createElement('div');
+        badge.className = 'day-weather-badge';
+        badge.textContent = `${icon} ${lo}°–${hi}°C · 💧${rain}%`;
+        sub.insertAdjacentElement('afterend', badge);
+      }
+    });
+  }
+
+  // --- Traffic Modal ---
+  function openTrafficModal() {
+    const w = V11_I18N[currentLang];
+    document.getElementById('tModalTitle').textContent = w.tTitle;
+    document.getElementById('trafficModalBody').innerHTML = `
+      <div class="section-box">
+        <h4>${w.tRailTitle}</h4>
+        <div class="traffic-grid">
+          <a class="traffic-link" href="https://www.kotsu.metro.tokyo.jp/subway/schedule/index.html" target="_blank">🚇 都營地鐵（三田/大江戶）</a>
+          <a class="traffic-link" href="https://traininfo.jreast.co.jp/train_info/kanto.aspx" target="_blank">🚆 JR 東日本（山手線）</a>
+          <a class="traffic-link" href="https://www.odakyu.jp/cgi-bin/user/emg/emergency_bbs.pl" target="_blank">🚄 小田急線（D2 秦野）</a>
+          <a class="traffic-link" href="https://www.keisei.co.jp/keisei/tetudou/unkou/unkou.php" target="_blank">✈️ 京成 Skyliner（D8）</a>
+        </div>
+      </div>
+      <div class="section-box">
+        <h4>${w.tTaxiTitle}</h4>
+        <div class="traffic-grid">
+          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=東京駅日本橋口&destination=本蓮沼駅&travelmode=driving" target="_blank">🚕 D1 東京站 ➔ 民宿</a>
+          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=巣鴨駅北口&destination=本蓮沼駅&travelmode=driving" target="_blank">🚕 D2/D7 巢鴨 ➔ 民宿</a>
+          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=表参道駅&destination=六本木ヒルズ森タワー&travelmode=driving" target="_blank">🚕 D3 表參道 ➔ 六本木</a>
+          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=東京大学赤門&destination=黒毛和牛すき焼き日本橋一厘&travelmode=driving" target="_blank">🚕 D4 赤門 ➔ 日本橋一厘</a>
+          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=大衆割烹田や十条&destination=本蓮沼駅&travelmode=driving" target="_blank">🚕 D6 十條田や ➔ 民宿</a>
+          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=本蓮沼駅&destination=日暮里駅東口&travelmode=driving" target="_blank">🚕 D8 民宿 ➔ 日暮里東口</a>
+        </div>
+      </div>
+      <div style="font-size:0.77rem;color:#6b7280;">${w.tNote}</div>
+    `;
+    document.getElementById('trafficModal').classList.add('open');
+  }
+  function closeTrafficModal() {
+    document.getElementById('trafficModal').classList.remove('open');
+  }
+
+  // --- Tax-Free Calculator & AI Receipt Scanner ---
+  const RECEIPT_KEY = 'tokyo_2026_receipts_v11';
+  const FX_KEY = 'tokyo_2026_fx_v11';
+  const GEMINI_KEY_STORAGE = 'tokyo_2026_gemini_key';
+
+  function getReceipts() {
+    try { return JSON.parse(localStorage.getItem(RECEIPT_KEY) || '[]'); } catch(e) { return []; }
+  }
+  function saveReceipts(list) {
+    localStorage.setItem(RECEIPT_KEY, JSON.stringify(list));
+  }
+  function getFx() {
+    return parseFloat(localStorage.getItem(FX_KEY) || '0.215') || 0.215;
+  }
+
+  function openTaxModal() {
+    const w = V11_I18N[currentLang];
+    const fx = getFx();
+    const apiKey = localStorage.getItem(GEMINI_KEY_STORAGE) || '';
+    document.getElementById('xModalTitle').textContent = w.xTitle;
+    document.getElementById('taxModalBody').innerHTML = `
+      <div class="section-box">
+        <h4>${w.xCalcTitle}</h4>
+        <div class="form-row">
+          <input type="number" id="calcAmt" class="form-input" placeholder="${w.xAmountPh}" oninput="updateTaxCalc()">
+          <select id="calcTaxRate" class="form-select" style="flex:0 0 92px;" onchange="updateTaxCalc()">
+            <option value="10">10%</option>
+            <option value="8">8%</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label style="font-size:0.76rem;color:#4b5563;">${w.xFeeLbl}</label>
+          <input type="number" id="calcFee" class="form-input" value="0" step="0.05" style="flex:0 0 72px;" oninput="updateTaxCalc()">
+          <button type="button" class="tag-btn" onclick="document.getElementById('calcFee').value='0';updateTaxCalc()">0%</button>
+          <button type="button" class="tag-btn" onclick="document.getElementById('calcFee').value='1.55';updateTaxCalc()">1.55%</button>
+          <label style="font-size:0.76rem;color:#4b5563;margin-left:auto;">${w.xRateLbl}</label>
+          <input type="number" id="calcFx" class="form-input" value="${fx}" step="0.001" style="flex:0 0 74px;" onchange="localStorage.setItem(FX_KEY,this.value);updateTaxCalc();renderReceipts();">
+        </div>
+        <div id="calcOutput"></div>
+      </div>
+
+      <div class="section-box">
+        <h4>${w.xScanTitle}</h4>
+        <div class="form-row">
+          <input type="password" id="geminiApiKey" class="form-input" value="${apiKey}" placeholder="${w.xKeyPh}">
+          <button type="button" class="copy-btn" onclick="saveGeminiKey(this)">${w.xSaveKey}</button>
+        </div>
+        <label class="scan-btn-label">
+          <span id="scanBtnText">${w.xScanBtn}</span>
+          <input type="file" id="receiptFileInput" accept="image/*" capture="environment" style="display:none;" onchange="handleReceiptScan(this)">
+        </label>
+        <div id="scanStatus" style="font-size:0.78rem;color:#92400e;margin-bottom:6px;"></div>
+
+        <details id="manualReceiptBox" style="margin-top:4px;">
+          <summary style="cursor:pointer;font-weight:700;color:#9a3412;font-size:0.81rem;margin-bottom:6px;">${w.xManualAdd}</summary>
+          <div class="form-row">
+            <input type="text" id="rStore" class="form-input" placeholder="${w.xStorePh}">
+            <input type="number" id="rTotal" class="form-input" style="flex:0 0 110px;" placeholder="¥">
+          </div>
+          <div class="form-row">
+            <input type="text" id="rItems" class="form-input" placeholder="${w.xItemsPh}">
+            <select id="rTax" class="form-select" style="flex:0 0 80px;"><option value="10">10%</option><option value="8">8%</option></select>
+          </div>
+          <div class="form-row">
+            <input type="text" id="rPlatform" class="form-input" placeholder="${w.xPlatformPh}">
+            <button type="button" class="copy-btn" onclick="addManualReceipt()">${w.xAddBtn}</button>
+          </div>
+        </details>
+      </div>
+
+      <div id="receiptSummary"></div>
+      <div id="receiptList"></div>
+    `;
+    updateTaxCalc();
+    renderReceipts();
+    document.getElementById('taxModal').classList.add('open');
+  }
+
+  function closeTaxModal() {
+    document.getElementById('taxModal').classList.remove('open');
+  }
+
+  function saveGeminiKey(btn) {
+    const val = (document.getElementById('geminiApiKey').value || '').trim();
+    localStorage.setItem(GEMINI_KEY_STORAGE, val);
+    const w = V11_I18N[currentLang];
+    btn.textContent = w.xKeySaved;
+    btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = w.xSaveKey; btn.classList.remove('copied'); }, 1500);
+  }
+
+  function calcTaxNumbers(totalJpy, taxRate, feePct) {
+    const exTax = totalJpy / (1 + taxRate / 100);
+    const rawTax = totalJpy - exTax;
+    const fee = exTax * (feePct / 100);
+    const refund = Math.max(0, Math.round(rawTax - fee));
+    const eligible = exTax >= 5000;
+    const diff = Math.max(0, Math.ceil(5000 - exTax));
+    return { exTax: Math.round(exTax), refund, eligible, diff, net: totalJpy - refund };
+  }
+
+  function updateTaxCalc() {
+    const out = document.getElementById('calcOutput');
+    if (!out) return;
+    const amt = parseFloat(document.getElementById('calcAmt').value || '0');
+    if (!amt || amt <= 0) { out.innerHTML = ''; return; }
+    const taxRate = parseFloat(document.getElementById('calcTaxRate').value || '10');
+    const feePct = parseFloat(document.getElementById('calcFee').value || '0') || 0;
+    const fx = parseFloat(document.getElementById('calcFx').value || getFx()) || 0.215;
+    const r = calcTaxNumbers(amt, taxRate, feePct);
+    const w = V11_I18N[currentLang];
+    if (!r.eligible) {
+      out.innerHTML = `<div class="calc-result warn">${w.xNeedMore.replace('{diff}', r.diff.toLocaleString())}</div>`;
+    } else {
+      const msg = w.xEligible
+        .replace('{ref}', r.refund.toLocaleString())
+        .replace('{refTwd}', Math.round(r.refund * fx).toLocaleString())
+        .replace('{net}', r.net.toLocaleString())
+        .replace('{netTwd}', Math.round(r.net * fx).toLocaleString());
+      out.innerHTML = `<div class="calc-result">${msg}</div>`;
+    }
+  }
+
+  function compressImageToBase64(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const maxDim = 1024;
+          let w = img.width, h = img.height;
+          if (w > maxDim || h > maxDim) {
+            if (w > h) { h = Math.round(h * maxDim / w); w = maxDim; }
+            else { w = Math.round(w * maxDim / h); h = maxDim; }
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = w; canvas.height = h;
+          canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+          const dataUrl = canvas.toDataURL('image/jpeg', 0.78);
+          resolve(dataUrl.split(',')[1]);
+        };
+        img.onerror = reject;
+        img.src = e.target.result;
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function handleReceiptScan(input) {
+    const file = input.files && input.files[0];
+    if (!file) return;
+    const w = V11_I18N[currentLang];
+    const statusEl = document.getElementById('scanStatus');
+    const apiKey = (localStorage.getItem(GEMINI_KEY_STORAGE) || '').trim();
+    if (!apiKey || !navigator.onLine) {
+      statusEl.textContent = w.xNoKeyWarn;
+      document.getElementById('manualReceiptBox').open = true;
+      input.value = '';
+      return;
+    }
+    statusEl.textContent = w.xScanning;
+    try {
+      const b64 = await compressImageToBase64(file);
+      const prompt = 'Extract this Japanese shopping receipt into strict JSON only (no markdown): {"store":"string","date":"YYYY-MM-DD","items":"short summary","total_jpy":number,"tax_rate":10 or 8,"platform":"tax-free note if any or empty string"}.';
+      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${encodeURIComponent(apiKey)}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }],
+          generationConfig: { responseMimeType: 'application/json' }
+        })
+      });
+      if (!res.ok) throw new Error('API HTTP ' + res.status);
+      const json = await res.json();
+      const rawText = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
+      const parsed = JSON.parse(rawText.replace(/```json|```/g, '').trim());
+      const total = parseInt(parsed.total_jpy, 10) || 0;
+      const taxRate = parsed.tax_rate === 8 ? 8 : 10;
+      const list = getReceipts();
+      list.unshift({
+        id: Date.now(),
+        store: parsed.store || 'Tokyo Store',
+        date: parsed.date || new Date().toISOString().slice(0,10),
+        items: parsed.items || '',
+        total,
+        taxRate,
+        platform: parsed.platform || '',
+        registered: false,
+        bag: 'checked'
+      });
+      saveReceipts(list);
+      statusEl.textContent = '✅ ' + (parsed.store || 'OK') + ' ¥' + total.toLocaleString();
+      renderReceipts();
+    } catch (err) {
+      statusEl.textContent = '⚠️ ' + err.message + ' — ' + w.xNoKeyWarn;
+      document.getElementById('manualReceiptBox').open = true;
+    }
+    input.value = '';
+  }
+
+  function addManualReceipt() {
+    const store = (document.getElementById('rStore').value || '').trim();
+    const total = parseInt(document.getElementById('rTotal').value || '0', 10);
+    if (!store || !total) return;
+    const items = (document.getElementById('rItems').value || '').trim();
+    const taxRate = parseInt(document.getElementById('rTax').value || '10', 10);
+    const platform = (document.getElementById('rPlatform').value || '').trim();
+    const list = getReceipts();
+    list.unshift({
+      id: Date.now(),
+      store,
+      date: new Date().toISOString().slice(0,10),
+      items,
+      total,
+      taxRate,
+      platform,
+      registered: false,
+      bag: 'checked'
+    });
+    saveReceipts(list);
+    document.getElementById('rStore').value = '';
+    document.getElementById('rTotal').value = '';
+    document.getElementById('rItems').value = '';
+    document.getElementById('rPlatform').value = '';
+    renderReceipts();
+  }
+
+  function toggleReceiptReg(id) {
+    const list = getReceipts();
+    const it = list.find(x => x.id === id);
+    if (it) { it.registered = !it.registered; saveReceipts(list); renderReceipts(); }
+  }
+  function toggleReceiptBag(id) {
+    const list = getReceipts();
+    const it = list.find(x => x.id === id);
+    if (it) { it.bag = it.bag === 'checked' ? 'carry' : 'checked'; saveReceipts(list); renderReceipts(); }
+  }
+  function deleteReceipt(id) {
+    const list = getReceipts().filter(x => x.id !== id);
+    saveReceipts(list);
+    renderReceipts();
+  }
+
+  function renderReceipts() {
+    const listEl = document.getElementById('receiptList');
+    const sumEl = document.getElementById('receiptSummary');
+    if (!listEl || !sumEl) return;
+    const w = V11_I18N[currentLang];
+    const fx = getFx();
+    const feePct = parseFloat(document.getElementById('calcFee')?.value || '0') || 0;
+    const list = getReceipts();
+
+    let sumTotal = 0, sumRefund = 0, regCount = 0;
+    list.forEach(r => {
+      sumTotal += r.total;
+      const calc = calcTaxNumbers(r.total, r.taxRate, feePct);
+      if (calc.eligible) sumRefund += calc.refund;
+      if (r.registered) regCount++;
+    });
+    sumEl.innerHTML = `<div class="summary-bar">
+      <span>${w.xSumSpent}: ¥${sumTotal.toLocaleString()} (NT$${Math.round(sumTotal*fx).toLocaleString()})</span>
+      <span>${w.xSumRefund}: ¥${sumRefund.toLocaleString()}</span>
+      <span>${w.xSumReg}: ${regCount}/${list.length}</span>
+    </div>`;
+
+    if (list.length === 0) {
+      listEl.innerHTML = `<div style="font-size:0.8rem;color:#6b7280;text-align:center;padding:10px;">${w.xEmpty}</div>`;
+      return;
+    }
+    listEl.innerHTML = list.map(r => {
+      const calc = calcTaxNumbers(r.total, r.taxRate, feePct);
+      const refBadge = calc.eligible ? `💰 退 ¥${calc.refund.toLocaleString()}` : `⚠️ <¥5,000`;
+      return `<div class="receipt-item">
+        <div class="receipt-head">
+          <strong>${r.store}</strong>
+          <span><strong>¥${r.total.toLocaleString()}</strong> (${r.taxRate}%)</span>
+        </div>
+        <div style="color:#4b5563;font-size:0.77rem;">${r.date} ${r.items ? '· ' + r.items : ''} ${r.platform ? '· ' + r.platform : ''} · ${refBadge}</div>
+        <div class="receipt-tags">
+          <button type="button" class="tag-btn ${r.registered ? 'on' : ''}" onclick="toggleReceiptReg(${r.id})">${r.registered ? w.xRegOn : w.xRegOff}</button>
+          <button type="button" class="tag-btn bag" onclick="toggleReceiptBag(${r.id})">${r.bag === 'checked' ? w.xBagCheck : w.xBagCarry}</button>
+          <button type="button" class="tag-btn del" onclick="deleteReceipt(${r.id})">🗑️</button>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  // Hook v11 into setLang
+  const _origSetLang = setLang;
+  setLang = function(lang) {
+    _origSetLang(lang);
+    const w = V11_I18N[currentLang];
+    const bt = document.getElementById('btnTraffic');
+    const bx = document.getElementById('btnTax');
+    if (bt) bt.textContent = w.trafficBtn;
+    if (bx) bx.textContent = w.taxBtn;
+    renderWeather();
+    injectDayWeatherBadges();
+  };
+
+  // Initial v11 boot
+  setLang(currentLang);
+  fetchWeather(false);
+
 </script>
 </body>
 </html>
