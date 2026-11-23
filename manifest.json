@@ -1,7 +1,7 @@
 {
   "name": "2026 東京深秋・8天7夜隨身手冊",
   "short_name": "東京秋旅手冊",
-  "description": "11/24–12/01 東京深秋減法美學定案版：含實拍商品圖卡、店家導航與離線清單",
+  "description": "11/24–12/01 東京深秋三語切換定案版（繁中 / 日本語 / English）：含21張實拍商品圖卡與離線導航",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

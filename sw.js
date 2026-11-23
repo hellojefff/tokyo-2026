@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tokyo-2026-pwa-v7';
+const CACHE_NAME = 'tokyo-2026-pwa-v8';
 const ASSETS = [
   './index.html',
   './manifest.json',
@@ -25,12 +25,10 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
-  // 針對 Safari 導覽請求（解決 Cloudflare 308 轉址與 redirected response 限制）
   if (event.request.mode === 'navigate') {
     event.respondWith(
       fetch(event.request)
         .then((res) => {
-          // 若雲端回應帶有 redirected 標記，從快取取出乾淨的 ./index.html 回傳給 Safari
           if (res.redirected) {
             return caches.match('./index.html').then((cached) => cached || Response.redirect(res.url, 302));
           }
