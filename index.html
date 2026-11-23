@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v11 智慧隨行版)</title>
+<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v12 智慧隨行版)</title>
 <meta name="theme-color" content="#9a3412">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -836,7 +836,7 @@
 
   const I18N = {
     zh: {
-      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v11 智慧隨行版)",
+      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v12 智慧隨行版)",
       offline: "📴 目前為離線模式（已從手機快取載入完整行程與車站導航）",
       title: "🍁 2026 東京深秋・8天7夜隨身手冊",
       subtitle: "11/24(二) – 12/01(二)｜減法美學・九品佛禪意・藏前水岸・丸之內至銀座慢步",
@@ -2081,16 +2081,30 @@
     try {
       const b64 = await compressImageToBase64(file);
       const prompt = 'Extract this Japanese shopping receipt into strict JSON only (no markdown): {"store":"string","date":"YYYY-MM-DD","items":"short summary","total_jpy":number,"tax_rate":10 or 8,"platform":"tax-free note if any or empty string"}.';
-      const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${encodeURIComponent(apiKey)}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }],
-          generationConfig: { responseMimeType: 'application/json' }
-        })
-      });
-      if (!res.ok) throw new Error('API HTTP ' + res.status);
-      const json = await res.json();
+      const models = ['gemini-flash-latest', 'gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.0-flash'];
+      let json = null;
+      let lastErr = '';
+      for (const m of models) {
+        try {
+          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${encodeURIComponent(apiKey)}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }],
+              generationConfig: { responseMimeType: 'application/json' }
+            })
+          });
+          if (res.ok) {
+            json = await res.json();
+            break;
+          }
+          lastErr = `${m} HTTP ${res.status}`;
+          if (res.status !== 503 && res.status !== 429 && res.status !== 404) break;
+        } catch (netErr) {
+          lastErr = netErr.message;
+        }
+      }
+      if (!json) throw new Error(lastErr || 'API Error');
       const rawText = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
       const parsed = JSON.parse(rawText.replace(/```json|```/g, '').trim());
       const total = parseInt(parsed.total_jpy, 10) || 0;
@@ -2111,7 +2125,7 @@
       statusEl.textContent = '✅ ' + (parsed.store || 'OK') + ' ¥' + total.toLocaleString();
       renderReceipts();
     } catch (err) {
-      statusEl.textContent = '⚠️ ' + err.message + ' — ' + w.xNoKeyWarn;
+      statusEl.textContent = '⚠️ ' + err.message + '（伺服器暫時忙碌，可稍後重試或手動輸入）';
       document.getElementById('manualReceiptBox').open = true;
     }
     input.value = '';
