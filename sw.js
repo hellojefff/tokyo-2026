@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tokyo-2026-pwa-v12';
+const CACHE_NAME = 'tokyo-2026-pwa-v11';
 const ASSETS = [
   './index.html',
   './manifest.json',
@@ -24,8 +24,6 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
-  const url = new URL(event.request.url);
-  if (url.origin !== self.location.origin) return;
 
   if (event.request.mode === 'navigate') {
     event.respondWith(

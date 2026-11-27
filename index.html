@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v12 智慧隨行版)</title>
+<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v11 最終定案版)</title>
 <meta name="theme-color" content="#9a3412">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -497,234 +497,6 @@
   .modal-btn-primary { background: #b85d19; color: #fff; }
   .modal-btn-map { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
   .modal-btn-copy { background: #f3f4f6; color: #1f2937; border: 1px solid #d1d5db; }
-
-  /* v11 Weather, Traffic & Tax/Receipt Styles */
-  .weather-card {
-    background: linear-gradient(135deg, #fff7ed 0%, #ffffff 100%);
-    border-radius: 12px;
-    padding: 12px 14px;
-    margin-bottom: 14px;
-    box-shadow: var(--shadow);
-    border: 1px solid #fed7aa;
-    font-size: 0.84rem;
-  }
-  .weather-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-bottom: 8px;
-  }
-  .weather-locs {
-    display: inline-flex;
-    gap: 4px;
-    flex-wrap: wrap;
-  }
-  .w-loc-btn {
-    background: #fff;
-    border: 1px solid #fdba74;
-    color: #9a3412;
-    padding: 3px 9px;
-    border-radius: 14px;
-    font-size: 0.74rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .w-loc-btn.active {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
-  }
-  .w-refresh-btn {
-    background: #f3f4f6;
-    border: 1px solid #d1d5db;
-    color: #374151;
-    padding: 3px 8px;
-    border-radius: 12px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .weather-now {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .weather-main-temp {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: #7c2d12;
-  }
-  .weather-meta {
-    font-size: 0.79rem;
-    color: #4b5563;
-  }
-  .weather-tip {
-    margin-top: 6px;
-    padding: 5px 9px;
-    background: #fef3c7;
-    color: #92400e;
-    border-radius: 8px;
-    font-size: 0.77rem;
-    font-weight: 600;
-  }
-  .day-weather-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    background: #fff;
-    border: 1px solid #fdba74;
-    color: #9a3412;
-    font-size: 0.73rem;
-    font-weight: 700;
-    padding: 2px 7px;
-    border-radius: 12px;
-    margin-top: 4px;
-  }
-  .modal-card.wide { max-width: 540px; }
-  .section-box {
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    padding: 11px 12px;
-    margin-bottom: 12px;
-    font-size: 0.83rem;
-  }
-  .section-box h4 {
-    font-size: 0.88rem;
-    color: #7c2d12;
-    margin-bottom: 8px;
-  }
-  .traffic-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-  .traffic-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 10px;
-    background: #fff;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    text-decoration: none;
-    color: #1f2937;
-    font-size: 0.78rem;
-    font-weight: 600;
-  }
-  .traffic-link:active { background: #f3f4f6; }
-  .form-row {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .form-input, .form-select {
-    flex: 1 1 110px;
-    padding: 7px 9px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 0.84rem;
-    background: #fff;
-    color: #111827;
-  }
-  .calc-result {
-    background: #ecfdf5;
-    border: 1px solid #6ee7b7;
-    border-radius: 8px;
-    padding: 9px 11px;
-    color: #065f46;
-    font-size: 0.82rem;
-    margin-top: 6px;
-  }
-  .calc-result.warn {
-    background: #fffbeb;
-    border-color: #fcd34d;
-    color: #92400e;
-  }
-  .scan-btn-label {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    width: 100%;
-    padding: 9px 12px;
-    background: linear-gradient(135deg, #9a3412 0%, #d97706 100%);
-    color: #fff;
-    border-radius: 8px;
-    font-size: 0.84rem;
-    font-weight: 700;
-    cursor: pointer;
-    margin-bottom: 8px;
-  }
-  .receipt-item {
-    background: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 9px 10px;
-    margin-bottom: 8px;
-    font-size: 0.8rem;
-  }
-  .receipt-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 4px;
-  }
-  .receipt-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-top: 6px;
-    align-items: center;
-  }
-  .tag-btn {
-    background: #f3f4f6;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-    padding: 3px 7px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    cursor: pointer;
-    color: #374151;
-  }
-  .tag-btn.on {
-    background: #dcfce7;
-    border-color: #86efac;
-    color: #166534;
-  }
-  .tag-btn.bag {
-    background: #eff6ff;
-    border-color: #bfdbfe;
-    color: #1d4ed8;
-  }
-  .tag-btn.del {
-    margin-left: auto;
-    color: #b91c1c;
-    background: #fef2f2;
-    border-color: #fecaca;
-  }
-  .summary-bar {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 6px;
-    background: #fdf2e9;
-    border: 1px solid #fed7aa;
-    border-radius: 8px;
-    padding: 8px 10px;
-    font-size: 0.79rem;
-    font-weight: 700;
-    color: #7c2d12;
-    margin-bottom: 10px;
-  }
-
 </style>
 </head>
 <body>
@@ -734,7 +506,7 @@
   <div class="header-top">
     <div>
       <h1 id="uiTitle">🍁 2026 東京深秋・8天7夜隨身手冊</h1>
-      <p id="uiSubtitle">11/24(二) – 12/01(二)｜減法美學・九品佛禪意・藏前水岸・丸之內至銀座慢步</p>
+      <p id="uiSubtitle">11/24(二) – 12/01(二)｜減法美學・清澄藏前・銀座八芳帝王蟹・京王履約退稅</p>
     </div>
     <div class="lang-switcher" role="group" aria-label="Language switcher">
       <button type="button" class="lang-btn active" data-lang="zh" onclick="setLang('zh')">繁中</button>
@@ -746,8 +518,6 @@
     <button class="btn-pill" id="btnTaxiFilter" onclick="toggleTaxiOnly()">🚕 只看計程車替代</button>
     <button class="btn-pill" id="btnExpandAll" onclick="toggleAllDays(false)">📂 全部展開</button>
     <button class="btn-pill" id="btnCollapseAll" onclick="toggleAllDays(true)">📁 全部收合</button>
-    <button class="btn-pill" id="btnTraffic" onclick="openTrafficModal()">🚦 路況</button>
-    <button class="btn-pill" id="btnTax" onclick="openTaxModal()">🧾 退稅/收據</button>
   </div>
 </header>
 
@@ -764,7 +534,6 @@
 </nav>
 
 <div class="container">
-  <div id="weatherArea"></div>
   <div id="quickInfoArea"></div>
   <div id="checklistArea"></div>
   <div id="itineraryArea"></div>
@@ -783,29 +552,6 @@
     <div class="modal-spec-box" id="mSpecs"></div>
     <div class="modal-store-box" id="mStore"></div>
     <div class="modal-actions" id="mActions"></div>
-  </div>
-</div>
-
-
-<!-- 即時路況戰情彈窗 -->
-<div class="modal-backdrop" id="trafficModal" onclick="if(event.target===this) closeTrafficModal()">
-  <div class="modal-card wide">
-    <div class="modal-header">
-      <div class="modal-title" id="tModalTitle">🚦 即時路況與鐵路運行狀態</div>
-      <button type="button" class="modal-close" onclick="closeTrafficModal()">✕</button>
-    </div>
-    <div id="trafficModalBody"></div>
-  </div>
-</div>
-
-<!-- 退稅計算機＆收據掃描彈窗 -->
-<div class="modal-backdrop" id="taxModal" onclick="if(event.target===this) closeTaxModal()">
-  <div class="modal-card wide">
-    <div class="modal-header">
-      <div class="modal-title" id="xModalTitle">🧾 2026/11 新制退稅計算 ＆ 收據掃描</div>
-      <button type="button" class="modal-close" onclick="closeTaxModal()">✕</button>
-    </div>
-    <div id="taxModalBody"></div>
   </div>
 </div>
 
@@ -836,10 +582,10 @@
 
   const I18N = {
     zh: {
-      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v12 智慧隨行版)",
+      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v11 最終定案版)",
       offline: "📴 目前為離線模式（已從手機快取載入完整行程與車站導航）",
       title: "🍁 2026 東京深秋・8天7夜隨身手冊",
-      subtitle: "11/24(二) – 12/01(二)｜減法美學・九品佛禪意・藏前水岸・丸之內至銀座慢步",
+      subtitle: "11/24(二) – 12/01(二)｜減法美學・清澄藏前・銀座八芳帝王蟹・京王履約退稅",
       taxiBtn: "🚕 只看計程車替代",
       expandBtn: "📂 全部展開",
       collapseBtn: "📁 全部收合",
@@ -876,10 +622,10 @@
         { key: "mb_wallet", text: "<strong>Day 2 mont-bell 御徒町：</strong>短夾 ジップワレット（#1133372，BK 黑色優先）", btn: "👛 圖卡/店家" },
         { key: "takeya_meiji", text: "<strong>Day 2 多慶屋 3F：</strong>28～30吋超輕量硬殼大箱 ＋ 明治膠原蛋白粉 PREMIUM 金色版 × 3包", btn: "🧳 圖卡/店家" },
         { key: "takeya_drug", text: "<strong>Day 2 多慶屋 3F 藥妝：</strong>UHA 鐵&amp;葉酸 × 2罐、DHC 極纖對策 × 1包、Ophtecs 人工淚液 × 2盒", btn: "💊 圖卡/店家" },
-        { key: "kayanoya", text: "<strong>Day 6 東京站茅乃舍：</strong>經典柴魚高湯包、鮮甜野菜高湯包、特選調味醬汁包", btn: "🍲 圖卡/店家" },
-        { key: "owala", text: "<strong>Day 7 澀谷 LOFT：</strong>Owala 保溫水壺（備案：新宿東口 Alpen TOKYO 5F）", btn: "🥤 圖卡/店家" },
+        { key: "kayanoya", text: "<strong>Day 5 東京站茅乃舍：</strong>經典柴魚高湯包、鮮甜野菜高湯包、特選調味醬汁包", btn: "🍲 圖卡/店家" },
+        { key: "owala", text: "<strong>Day 5 銀座 LOFT：</strong>Owala 保溫水壺（備案：Day 7 新宿東口 Alpen TOKYO 5F）", btn: "🥤 圖卡/店家" },
         { key: "keio_1f", text: "<strong>Day 7 新宿京王 1F：</strong>肌膚之鑰 妝前凝霜 × 2支 ＋ 黛珂 AQ 緊緻賦活眼霜 × 2罐", btn: "💄 圖卡/店家" },
-        { key: "keio_4f", text: "<strong>Day 7 新宿京王 4F：</strong>朵茉麗蔻專櫃憑預約領取全套保養品（2F合併退稅，封箱 ≤ 24.5kg）", btn: "✨ 圖卡/店家" },
+        { key: "keio_4f", text: "<strong>Day 7 新宿京王 4F：</strong>朵茉麗蔻預約自取（鄭云嘉・會員19363373・¥89,100・2F退稅＋新橋寄物）", btn: "✨ 取貨卡" },
         { key: "narita_tax", text: "<strong>Day 8 成田 T1 4F：</strong>先掃免稅 KIOSK 綠燈/海關蓋章，再託運 25kg 行李！", btn: "🛂 流程圖卡" }
       ],
       days: [
@@ -934,37 +680,36 @@
         },
         {
           id: "day5",
-          title: "🗓️ Day 5｜2026/11/28（六・減法美學・水岸、庭園與下町職人）築地黑鮪魚 ➔ 清澄庭園 ➔ 藏前水岸夕景 ➔ 淺草遠州屋",
-          sub: "24H壽司三昧・古印度宮殿寺院・池泉楓紅・隅田川遠眺晴空塔・百年鮮魚",
+          title: "🗓️ Day 5｜2026/11/28（六・雨天單人室內）丸之內 ➔ 茅乃舍＆銀座LOFT ➔ 日本橋高島屋便當",
+          sub: "朋友民宿休息・三田線大手町零淋雨・提前採購高湯包與水壺・17:00百貨雙人便當",
           items: [
-            { time: "07:30 - 09:45｜🐟 晨間免排：すしざんまい 本店 ＆ 築地本願寺", html: `<div class="item-content"><div class="std-transit"><strong>交通：</strong>07:30 出門，本蓮沼站搭三田線至日比谷站，轉 <strong>日比谷線</strong> 直達「築地站」（車程約 35 分鐘，刷 Suica 330 日圓）。</div><div class="food-box"><strong>08:00-09:15 壽司三昧 築地本店：</strong>24 小時營業、席次眾多，清晨八點無須排隊入座。必點：極鮮鮪魚五貫拼盤、黑鮪魚大腹（大トロ）、炙燒海鮮握壽司。</div><strong>09:20-09:45 築地本願寺（步行 3 分鐘）：</strong>日本國家重要文化財，罕見古印度阿育王石造宮殿風格，挑高本堂配置彩繪玻璃與德國巨型管風琴。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=すしざんまい+本店+築地" target="_blank">📍 壽司三昧</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=築地本願寺" target="_blank">📍 築地本願寺</a></div>` },
-            { time: "10:00 - 13:30｜🍁 清澄白河慢活散策：清澄庭園楓紅與文青咖啡", html: `<div class="item-content"><span class="std-transit">築地站搭日比谷線至水天宮前轉半藏門線直達「清澄白河站」。</span><br><ul><li><strong>清澄庭園（門票 150 日圓）：</strong>漫步池泉回遊式名石庭園，欣賞名石倒影與 11 月下旬楓紅。</li><li><strong>咖啡時光：</strong>出園後漫步文青街區，在藍瓶旗艦店（Blue Bottle）或巷弄特色烘焙館品嚐手沖單品咖啡與甜點。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 Google Maps 清澄庭園</a></div>` },
-            { time: "13:45 - 16:30｜☕ 職人街區 ✕ 隅田川水岸夕景遠眺晴空塔：藏前（Kuramae）", html: `<div class="item-content"><span class="std-transit">自清澄白河搭乘都營大江戶線（僅 2 站約 4 分鐘）抵達「藏前站」。</span><br><ul><li><strong>美感減法：</strong>避開人潮洶湧之商場內部，漫步「東京布魯克林」藏前手作皮革工房、文具雜貨店（如 <strong>Kakimori</strong>）與極簡巧克力工坊（<strong>Dandelion Chocolate</strong>）。</li><li><strong>水岸夕陽：</strong>傍晚走到 <strong>隅田川水岸步道（隅田川テラス）</strong>，在深秋微風中看斜陽將對岸東京晴空塔染成金黃色，享受遠觀地標的壯闊與寧靜。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 Google Maps 藏前隅田川水岸</a></div>` },
-            { time: "16:45 - 18:30｜🐟 錯峰晚餐：魚料理 遠州屋（田原町站／淺草）", html: `<div class="food-box"><strong>餐廳特色：</strong>自藏前沿江戶通向北散步 10 分鐘即達。淺草經營近百年活魚海鮮料理名店，17:00 晚市開門準時入座第一輪。<br><strong>必點推薦：</strong>當日市場直送鮮魚刺身定食、現煮海鮮小火鍋、烤魚下巴。18:45 後搭都營淺草線至三田站轉三田線返回板橋民宿。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚料理+遠州屋+田原町" target="_blank">📍 Google Maps 魚料理 遠州屋</a></div>` }
+            { time: "10:30 - 12:30｜🏢 丸之內地下連通商圈（零淋雨動線）", html: `<div class="item-content"><div class="std-transit"><strong>交通：</strong>本蓮沼站搭 <strong>都營三田線</strong> 直達「大手町站」（車程約 23 分鐘，刷 Suica 280 日圓），走地下連通道全程免撐傘。</div>逛 <strong>丸之內 OAZO（丸善書店本店）</strong> 與 <strong>KITTE Marunouchi</strong>（1F WHITE KITTE 巨型白色聖誕樹＋6F 屋頂花園俯瞰東京車站紅磚建築）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KITTE丸の内" target="_blank">📍 KITTE丸之內</a></div>` },
+            { time: "12:30 - 13:45｜🍜 午餐：東京站一番街（地下街熱食）", html: `<div class="food-box"><strong>單人友善快食：</strong>沿地下通道直入東京站一番街（東京拉麵街：六厘舍、斑鳩等），翻桌快且完全不吹風淋雨。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=東京駅一番街" target="_blank">📍 東京站一番街</a></div>` },
+            { time: "14:00 - 16:30｜🛍️ 提前解鎖採購：茅乃舍 ＋ 銀座 LOFT（Owala水壺）＋ 日本橋百貨", html: `<div class="shop-box"><ul><li><strong>茅乃舍 Gransta 丸之內店（丸之內地下中央口改札外）：</strong>買齊經典柴魚高湯包、鮮甜野菜高湯包、特選調味醬汁包（湊滿未稅 ¥5,000 現場免稅），讓週日雙手完全淨空！</li><li><strong>銀座 LOFT（銀座ベルビア館）：</strong>自東京站步行約 10 分鐘（或搭丸之內線 1 站至銀座站）挑選 <strong>Owala FreeSip 不鏽鋼保溫水壺</strong>（現場免稅；若無心儀顏色，週一再去新宿東口 Alpen TOKYO 5F 補買）。</li><li><strong>日本橋百貨巡禮：</strong>自銀座搭 <strong>銀座線</strong> 至「日本橋站」（約 4 分鐘，刷 Suica 180 日圓），逛室內連通的日本橋三越本店或 COREDO 室町。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=茅乃舎+グランスタ丸の内店" target="_blank">📍 茅乃舍東京站</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=銀座ロフト" target="_blank">📍 銀座 LOFT</a></div>` },
+            { time: "16:45 - 17:30｜🍱 重頭戲：日本橋高島屋 B1 採買雙人高級便當回民宿", html: `<div class="item-content"><div class="food-box"><strong>日本橋高島屋 S.C. 本館 B1（營業至 19:30）：</strong>推薦「人形町今半」黑毛和牛壽喜燒便當、可樂餅、「日本橋弁松總本店」江戶傳統折詰便當與熟食甜點。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日本橋高島屋" target="_blank">📍 日本橋高島屋</a></div><div class="std-transit" style="margin-top:8px;"><strong>17:30 地鐵回程：</strong>走地下通道步行約 7 分鐘接回「大手町站」，搭 <strong>都營三田線</strong> 一車直達「本蓮沼站」（車程約 23 分鐘，刷 Suica 280 日圓）。</div><div class="taxi-box"><strong>🚕 計程車替代方案（日本橋高島屋 ➔ 本蓮沼站旁民宿）：</strong><br>若雨勢變大或提著高湯包＋水壺＋便當太重，直接在高島屋門口上車直達民宿（車程約 25～30 分鐘，車資約 4,200～4,800 日圓）。</div></div>` }
           ]
         },
         {
           id: "day6",
-          title: "🗓️ Day 6｜2026/11/29（日・減法美學・都會精華漫步）根津千本鳥居 ➔ 東京站牛舌與銀杏 ➔ 茅乃舍 ➔「丸之內 ➔ 銀座」黃金慢步 ➔ 田や宵夜",
-          sub: "銀杏名所3・消除新宿折返跑・16:00香檳金燈海慢步・日比谷直達卸貨",
+          title: "🗓️ Day 6｜2026/11/29（日）清澄庭園 ➔ 藏前水岸 ➔ 東京站烤牛舌 ➔ 丸之內至銀座燈海 ➔ 鳥貴族",
+          sub: "雙手淨空日・池泉楓紅・隅田川遠眺晴空塔・喜助烤牛舌・16:00香檳金燈海・中文平板燒鳥",
           items: [
-            { time: "08:15 - 10:30｜⛩️ 晨間秘境與私房早餐：根津神社千本鳥居 ✕ 谷根千老町家", html: `<div class="item-content"><div class="std-transit"><strong>極速直達（08:15-08:35）：</strong>本蓮沼站搭都營三田線直達「白山站」（車程僅 13 分鐘，刷 Suica 220 日圓），A1 出口步行 8～10 分鐘由後門進入。</div><ul><li><strong>千本鳥居空景：</strong>清晨遊客稀落，穿過朱紅色千本鳥居拍無人搶鏡空靈晨光大景，參拜江戶時代權現造本殿。</li><li><strong>私房朝食：</strong>漫步至 1938 年大正木造町家 <strong>カヤバ珈琲（Kayaba Coffee）</strong> 享用「極厚滑嫩煎蛋三明治」搭熱美式；或外帶 10:00 出爐之「根津鯛魚燒」。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=根津神社+千本鳥居" target="_blank">📍 根津神社</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=カヤバ珈琲" target="_blank">📍 カヤバ珈琲</a></div>` },
-            { time: "10:45 - 12:15｜🥩 減法直奔東京車站 ➔ 炭火現烤牛舌定食（八重洲地下街 喜助）", html: `<div class="item-content"><span class="std-transit"><strong>取消新宿折返跑（10:45-11:15）：</strong>根津站搭千代田線至「大手町站」，地下連通道步行直通「東京車站」（僅 8 分鐘，刷 Suica 180 日圓）。</span><div class="food-box"><strong>11:15 錯峰入座（牛料理第 3 彈）：</strong>東京站八重洲地下街「味の牛たん 喜助」，炭火厚切純瘦極上牛舌定食，佐香蔥麥飯、山藥泥與牛尾熱湯。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 Google Maps 喜助東京站</a></div></div>` },
-            { time: "12:30 - 15:40｜🍂 銀杏名所 3：行幸通り銀杏 ➔ WHITE KITTE ➔ 🛍️ 茅乃舍採購", html: `<div class="item-content"><ul><li><strong>12:30-13:45 行幸通り銀杏並木：</strong>漫步拍攝紅磚站房前寬闊金黃銀杏大道；登 <strong>KITTE 6 樓空中花園</strong> 免費俯瞰全景。</li><li><strong>14:00-15:00 WHITE KITTE：</strong>回到 KITTE 1 樓中庭欣賞白色冷杉巨型聖誕樹與每半小時播放之音效燈光秀。</li><li><strong>15:00-15:40 茅乃舍 Gransta 丸之內店：</strong>自 KITTE B1 出門，順指標「JR 丸の内地下中央口」步行 2～3 分鐘至大廳（改札外免進站），採購經典柴魚高湯包、野菜高湯包與調味醬汁包。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KITTE丸の内" target="_blank">📍 KITTE丸之內</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=茅乃舎+グランスタ丸の内店" target="_blank">📍 茅乃舍東京站</a></div>` },
-            { time: "15:45 - 17:30｜🌟 東京散步美學之巔：「丸之內 ➔ 銀座」黃金慢步路線", html: `<div class="item-content">約 1.5 公里平坦大道（耗時約 90 分鐘），正好跨越 <strong>16:00 點燈初上至 16:30 暮色全黑</strong> 魔幻時刻：<ul><li><strong>起點・丸之內仲通り：</strong>16:00 整兩側數百棵行道樹瞬間點亮溫暖「香檳金 LED 燈海」，歐風木屋聖誕市集品嚐熱紅酒。</li><li><strong>中繼・三菱一號館 ＆ 有樂町磚橋：</strong>穿過英式磚紅庭院與 JR 紅磚拱形高架橋下。</li><li><strong>終點・銀座中央通：</strong>欣賞 Cartier、Tiffany、Bvlgari 與和光鐘樓奢華櫥窗及立體外牆燈飾。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 Google Maps 丸之內仲通り</a></div>` },
-            { time: "17:40 - 20:45｜🚇 採購卸貨直達線 ➔ 🏮 晚餐：大衆割烹 田や（十條）", html: `<div class="item-content"><span class="std-transit"><strong>17:40-18:20 卸貨直達線：</strong>自銀座漫步至相通的「日比谷站」，搭 <strong>都營三田線直達「本蓮沼站」</strong>（約 25 分鐘，刷 Suica 280 日圓），回民宿放下茅乃舍高湯包休整。</span><div class="food-box"><strong>18:45-20:45 大衆割烹 田や（十條）：</strong>《孤獨的美食家》名店，散步約 15 分鐘至十條銀座商店街老字號居酒屋，大啖煙燻鯖魚刺身、關東煮雜煮小火鍋搭溫清酒。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=大衆割烹+田や+十条" target="_blank">📍 Google Maps 大衆割烹 田や</a></div><div class="taxi-box"><strong>🚕 返宿計程車（十條居酒屋田や ➔ 本蓮沼站旁民宿）：</strong><br>店門口叫車 5 分鐘直達民宿（車資約 1,000～1,200 日圓含深夜加成，<strong>雙人平分每人僅 500～600 日圓，約台幣 110 元</strong>），冬夜微醺免受寒風！</div></div>` }
+            { time: "09:30 - 12:00｜🍁 清澄庭園賞楓 ＋ 藏前職人水岸（補回 Day 5 精華）", html: `<div class="item-content"><div class="std-transit"><strong>都營省錢順轉（約 35 分鐘，刷 Suica 280 日圓）：</strong>本蓮沼站搭 <strong>都營三田線</strong> 至「春日站」（15 分鐘），站內轉乘 <strong>都營大江戶線</strong> 直達「清澄白河站」（15 分鐘）。</div><ul><li><strong>清澄庭園（門票 150 日圓）：</strong>池泉回遊式名石庭園賞 11 月底楓紅，順訪藍瓶咖啡旗艦店。</li><li><strong>藏前水岸：</strong><span class="std-transit">搭 <strong>都營大江戶線</strong> 僅 2 站（4 分鐘，180 日圓）至「藏前站」。</span>漫步手作雜貨街區，走上 <strong>隅田川水岸步道</strong> 遠眺東京晴空塔。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 清澄庭園</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 藏前水岸</a></div>` },
+            { time: "12:15 - 13:30｜🥩 午餐：味の牛たん 喜助（東京站八重洲地下街）", html: `<div class="item-content"><div class="std-transit"><strong>交通：</strong>藏前站搭 <strong>都營淺草線</strong> 至「日本橋站」（約 7 分鐘，180 日圓），步行 6 分鐘進東京站八重洲地下街。</div><div class="food-box"><strong>炭火烤牛舌定食：</strong>厚切純瘦極上牛舌定食，佐香蔥麥飯、山藥泥與牛尾熱湯，套餐制看圖點餐極方便。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 喜助東京站</a></div></div>` },
+            { time: "13:45 - 17:30｜🌟 行幸通銀杏 ➔「丸之內 ➔ 銀座」黃金慢步路線", html: `<div class="item-content">拍攝東京站前 <strong>行幸通り銀杏並木</strong>；15:45 自 <strong>丸之內仲通り</strong> 往 <strong>銀座中央通</strong> 慢步，迎接 <strong>16:00 香檳金 LED 燈海亮燈</strong> 與奢華聖誕櫥窗。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 丸之內仲通り</a></div>` },
+            { time: "18:00 - 19:30｜🍢 晚餐：鳥貴族 巢鴨店（中文平板點餐連鎖燒鳥）", html: `<div class="item-content"><div class="std-transit"><strong>去程：</strong>自銀座漫步至「日比谷站」，搭 <strong>都營三田線</strong> 直達「巢鴨站」（約 17 分鐘，220 日圓），出口旁即達。</div><div class="food-box"><strong>特色：</strong>全品項均一價、桌上中文觸控平板看圖點餐零壓力（必點：鹽烤／醬燒貴族燒、雞肉丸、釜飯）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 鳥貴族 巢鴨店</a></div><div class="std-transit" style="margin-top:8px;"><strong>回程：</strong>吃完下樓搭 <strong>都營三田線</strong> 9 分鐘直達「本蓮沼站」（220 日圓）。</div><div class="taxi-box"><strong>🚕 計程車替代（巢鴨鳥貴族 ➔ 本蓮沼民宿）：</strong><br>若吃飽微醺想直接回家，巢鴨站北口搭計程車 10 分鐘直達民宿（車資約 1,500～1,800 日圓，<strong>兩人平分每人約 750～900 日圓</strong>）。</div></div>` }
           ]
         },
         {
           id: "day7",
-          title: "🗓️ Day 7｜2026/11/30（一・🚨 預約日完全不動）活美登利 ➔ 澀谷 LOFT ➔ 京王履約退稅 ➔ 封箱秤重 ➔ 惠比壽水晶燈 ➔ 魚真割烹",
-          sub: "睡到自然醒・Owala水壺・朵茉麗蔻/肌鑰/黛珂免稅封箱(24.0～24.5kg)・冷熱對流",
+          title: "🗓️ Day 7｜2026/11/30（一・🚨預約日）京王履約退稅 ➔ 新橋寄物 ➔ 16:30 銀座八芳帝王蟹 ➔ 封箱秤重",
+          sub: "睡到自然醒・朵茉麗蔻/肌鑰/黛珂合併退稅・新橋Suica寄物・銀座八芳(H7ZUX993DA)・24.5kg封箱",
           items: [
-            { time: "08:30 - 12:15｜🍣 睡到自然醒 ➔ 澀谷打卡 ➔ 回轉壽司 活 美登利", html: `<div class="item-content"><span class="std-transit">09:45-10:25 本蓮沼搭三田線至巢鴨站，轉 JR 山手線直達「澀谷站」，八公口出站拍攝全向十字路口。</span><div class="food-box"><strong>11:00-12:15 澀谷西武百貨 A 館 8 樓：</strong>10:50 抽取第一輪號碼牌，11:00 準時首波入座。必點：整條炙燒穴子星鰻、爆量海膽軍艦、炙燒比目魚緣側、牡丹蝦。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=回し寿司+活+西武渋谷店" target="_blank">📍 Google Maps 活 美登利澀谷</a></div></div>` },
-            { time: "12:15 - 12:40｜🛍️ 水壺採購第一站：澀谷 LOFT 旗艦店", html: `<div class="shop-box">出西武百貨步行 2 分鐘進 LOFT 旗艦店，挑選 <strong>Owala 保溫水壺</strong>，享現場外國旅客免稅服務。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=渋谷ロフト" target="_blank">📍 Google Maps 澀谷 LOFT</a></div>` },
-            { time: "13:15 - 14:45｜🛍️ 🚨 京王百貨專櫃預約履約、代購與退稅（嚴格鎖定不可異動）", html: `<div class="item-content"><span class="std-transit">12:45-13:00 搭乘 JR 山手線僅 3 站（6 分鐘）抵達新宿站，地下連通道直通京王百貨。</span><div class="shop-box"><ul><li><strong>一樓專櫃代購：</strong><strong>肌膚之鑰（CPB）</strong>購入光采無瑕妝前凝霜 2 支；<strong>黛珂（DECORTE）</strong>購入 AQ 緊緻賦活眼霜 2 罐。</li><li><strong>四樓專櫃預約取貨（核心任務）：</strong>準時前往 4 樓 <strong>朵茉麗蔻專櫃</strong>，憑預約憑證提領太太全套精油保養品實物。</li><li><strong>二樓外國顧客退稅櫃台：</strong>將 1 樓與 4 樓全部單據、發票與護照整合，一次性辦理退稅手續。</li><li><em>（備案：若中午在澀谷未選中心儀水壺顏色，穿過新宿地下通道至東口站前 Alpen TOKYO 5 樓露營區選購）</em></li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=京王百貨店+新宿店" target="_blank">📍 京王百貨新宿店</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alpen+TOKYO" target="_blank">📍 備案：Alpen TOKYO</a></div></div>` },
-            { time: "15:15 - 16:00｜🚨 護送戰利品返宿與裝箱（計程車方案 A）", html: `<div class="item-content"><div class="taxi-box"><strong>🚕 方案 A 接駁（新宿山手線至巢鴨 ➔ 計程車直達民宿）：</strong><br>新宿搭山手線至巢鴨站，出北口跳上排班計程車直達本蓮沼站旁民宿（車資約 1,500～1,800 日圓，<strong>雙人平分每人僅 750～900 日圓</strong>），防碰撞且零體力消耗。</div><strong>🚨 封箱秤重標準程序：</strong>將全部玻璃瓶保養品、朵茉麗蔻與水壺以 UNIQLO 極暖厚衣物交叉包裹放入 28 吋大箱正中心；使用隨身電子秤實測，<strong>嚴格確認總重控制於 24.0 至 24.5 公斤以內（不超過 25kg 限額）</strong>，拉上拉鍊上鎖！</div>` },
-            { time: "16:30 - 20:00｜✨ 惠比壽花園廣場水晶燈 ➔ 🐟 魚真 惠比壽店（冷熱對流享受）", html: `<div class="item-content"><span class="std-transit">16:30-17:15 本蓮沼搭三田線至巢鴨轉山手線直達「惠比壽站」，東口搭電動步道 Skywalk 漫步至惠比壽花園廣場。</span><br><strong>17:15-18:00（先看點燈・拍空景）：</strong>天剛全黑、人潮尚未達峰值時抵達，漫步紅毯大道觀賞世界最大規模 <strong>Baccarat ETERNAL LIGHTS 2026</strong> 奢華水晶吊燈與聖誕真樹。<div class="food-box"><strong>18:15-20:00 魚真 惠比壽店（Uoshin Ebisu）：</strong>戶外微涼賞燈後鑽進溫暖居酒屋，完美避開 17:00 第一輪客滿，剛好承接 18:30 離場空位。<br><strong>必點推薦：</strong>當日現流刺身盛合、鹽烤金目鯛魚頭、爆漿海膽鮭魚卵手卷、時令白子橙醋佐溫清酒。20:15 後搭車回民宿早早安歇。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚真+恵比寿店" target="_blank">📍 Google Maps 魚真惠比壽店</a></div></div>` }
+            { time: "09:30 - 12:30｜☕ 睡到自然醒 ➔ 輕食早午餐 ➔ 前往新宿", html: `<div class="item-content">早上不趕行程，於民宿附近或新宿吃簡單三明治、咖啡或蕎麥麵墊胃，保留戰力給下午帝王蟹大餐。<div class="std-transit" style="margin-top:6px;"><strong>交通（約 30 分鐘，刷 Suica 390 日圓）：</strong>本蓮沼站搭 <strong>都營三田線</strong> 至「巢鴨站」（9 分鐘），轉 <strong>JR 山手線</strong> 直達「新宿站」（15 分鐘），西口地下通道直通京王百貨。</div></div>` },
+            { time: "13:15 - 14:45｜🛍️ 🚨 新宿京王百貨專櫃履約、代購與合併退稅（嚴格鎖定）", html: `<div class="item-content"><div class="shop-box"><ul><li><strong>1F 化粧品區代購：</strong>肌膚之鑰（CPB）<code>ヴォワールコレクチュールｎ</code>（境內版 40g）× 2 支 ＋ 黛珂（DECORTE）<code>AQ アブソリュート アイクリーム タイトフォーカス</code>（15g）× 2 罐（留發票帶上 4F）。</li><li><strong>4F 朵茉麗蔻專櫃自取：</strong>持 <strong>鄭云嘉小姐本人護照正本</strong> 並出示下方日文卡片給店員（總額 ¥89,100 含稅，可刷卡或現金）。</li><li><strong>2F 外國顧客退稅櫃台：</strong>整合 1F 與 4F 全部單據、商品與護照一次性辦理退稅密封打包。</li><li><em>（備案：若週六未買到 Owala 水壺，14:45 順路至新宿東口 Alpen TOKYO 5F 補買）</em></li></ul></div><div class="taxi-box"><strong>📱 4F 朵茉麗蔻給日本店員看（Show to Staff）：</strong><br>こんにちは。事前予約した商品を受け取りに来ました。<br>・お名前：<strong>鄭 云嘉（テイ ウンカ）様</strong><br>・日本会員番号：<strong>19363373</strong>（台湾：00979731）<br>・受取日：2026/11/30｜合計：<strong>89,100円（税込）</strong><br>・商品：4.保湿液×3、5.美活肌エキス×2、6.クリーム20×2、7.保護乳液×4<br>・ポイント交換品：基本4点(3日分)×2、保湿リップ×1</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=京王百貨店+新宿店" target="_blank">📍 京王百貨新宿店</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alpen+TOKYO" target="_blank">📍 備案：Alpen TOKYO</a></div>` },
+            { time: "14:50 - 15:40｜🔐 新宿 ➔ 新橋站（Suica 置物櫃寄放戰利品）", html: `<div class="item-content"><div class="std-transit"><strong>地鐵（約 24 分鐘，刷 Suica 210 日圓）：</strong>新宿搭 <strong>東京Metro丸之內線</strong> 至「赤坂見附站」，同月台對面無縫轉乘 <strong>銀座線</strong> 直達「新橋站」。</div><div class="taxi-box"><strong>🚕 計程車替代（新宿京王 ➔ 新橋銀座ナイン）：</strong><br>若免稅袋太重不想擠地鐵，京王百貨西口直接叫車至銀座ナイン 3 號館（車程約 20～25 分鐘，車資約 3,500～4,000 日圓，<strong>兩人平分每人約 1,750～2,000 日圓</strong>）。</div>將免稅密封購物袋鎖進新橋站（銀座口／銀座線改札外）Suica 感應式置物櫃（約 400～500 日圓，<strong>務必拍照記櫃號</strong>），空手散步 3 分鐘前往餐廳。</div>` },
+            { time: "16:30 - 18:30｜🦀 壓軸大餐：海鮮ブッフェダイニング 銀座八芳（已確認預約）", html: `<div class="food-box"><strong>預訂編號：<code>H7ZUX993DA</code>（2名・16:30 報到）</strong><br><strong>地點：</strong>銀座ナイン 3 號館 B1F（新橋站步行 3 分鐘）<br><strong>方案：</strong>120 分鐘制・包含帝王蟹在內超過 150 種海鮮日料＋酒精飲品無限暢飲（JPY 13,000／人含稅，刷卡或現金）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=海鮮ブッフェダイニング+銀座八芳" target="_blank">📍 Google Maps 銀座八芳</a></div>` },
+            { time: "18:30 - 20:00｜🚨 新橋取物返宿 ➔ 24.5kg 封箱秤重", html: `<div class="item-content"><div class="std-transit"><strong>地鐵一車直達（約 35 分鐘，刷 Suica 280 日圓）：</strong>回新橋站取出置物櫃戰利品，步行 4 分鐘至 <strong>都營三田線「內幸町站」</strong>，一車直達「本蓮沼站」。</div><div class="taxi-box"><strong>🚕 計程車護送戰利品返宿（新橋 ➔ 本蓮沼民宿）：</strong><br>吃飽又提著昂貴玻璃瓶保養品，可直接從新橋叫車直達民宿（車程約 25～30 分鐘，車資約 4,500～5,200 日圓，<strong>兩人平分每人約 2,250～2,600 日圓</strong>），防碰撞零負擔！</div>回到民宿後將所有玻璃瓶保養品與水壺以厚衣物交叉包覆放入 28 吋大箱正中心，電子秤實測 <strong>嚴格控制於 24.0～24.5 kg 以內</strong>，拉鍊上鎖！</div>` }
           ]
         },
         {
@@ -980,7 +725,7 @@
       ]
     },
     ja: {
-      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v8 三言語版)",
+      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v11 最終定案版)",
       offline: "📴 オフラインモード中（端末キャッシュから全日程・駅ナビを表示しています）",
       title: "🍁 2026 東京晩秋・7泊8日旅のしおり",
       subtitle: "11/24(火) – 12/01(火)｜引き算の美学・九品仏の禅・蔵前リバーサイド・丸の内〜銀座",
@@ -1020,8 +765,8 @@
         { key: "mb_wallet", text: "<strong>Day 2 モンベル 御徒町店：</strong>ジップワレット（#1133372、BK ブラック優先）", btn: "👛 写真/店舗" },
         { key: "takeya_meiji", text: "<strong>Day 2 多慶屋 3F：</strong>28〜30インチ軽量スーツケース ＋ 明治アミノコラーゲン プレミアム × 3袋", btn: "🧳 写真/店舗" },
         { key: "takeya_drug", text: "<strong>Day 2 多慶屋 3F 薬局：</strong>UHA 鉄&amp;葉酸 × 2ボトル、DHC フォースコリー × 1袋、ティアーレW × 2箱", btn: "💊 写真/店舗" },
-        { key: "kayanoya", text: "<strong>Day 6 東京駅 茅乃舎：</strong>茅乃舎だし・野菜だし・特選だしつゆ", btn: "🍲 写真/店舗" },
-        { key: "owala", text: "<strong>Day 7 渋谷ロフト：</strong>Owala 保温ボトル（予備：新宿東口 Alpen TOKYO 5F）", btn: "🥤 写真/店舗" },
+        { key: "kayanoya", text: "<strong>Day 5 東京駅 茅乃舎：</strong>茅乃舎だし・野菜だし・特選だしつゆ", btn: "🍲 写真/店舗" },
+        { key: "owala", text: "<strong>Day 5 銀座ロフト：</strong>Owala 保温ボトル（予備：Day 7 新宿東口 Alpen TOKYO 5F）", btn: "🥤 写真/店舗" },
         { key: "keio_1f", text: "<strong>Day 7 京王百貨店 新宿店 1F：</strong>クレ・ド・ポー ヴォワールコレクチュールn × 2本 ＋ コスメデコルテ AQ アイクリーム × 2個", btn: "💄 写真/店舗" },
         { key: "keio_4f", text: "<strong>Day 7 京王百貨店 新宿店 4F：</strong>ドモホルンリンクル予約受取（2Fで一括免税、24.5kg以下で梱包）", btn: "✨ 写真/店舗" },
         { key: "narita_tax", text: "<strong>Day 8 成田空港 T1 4F：</strong>先に税関KIOSKでパスポートスキャン後、25kgスーツケースを預け入れ！", btn: "🛂 手順確認" }
@@ -1078,37 +823,36 @@
         },
         {
           id: "day5",
-          title: "🗓️ Day 5｜2026/11/28（土・水辺と庭園・下町職人）築地マグロ ➔ 清澄庭園 ➔ 蔵前リバーサイド夕景 ➔ 浅草遠州屋",
-          sub: "24Hすしざんまい・古代インド様式本願寺・池泉紅葉・隅田川からスカイツリー遠望",
+          title: "🗓️ Day 5｜2026/11/28（土・雨天ソロ屋内）丸の内 ➔ 茅乃舎＆銀座ロフト ➔ 日本橋高島屋デパ地下弁当",
+          sub: "友人は宿で休息・三田線大手町で傘いらず・だし＆ボトル先行購入・17:00デパ地下弁当",
           items: [
-            { time: "07:30 - 09:45｜🐟 朝の築地：すしざんまい 本店 ＆ 築地本願寺", html: `<div class="item-content"><div class="std-transit"><strong>アクセス：</strong>07:30発、本蓮沼駅から三田線で日比谷駅へ、<strong>日比谷線</strong>乗り換えで「築地駅」へ（約35分、Suica 330円）。</div><div class="food-box"><strong>08:00-09:15 すしざんまい 本店：</strong>24時間営業・席数豊富で朝8時は並ばず入店可能。名物まぐろざんまい（大トロ・中トロ・炙り）を堪能。</div><strong>09:20-09:45 築地本願寺（徒歩3分）：</strong>国の重要文化財。古代インド仏教建築様式の石造り本堂とステンドグラスを拝観。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=すしざんまい+本店+築地" target="_blank">📍 すしざんまい</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=築地本願寺" target="_blank">📍 築地本願寺</a></div>` },
-            { time: "10:00 - 13:30｜🍁 清澄白河散策：清澄庭園の紅葉とロースタリーカフェ", html: `<div class="item-content"><span class="std-transit">築地駅から日比谷線・半蔵門線乗り継ぎで「清澄白河駅」へ。</span><br><ul><li><strong>清澄庭園（入園料150円）：</strong>全国の名石が配された池泉回遊式庭園と11月下旬の紅葉を鑑賞。</li><li><strong>カフェ巡り：</strong>ブルーボトルコーヒー清澄白河フラッグシップカフェや街の焙煎所でハンドドリップコーヒー休憩。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 Googleマップ 清澄庭園</a></div>` },
-            { time: "13:45 - 16:30｜☕ 職人の街 ✕ 隅田川テラス夕景：蔵前（Kuramae）", html: `<div class="item-content"><span class="std-transit">清澄白河から都営大江戸線で2駅（約4分）、「蔵前駅」下車。</span><br><ul><li><strong>下町クラフト散策：</strong>「東京のブルックリン」蔵前の革工房、オーダー文具「<strong>カキモリ</strong>」、Bean to Bar「<strong>ダンデライオン・チョコレート</strong>」を散策。</li><li><strong>水辺の夕景：</strong>夕暮れ時に<strong>隅田川テラス</strong>へ出て、夕陽に染まる東京スカイツリーを対岸から静かに眺めます。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 Googleマップ 蔵前隅田川テラス</a></div>` },
-            { time: "16:45 - 18:30｜🐟 夕食：魚料理 遠州屋（田原町駅／浅草）", html: `<div class="food-box"><strong>お店の特徴：</strong>蔵前から江戸通りを北へ徒歩10分。浅草で百年近く愛される活魚・海鮮料理の老舗。17:00開店と同時に1巡目入店。<br><strong>おすすめ：</strong>市場直送お刺身定食、海鮮小鍋、カマ焼き。18:45頃に都営浅草線・三田線経由で板橋へ帰宿。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚料理+遠州屋+田原町" target="_blank">📍 Googleマップ 魚料理 遠州屋</a></div>` }
+            { time: "10:30 - 12:30｜🏢 丸の内地下直結エリア（傘いらず動線）", html: `<div class="item-content"><div class="std-transit"><strong>アクセス：</strong>本蓮沼駅から <strong>都営三田線</strong> で「大手町駅」へ直通（約23分・Suica 280円）。地下通路直結で濡れずに移動可能。</div><strong>丸の内オアゾ（丸善本店）</strong> と <strong>KITTE丸の内</strong>（1F WHITE KITTE クリスマスツリー＋6F 屋上庭園）を散策。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KITTE丸の内" target="_blank">📍 KITTE丸の内</a></div>` },
+            { time: "12:30 - 13:45｜🍜 ランチ：東京駅一番街（地下街グルメ）", html: `<div class="food-box"><strong>一人ランチに最適：</strong>地下通路から東京駅一番街（東京ラーメンストリート等）へ直行。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=東京駅一番街" target="_blank">📍 東京駅一番街</a></div>` },
+            { time: "14:00 - 16:30｜🛍️ 先行ショッピング：茅乃舎 ＋ 銀座ロフト（Owala）＋ 日本橋百貨店", html: `<div class="shop-box"><ul><li><strong>茅乃舎 グランスタ丸の内店（丸の内地下中央口 改札外）：</strong>茅乃舎だし・野菜だし・だしつゆを一括購入（税抜5,000円以上で免税）。</li><li><strong>銀座ロフト（銀座ベルビア館）：</strong>東京駅から徒歩約10分（または丸ノ内線1駅）。<strong>Owala FreeSip ボトル</strong>を選定（好みの色が無ければ月曜に新宿東口 Alpen TOKYO 5Fへ）。</li><li><strong>日本橋散策：</strong>銀座線で「日本橋駅」へ（約4分・180円）、日本橋三越本店やCOREDO室町を散策。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=茅乃舎+グランスタ丸の内店" target="_blank">📍 茅乃舎</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=銀座ロフト" target="_blank">📍 銀座ロフト</a></div>` },
+            { time: "16:45 - 17:30｜🍱 日本橋高島屋 B1 デパ地下で豪華弁当2人分を購入", html: `<div class="item-content"><div class="food-box"><strong>日本橋高島屋S.C. 本館B1（19:30まで）：</strong>人形町今半の黒毛和牛すき焼き弁当・コロッケ、日本橋弁松総本店などを購入。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日本橋高島屋" target="_blank">📍 日本橋高島屋</a></div><div class="std-transit" style="margin-top:8px;"><strong>17:30 帰路：</strong>地下通路で「大手町駅」へ歩き、<strong>都営三田線</strong>で「本蓮沼駅」へ直通（約23分・280円）。</div><div class="taxi-box"><strong>🚕 タクシー代替（日本橋高島屋 ➔ 本蓮沼民泊）：</strong><br>雨足が強い・荷物が多い場合は高島屋前から直行（約25〜30分・約4,200〜4,800円）。</div></div>` }
           ]
         },
         {
           id: "day6",
-          title: "🗓️ Day 6｜2026/11/29（日・都会の洗練散歩）根津千本鳥居 ➔ 東京駅牛たん＆銀杏 ➔ 茅乃舎 ➔「丸の内 ➔ 銀座」黄金散歩 ➔ 田や",
-          sub: "銀杏名所3・効率動線・16:00シャンパンゴールド点灯散歩・日比谷直通荷物置き",
+          title: "🗓️ Day 6｜2026/11/29（日）清澄庭園 ➔ 蔵前水辺 ➔ 東京駅牛たん ➔ 丸の内〜銀座イルミ ➔ 鳥貴族",
+          sub: "手ぶら散策日・紅葉庭園・隅田川スカイツリー眺望・喜助牛たん・16:00シャンパンゴールド・巣鴨焼鳥",
           items: [
-            { time: "08:15 - 10:30｜⛩️ 朝の秘境と古民家朝食：根津神社千本鳥居 ✕ 谷根千", html: `<div class="item-content"><div class="std-transit"><strong>直通アクセス（08:15-08:35）：</strong>本蓮沼駅から都営三田線で「白山駅」へ直通（約13分、Suica 220円）、A1出口から徒歩8〜10分。</div><ul><li><strong>千本鳥居：</strong>朝の静かな時間帯に朱色の千本鳥居と重要文化財の社殿を参拝。</li><li><strong>朝食タイム：</strong>1938年築の古民家カフェ<strong>カヤバ珈琲</strong>の「たまごサンド」や10:00焼き上がりの「根津のたいやき」を堪能。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=根津神社+千本鳥居" target="_blank">📍 根津神社</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=カヤバ珈琲" target="_blank">📍 カヤバ珈琲</a></div>` },
-            { time: "10:45 - 12:15｜🥩 東京駅直行 ➔ 炭火厚切り牛たん定食（八重洲地下街 喜助）", html: `<div class="item-content"><span class="std-transit"><strong>移動（10:45-11:15）：</strong>根津駅から千代田線で「大手町駅」へ（約8分、Suica 180円）、地下通路直結で東京駅へ。</span><div class="food-box"><strong>11:15 早めランチ（牛料理第3弾）：</strong>東京駅八重洲地下街「味の牛たん 喜助」にて、熟成厚切り牛たん定食（麦飯・とろろ・テールスープ付）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 Googleマップ 喜助東京駅</a></div></div>` },
-            { time: "12:30 - 15:40｜🍂 いちょう名所③：行幸通り銀杏 ➔ WHITE KITTE ➔ 🛍️ 茅乃舎", html: `<div class="item-content"><ul><li><strong>12:30-13:45 行幸通りいちょう並木：</strong>東京駅丸の内駅舎前の黄金並木を散策＆<strong>KITTE 6F 屋上庭園</strong>から全景を一望。</li><li><strong>14:00-15:00 WHITE KITTE：</strong>KITTE 1Fアトリウムの純白クリスマスツリーと音と光のショーを鑑賞。</li><li><strong>15:00-15:40 茅乃舎 グランスタ丸の内店：</strong>KITTE地下から「JR丸の内地下中央口」改札外コンコースへ徒歩2〜3分。茅乃舎だし・野菜だしを購入。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KITTE丸の内" target="_blank">📍 KITTE丸の内</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=茅乃舎+グランスタ丸の内店" target="_blank">📍 茅乃舎東京駅</a></div>` },
-            { time: "15:45 - 17:30｜🌟 東京イルミネーション散歩の王道：「丸の内 ➔ 銀座」", html: `<div class="item-content">全長約1.5km（約90分）のフラットな散歩道。<strong>16:00の点灯瞬間からトワイライトタイム</strong>を満喫：<ul><li><strong>丸の内仲通り：</strong>16:00ちょうどに街路樹がシャンパンゴールドに一斉点灯。</li><li><strong>三菱一号館美術館・有楽町レンガアーチ：</strong>レトロな赤レンガ街並みを通り抜け銀座へ。</li><li><strong>銀座中央通り：</strong>和光時計塔やハイブランドのホリデーウィンドウを鑑賞。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 Googleマップ 丸の内仲通り</a></div>` },
-            { time: "17:40 - 20:45｜🚇 荷物置き直通線 ➔ 🏮 夕食：大衆割烹 田や（十条）", html: `<div class="item-content"><span class="std-transit"><strong>17:40-18:20 直通帰宿：</strong>銀座から直結の「日比谷駅」より<strong>都営三田線で「本蓮沼駅」へ直通</strong>（約25分、Suica 280円）、一度宿にだしパックを置いて休憩。</span><div class="food-box"><strong>18:45-20:45 大衆割烹 田や（十条）：</strong>『孤独のグルメ』登場の名店へ徒歩約15分。燻製鯖刺身やおでん鍋と熱燗で乾杯。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=大衆割烹+田や+十条" target="_blank">📍 Googleマップ 大衆割烹 田や</a></div><div class="taxi-box"><strong>🚕 帰りタクシー（十条 田や ➔ 本蓮沼駅近くの宿）：</strong><br>店前から約5分（約1,000〜1,200円／<strong>1人あたり約500〜600円</strong>）。冬の夜風を避けて快適帰宿。</div></div>` }
+            { time: "09:30 - 12:00｜🍁 清澄庭園の紅葉 ＋ 蔵前リバーサイド散策", html: `<div class="item-content"><div class="std-transit"><strong>都営乗り継ぎ（約35分・Suica 280円）：</strong>本蓮沼駅から三田線で「春日駅」（15分）、大江戸線に乗換えて「清澄白河駅」（15分）。</div><ul><li><strong>清澄庭園（入園150円）：</strong>池泉回遊式庭園で晩秋の紅葉を鑑賞、ブルーボトルコーヒー清澄白河店へ。</li><li><strong>蔵前エリア：</strong><span class="std-transit">大江戸線で2駅（4分・180円）「蔵前駅」へ。</span>クラフト雑貨街と<strong>隅田川テラス</strong>からスカイツリーを遠望。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 清澄庭園</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 蔵前水辺</a></div>` },
+            { time: "12:15 - 13:30｜🥩 ランチ：味の牛たん 喜助（東京駅八重洲地下街）", html: `<div class="item-content"><div class="std-transit"><strong>アクセス：</strong>蔵前駅から都営浅草線で「日本橋駅」（約7分・180円）、徒歩6分で八重洲地下街へ。</div><div class="food-box"><strong>炭火焼牛たん定食：</strong>厚切り牛たん・麦飯・とろろ・テールスープの王道定食。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 喜助東京駅</a></div></div>` },
+            { time: "13:45 - 17:30｜🌟 行幸通りイチョウ ➔「丸の内 ➔ 銀座」黄金イルミ散歩", html: `<div class="item-content">東京駅前の<strong>行幸通りイチョウ並木</strong>を撮影後、15:45から<strong>丸の内仲通り</strong>〜<strong>銀座中央通り</strong>を散策し、<strong>16:00のイルミネーション点灯</strong>を満喫。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 丸の内仲通り</a></div>` },
+            { time: "18:00 - 19:30｜🍢 夕食：鳥貴族 巣鴨店（タッチパネル注文）", html: `<div class="item-content"><div class="std-transit"><strong>往路：</strong>銀座から「日比谷駅」へ歩き、<strong>都営三田線</strong>で「巣鴨駅」へ直通（約17分・220円）。</div><div class="food-box"><strong>特徴：</strong>全品均一価格・多言語タッチパネルで注文ラクラク（貴族焼・つくね・釜飯）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 鳥貴族 巣鴨店</a></div><div class="std-transit" style="margin-top:8px;"><strong>帰路：</strong>都営三田線で9分、「本蓮沼駅」へ直通（220円）。</div><div class="taxi-box"><strong>🚕 タクシー代替（巣鴨 ➔ 本蓮沼民泊）：</strong><br>巣鴨駅北口から約10分（約1,500〜1,800円・2人割勘で1人約750〜900円）。</div></div>` }
           ]
         },
         {
           id: "day7",
-          title: "🗓️ Day 7｜2026/11/30（月・🚨 予約確定日）活美登利 ➔ 渋谷ロフト ➔ 京王百貨店免税＆パッキング ➔ 恵比寿バカラ ➔ 魚真",
-          sub: "朝ゆっくり出発・Owalaボトル・ドモホルンリンクル/CPB/デコルテ免税梱包(24.5kg以下)",
+          title: "🗓️ Day 7｜2026/11/30（月・🚨予約厳守）京王受取＆免税 ➔ 新橋ロッカー ➔ 16:30 銀座八芳タラバ蟹 ➔ 梱包",
+          sub: "ゆったり起床・ドモホルンリンクル/CPB/デコルテ合算免税・新橋預け・銀座八芳(H7ZUX993DA)・24.5kg梱包",
           items: [
-            { time: "08:30 - 12:15｜🍣 ゆっくり起床 ➔ 渋谷スクランブル交差点 ➔ 回し寿司 活 美登利", html: `<div class="item-content"><span class="std-transit">09:45-10:25 本蓮沼から三田線・山手線乗り継ぎで「渋谷駅」へ。ハチ公口で記念撮影。</span><div class="food-box"><strong>11:00-12:15 西武渋谷店 A館8F：</strong>10:50整理券発券、11:00開店1巡目入店。名物一本穴子、こぼれウニ、炙りえんがわ、ぼたん海老を堪能。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=回し寿司+活+西武渋谷店" target="_blank">📍 Googleマップ 活 美登利渋谷</a></div></div>` },
-            { time: "12:15 - 12:40｜🛍️ マイボトル調達：渋谷ロフト", html: `<div class="shop-box">西武渋谷から徒歩2分の渋谷ロフトにて<strong>Owala 保温ボトル</strong>を購入（免税対応）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=渋谷ロフト" target="_blank">📍 Googleマップ 渋谷ロフト</a></div>` },
-            { time: "13:15 - 14:45｜🛍️ 🚨 京王百貨店 新宿店 予約受取・化粧品購入・一括免税（時間厳守）", html: `<div class="item-content"><span class="std-transit">12:45-13:00 JR山手線で3駅（6分）「新宿駅」下車、西口地下通路直結で京王百貨店へ。</span><div class="shop-box"><ul><li><strong>1F 化粧品フロア：</strong><strong>クレ・ド・ポー ボーテ</strong>（ヴォワールコレクチュールn 40g × 2本）、<strong>コスメデコルテ</strong>（AQ アイクリーム 15g × 2個）を購入。</li><li><strong>4F ドモホルンリンクル（予約受取）：</strong>予約番号を提示し、奥様用の基礎化粧品セット一式を受領。</li><li><strong>2F 外国人お客様免税カウンター：</strong>1Fと4Fのレシート・商品・パスポートをまとめて一括免税手続き。</li><li><em>（予備案：渋谷で希望のボトル色がなかった場合、新宿東口 Alpen TOKYO 5F キャンプ売場を確認）</em></li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=京王百貨店+新宿店" target="_blank">📍 京王百貨店 新宿店</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alpen+TOKYO" target="_blank">📍 予備案：Alpen TOKYO</a></div></div>` },
-            { time: "15:15 - 16:00｜🚨 購入品の宿への搬送＆パッキング計量（プランA）", html: `<div class="item-content"><div class="taxi-box"><strong>🚕 プランA（新宿から山手線で巣鴨 ➔ タクシーで宿へ直行）：</strong><br>巣鴨駅北口からタクシーで本蓮沼駅付近の宿へ直行（約1,500〜1,800円／<strong>1人あたり約750〜900円</strong>）。ガラス瓶の破損防止と体力温存に最適。</div><strong>🚨 梱包＆重量チェック：</strong>ガラス瓶化粧品・ドモホルンリンクル・ボトルをユニクロの極暖衣類で包んで28インチスーツケース中央へ収納。携帯スケールで実測し、<strong>必ず24.0〜24.5kg以内（25kg制限未満）</strong>に収めて施錠！</div>` },
-            { time: "16:30 - 20:00｜✨ 恵比寿ガーデンプレイス バカラ ➔ 🐟 魚真 恵比寿店", html: `<div class="item-content"><span class="std-transit">16:30-17:15 本蓮沼から三田線・山手線で「恵比寿駅」へ。スカイウォークで恵比寿ガーデンプレイスへ。</span><br><strong>17:15-18:00（点灯直後の空いている時間帯）：</strong>世界最大級<strong>バカラ シャンデリア</strong>とクリスマスツリーを鑑賞・撮影。<div class="food-box"><strong>18:15-20:00 魚真 恵比寿店：</strong>1回転目が落ち着く18:15に入店。名物お刺身盛り合わせ、金目鯛かぶと塩焼き、うに・いくら手巻きと熱燗を堪能後、20:15頃に帰宿。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚真+恵比寿店" target="_blank">📍 Googleマップ 魚真恵比寿店</a></div></div>` }
+            { time: "09:30 - 12:30｜☕ ゆったり起床 ➔ 軽食ブランチ ➔ 新宿へ移動", html: `<div class="item-content">夕方のタラバ蟹ビュッフェに備え、午前は軽めの食事で調整。<div class="std-transit" style="margin-top:6px;"><strong>アクセス（約30分・Suica 390円）：</strong>本蓮沼駅から三田線で「巣鴨駅」（9分）、JR山手線で「新宿駅」（15分）、西口地下通路で京王百貨店へ直結。</div></div>` },
+            { time: "13:15 - 14:45｜🛍️ 🚨 京王百貨店 新宿店 予約受取・購入・一括免税（時間厳守）", html: `<div class="item-content"><div class="shop-box"><ul><li><strong>1F 化粧品売場：</strong>クレ・ド・ポー <code>ヴォワールコレクチュールｎ</code>（国内版40g）× 2本 ＋ デコルテ <code>AQ アブソリュート アイクリーム タイトフォーカス</code>（15g）× 2個（レシート持参で4Fへ）。</li><li><strong>4F ドモホルンリンクル受取：</strong><strong>鄭 云嘉様ご本人のパスポート原本</strong>と下記カードを提示（合計89,100円税込・カード/現金可）。</li><li><strong>2F 外国人免税カウンター：</strong>1F・4Fのレシートと商品を合算して免税・密封梱包。</li><li><em>（予備：Owala未購入の場合、14:45に新宿東口 Alpen TOKYO 5Fへ）</em></li></ul></div><div class="taxi-box"><strong>📱 4F スタッフ提示用カード（Show to Staff）：</strong><br>こんにちは。事前予約した商品を受け取りに来ました。<br>・お名前：<strong>鄭 云嘉（テイ ウンカ）様</strong><br>・日本会員番号：<strong>19363373</strong>（台湾：00979731）<br>・受取日：2026/11/30｜合計：<strong>89,100円（税込）</strong><br>・商品：4.保湿液×3、5.美活肌エキス×2、6.クリーム20×2、7.保護乳液×4<br>・ポイント交換品：基本4点(3日分)×2、保湿リップ×1</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=京王百貨店+新宿店" target="_blank">📍 京王百貨店新宿店</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alpen+TOKYO" target="_blank">📍 予備：Alpen TOKYO</a></div>` },
+            { time: "14:50 - 15:40｜🔐 新宿 ➔ 新橋駅（Suicaコインロッカーへ荷物預け）", html: `<div class="item-content"><div class="std-transit"><strong>地下鉄（約24分・Suica 210円）：</strong>新宿から丸ノ内線で「赤坂見附駅」、同一ホーム対面乗換で銀座線「新橋駅」直通。</div><div class="taxi-box"><strong>🚕 タクシー代替（新宿京王 ➔ 新橋銀座ナイン）：</strong><br>免税袋が重い場合は西口から直行（約20〜25分・約3,500〜4,000円・1人約1,750〜2,000円）。</div>新橋駅（銀座口／銀座線改札外）のSuicaロッカーに預け（400〜500円・<strong>番号を写真記録</strong>）、手ぶらで徒歩3分。</div>` },
+            { time: "16:30 - 18:30｜🦀 フィナーレ夕食：海鮮ブッフェダイニング 銀座八芳（予約確定）", html: `<div class="food-box"><strong>予約番号：<code>H7ZUX993DA</code>（2名・16:30来店）</strong><br><strong>場所：</strong>銀座ナイン3号館 B1F（新橋駅徒歩3分）<br><strong>プラン：</strong>120分制・タラバ蟹含む150種以上海鮮ビュッフェ＋アルコール飲み放題（13,000円税込/人）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=海鮮ブッフェダイニング+銀座八芳" target="_blank">📍 Google Maps 銀座八芳</a></div>` },
+            { time: "18:30 - 20:00｜🚨 新橋で荷物回収 ➔ 帰宿・24.5kg以下で厳重梱包", html: `<div class="item-content"><div class="std-transit"><strong>三田線直通（約35分・Suica 280円）：</strong>新橋ロッカー回収後、徒歩4分で<strong>都営三田線「内幸町駅」</strong>へ、乗換なしで「本蓮沼駅」直通。</div><div class="taxi-box"><strong>🚕 タクシー護送（新橋 ➔ 本蓮沼民泊）：</strong><br>高級瓶入り化粧品を安全に運ぶならタクシー直行（約25〜30分・約4,500〜5,200円・1人約2,250〜2,600円）。</div>帰宿後、瓶類を衣類で包み28インチ箱中央へ収納。携帯スケールで<strong>24.0〜24.5kg以内</strong>を確認して施錠！</div>` }
           ]
         },
         {
@@ -1124,7 +868,7 @@
       ]
     },
     en: {
-      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v8 Trilingual)",
+      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v11 Final)",
       offline: "📴 Offline Mode Active (Full itinerary & station maps loaded from device cache)",
       title: "🍁 2026 Autumn in Tokyo・8D7N Guide",
       subtitle: "Nov 24 (Tue) – Dec 01 (Tue)｜Minimalist Aesthetics・Kuhonbutsu・Kuramae・Marunouchi to Ginza",
@@ -1164,8 +908,8 @@
         { key: "mb_wallet", text: "<strong>Day 2 mont-bell Okachimachi:</strong> Zip Wallet (#1133372, BK Black preferred)", btn: "👛 Photos/Store" },
         { key: "takeya_meiji", text: "<strong>Day 2 Takeya 3F:</strong> 28–30″ Lightweight Hard Suitcase + Meiji Amino Collagen Premium Gold × 3 packs", btn: "🧳 Photos/Store" },
         { key: "takeya_drug", text: "<strong>Day 2 Takeya 3F Pharmacy:</strong> UHA Iron &amp; Folic Acid × 2 jars, DHC Forslean × 1 pack, Teare W Eye Drops × 2 boxes", btn: "💊 Photos/Store" },
-        { key: "kayanoya", text: "<strong>Day 6 Tokyo Sta. Kayanoya:</strong> Classic Dashi, Vegetable Dashi &amp; Special Soup Stock", btn: "🍲 Photos/Store" },
-        { key: "owala", text: "<strong>Day 7 Shibuya LOFT:</strong> Owala Insulated Bottle (Backup: Shinjuku Alpen TOKYO 5F)", btn: "🥤 Photos/Store" },
+        { key: "kayanoya", text: "<strong>Day 5 Tokyo Sta. Kayanoya:</strong> Classic Dashi, Vegetable Dashi &amp; Special Soup Stock", btn: "🍲 Photos/Store" },
+        { key: "owala", text: "<strong>Day 5 Ginza LOFT:</strong> Owala Insulated Bottle (Backup: Day 7 Shinjuku Alpen TOKYO 5F)", btn: "🥤 Photos/Store" },
         { key: "keio_1f", text: "<strong>Day 7 Keio Shinjuku 1F:</strong> Clé de Peau Correcting Cream Veil × 2 + DECORTÉ AQ Eye Cream × 2", btn: "💄 Photos/Store" },
         { key: "keio_4f", text: "<strong>Day 7 Keio Shinjuku 4F:</strong> Pick up reserved Domohorn Wrinkle set (Tax refund at 2F, pack ≤ 24.5kg)", btn: "✨ Photos/Store" },
         { key: "narita_tax", text: "<strong>Day 8 Narita T1 4F:</strong> Scan passport at Customs KIOSK FIRST before checking 25kg suitcase!", btn: "🛂 Procedure" }
@@ -1222,37 +966,36 @@
         },
         {
           id: "day5",
-          title: "🗓️ Day 5｜Nov 28 (Sat・Waterfront, Gardens & Artisans) Tsukiji Tuna ➔ Kiyosumi Garden ➔ Kuramae Sunset ➔ Enshuya",
-          sub: "24H Sushizanmai・Indo-Saracenic Temple・Maple Pond・Sumida River Skytree View・Century-Old Seafood",
+          title: "🗓️ Day 5｜2026/11/28 (Sat・Rainy Solo Indoor) Marunouchi ➔ Kayanoya & Ginza LOFT ➔ Takashimaya Bento",
+          sub: "Friend rests at Airbnb・Rain-free Otemachi underground・Early shopping・17:00 luxury bento dinner",
           items: [
-            { time: "07:30 - 09:45｜🐟 Morning Zero-Wait: Sushizanmai Honten & Tsukiji Hongwanji", html: `<div class="item-content"><div class="std-transit"><strong>Transit:</strong> Depart 07:30, Mita Line to Hibiya, transfer to <strong>Hibiya Line</strong> to "Tsukiji Sta." (~35 min, ¥330).</div><div class="food-box"><strong>08:00-09:15 Sushizanmai Tsukiji Main Store:</strong> Open 24/7 with plenty of seating—walk right in at 8 AM for bluefin otoro, chutoro &amp; seared sushi.</div><strong>09:20-09:45 Tsukiji Hongwanji (3-min walk):</strong> National Important Cultural Property featuring rare ancient Indian stone architecture, stained glass &amp; pipe organ.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=すしざんまい+本店+築地" target="_blank">📍 Sushizanmai</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=築地本願寺" target="_blank">📍 Tsukiji Hongwanji</a></div>` },
-            { time: "10:00 - 13:30｜🍁 Kiyosumi-Shirakawa: Kiyosumi Garden Maples & Specialty Coffee", html: `<div class="item-content"><span class="std-transit">Hibiya Line to Suitengumae, transfer to Hanzomon Line to "Kiyosumi-shirakawa Sta."</span><br><ul><li><strong>Kiyosumi Garden (¥150):</strong> Stroll the Edo-era strolling pond garden with famous rocks and late-November maple reflections.</li><li><strong>Coffee Time:</strong> Relax at Blue Bottle Coffee flagship or local artisan roasteries.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 Google Maps Kiyosumi Garden</a></div>` },
-            { time: "13:45 - 16:30｜☕ Artisan Quarter ✕ Sumida River Sunset View of Skytree: Kuramae", html: `<div class="item-content"><span class="std-transit">Ride Toei Oedo Line 2 stops (4 min) to "Kuramae Sta."</span><br><ul><li><strong>Minimalist Craft Walk:</strong> Explore Tokyo's "Brooklyn"—leather workshops, bespoke stationery at <strong>Kakimori</strong>, and bean-to-bar treats at <strong>Dandelion Chocolate</strong>.</li><li><strong>Riverside Sunset:</strong> Walk along the <strong>Sumida River Terrace</strong> at dusk as golden sunlight illuminates Tokyo Skytree across the water.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 Google Maps Kuramae Riverside</a></div>` },
-            { time: "16:45 - 18:30｜🐟 Early Dinner: Fish Cuisine Enshuya (Tawaramachi / Asakusa)", html: `<div class="food-box"><strong>Highlights:</strong> 10-min walk north from Kuramae. Nearly 100-year-old Asakusa seafood institution—enter right at 17:00 opening.<br><strong>Must-Order:</strong> Market-fresh sashimi set, seafood hotpot, grilled fish collar. Return via Asakusa &amp; Mita Lines after 18:45.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚料理+遠州屋+田原町" target="_blank">📍 Google Maps Enshuya</a></div>` }
+            { time: "10:30 - 12:30｜🏢 Marunouchi Underground Loop (100% Rain-Free)", html: `<div class="item-content"><div class="std-transit"><strong>Transit:</strong> Toei Mita Line direct from Motohasunuma to "Otemachi Sta." (~23 min, ¥280 Suica). Walk underground without an umbrella.</div>Explore <strong>Marunouchi OAZO (Maruzen Bookstore)</strong> and <strong>KITTE Marunouchi</strong> (1F WHITE KITTE Christmas tree + 6F rooftop garden overlooking Tokyo Station).<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KITTE丸の内" target="_blank">📍 KITTE Marunouchi</a></div>` },
+            { time: "12:30 - 13:45｜🍜 Lunch: Tokyo Station First Avenue (Underground)", html: `<div class="food-box"><strong>Solo-Friendly Lunch:</strong> Walk underground directly to Tokyo Ramen Street (Rokurinsha, Ikaruga, etc.). Quick turnover and dry.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=東京駅一番街" target="_blank">📍 Tokyo Sta. First Ave</a></div>` },
+            { time: "14:00 - 16:30｜🛍️ Early Shopping: Kayanoya + Ginza LOFT (Owala) + Nihombashi", html: `<div class="shop-box"><ul><li><strong>Kayanoya Gransta Marunouchi (Outside Marunouchi Underground Central Exit):</strong> Buy Classic Dashi, Vegetable Dashi &amp; Soup Stock (Tax-free over ¥5,000 excl. tax) to keep Sunday hands-free!</li><li><strong>Ginza LOFT (Ginza Velvia):</strong> 10-min walk from Tokyo Sta. (or 1 stop on Marunouchi Line). Pick <strong>Owala FreeSip Bottle</strong> (Backup: Shinjuku Alpen TOKYO 5F on Mon).</li><li><strong>Nihombashi Dept. Stores:</strong> Ginza Line to Nihombashi (~4 min, ¥180). Browse Mitsukoshi Main Store or COREDO Muromachi.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=茅乃舎+グランスタ丸の内店" target="_blank">📍 Kayanoya</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=銀座ロフト" target="_blank">📍 Ginza LOFT</a></div>` },
+            { time: "16:45 - 17:30｜🍱 Highlight: Nihombashi Takashimaya B1 Luxury Bento for Two", html: `<div class="item-content"><div class="food-box"><strong>Nihombashi Takashimaya S.C. Main B1 (Open till 19:30):</strong> Pick up Ningyocho Imahan Wagyu Sukiyaki Bento, Benmatsu traditional Edo bento, deli sides &amp; desserts.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=日本橋高島屋" target="_blank">📍 Nihombashi Takashimaya</a></div><div class="std-transit" style="margin-top:8px;"><strong>17:30 Subway Return:</strong> 7-min underground walk to "Otemachi Sta.", Toei Mita Line direct to "Motohasunuma Sta." (~23 min, ¥280).</div><div class="taxi-box"><strong>🚕 Taxi Alternative (Takashimaya ➔ Itabashi Airbnb):</strong><br>If rain is heavy or bags are full, take a taxi directly from Takashimaya (~25–30 min, ¥4,200–¥4,800).</div></div>` }
           ]
         },
         {
           id: "day6",
-          title: "🗓️ Day 6｜Nov 29 (Sun・Urban Elegance Walk) Nezu Torii Gates ➔ Tokyo Sta. Gyutan & Ginkgo ➔ Kayanoya ➔ Marunouchi-Ginza Walk ➔ Taya",
-          sub: "Ginkgo Spot #3・Streamlined Route・16:00 Champagne Gold Lights・Direct Hibiya Drop-Off",
+          title: "🗓️ Day 6｜2026/11/29 (Sun) Kiyosumi Garden ➔ Kuramae ➔ Beef Tongue ➔ Marunouchi–Ginza Lights ➔ Torikizoku",
+          sub: "Hands-free day・Autumn foliage・Sumida River Skytree view・Kisuke Beef Tongue・16:00 Illumination・Yakitori",
           items: [
-            { time: "08:15 - 10:30｜⛩️ Morning Sanctuary & Townhouse Breakfast: Nezu Shrine & Yanesen", html: `<div class="item-content"><div class="std-transit"><strong>Direct Transit (08:15-08:35):</strong> Toei Mita Line direct to "Hakusan Sta." (13 min, ¥220), 8–10 min walk from Exit A1.</div><ul><li><strong>Thousand Vermilion Torii:</strong> Walk through the serene crimson torii tunnel before crowds arrive.</li><li><strong>Breakfast:</strong> Thick fluffy egg sandwich at 1938 wooden townhouse <strong>Kayaba Coffee</strong>, or fresh 10:00 Nezu Taiyaki.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=根津神社+千本鳥居" target="_blank">📍 Nezu Shrine</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=カヤバ珈琲" target="_blank">📍 Kayaba Coffee</a></div>` },
-            { time: "10:45 - 12:15｜🥩 Direct to Tokyo Station ➔ Charcoal Beef Tongue (Kisuke Yaesu)", html: `<div class="item-content"><span class="std-transit"><strong>Transit (10:45-11:15):</strong> Chiyoda Line Nezu ➔ Otemachi (8 min, ¥180), walk underground directly into Tokyo Station.</span><div class="food-box"><strong>11:15 Early Lunch [Beef #3]:</strong> "Aji no Gyutan Kisuke" in Yaesu Underground Mall—charcoal-grilled thick-cut beef tongue set with barley rice, grated yam &amp; oxtail soup.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 Google Maps Kisuke Tokyo Sta.</a></div></div>` },
-            { time: "12:30 - 15:40｜🍂 Ginkgo Spot #3: Gyoko-dori ➔ WHITE KITTE ➔ 🛍️ Kayanoya Dashi", html: `<div class="item-content"><ul><li><strong>12:30-13:45 Gyoko-dori Ginkgo Avenue:</strong> Golden ginkgo boulevard framing Tokyo Station's red-brick facade + free panoramic view from <strong>KITTE 6F Roof Garden</strong>.</li><li><strong>14:00-15:00 WHITE KITTE:</strong> Giant white fir Christmas tree &amp; light show in KITTE 1F atrium.</li><li><strong>15:00-15:40 Kayanoya Gransta Marunouchi:</strong> Exit KITTE B1 toward "JR Marunouchi Underground Central Exit" (2–3 min walk, outside ticket gates) to buy classic &amp; vegetable dashi packs.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KITTE丸の内" target="_blank">📍 KITTE Marunouchi</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=茅乃舎+グランスタ丸の内店" target="_blank">📍 Kayanoya Tokyo Sta.</a></div>` },
-            { time: "15:45 - 17:30｜🌟 Premier Evening Stroll: «Marunouchi ➔ Ginza» Golden Walk", html: `<div class="item-content">Flat 1.5 km promenade (~90 min) timed across the <strong>16:00 illumination switch-on into twilight</strong>:<ul><li><strong>Marunouchi Naka-dori:</strong> Hundreds of trees light up in warm champagne gold at 16:00 sharp; enjoy mulled wine at the Christmas market.</li><li><strong>Mitsubishi Ichigokan &amp; Yurakucho Brick Arches:</strong> Pass red-brick courtyards into Ginza.</li><li><strong>Ginza Chuo-dori:</strong> Admire Wako Clock Tower &amp; luxury flagship holiday facades.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 Google Maps Marunouchi Naka-dori</a></div>` },
-            { time: "17:40 - 20:45｜🚇 Direct Drop-Off Line ➔ 🏮 Dinner: Taishu Kappo Taya (Jujo)", html: `<div class="item-content"><span class="std-transit"><strong>17:40-18:20 Direct Drop-Off:</strong> Walk from Ginza to connected "Hibiya Sta." and ride <strong>Toei Mita Line direct to "Motohasunuma Sta."</strong> (~25 min, ¥280) to drop off Kayanoya bags.</span><div class="food-box"><strong>18:45-20:45 Taishu Kappo Taya (Jujo):</strong> Featured on <em>Solitary Gourmet</em>—15-min walk to Jujo Ginza for smoked mackerel sashimi, oden hotpot &amp; warm sake.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=大衆割烹+田や+十条" target="_blank">📍 Google Maps Kappo Taya</a></div><div class="taxi-box"><strong>🚕 Return Taxi (Jujo Taya ➔ Motohasunuma Airbnb):</strong><br>5-min cab ride from the restaurant door (~¥1,000–¥1,200 / <strong>~¥500–¥600 per person</strong>)—stay warm after drinks!</div></div>` }
+            { time: "09:30 - 12:00｜🍁 Kiyosumi Garden Foliage + Kuramae Riverside", html: `<div class="item-content"><div class="std-transit"><strong>Toei Subway Transfer (~35 min, ¥280 Suica):</strong> Mita Line from Motohasunuma to "Kasuga Sta." (15 min), transfer to Oedo Line direct to "Kiyosumi-shirakawa Sta." (15 min).</div><ul><li><strong>Kiyosumi Garden (¥150):</strong> Stroll the pond garden for late-Nov maple foliage; stop by Blue Bottle Coffee Flagship.</li><li><strong>Kuramae Riverside:</strong> <span class="std-transit">Oedo Line 2 stops (4 min, ¥180) to "Kuramae Sta."</span> Explore craft shops &amp; <strong>Sumida River Terrace</strong> for Tokyo Skytree views.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 Kiyosumi Garden</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 Kuramae Terrace</a></div>` },
+            { time: "12:15 - 13:30｜🥩 Lunch: Aji no Gyutan Kisuke (Tokyo Sta. Yaesu Underground)", html: `<div class="item-content"><div class="std-transit"><strong>Transit:</strong> Toei Asakusa Line from Kuramae to "Nihombashi Sta." (~7 min, ¥180), 6-min walk to Yaesu Underground Mall.</div><div class="food-box"><strong>Charcoal-Grilled Beef Tongue Set:</strong> Thick-cut beef tongue with barley rice, grated yam &amp; oxtail soup. Easy picture set menu.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 Kisuke Tokyo Sta.</a></div></div>` },
+            { time: "13:45 - 17:30｜🌟 Gyoko-dori Ginkgo ➔ Marunouchi to Ginza Illumination Walk", html: `<div class="item-content">Photograph <strong>Gyoko-dori Ginkgo Avenue</strong>, then stroll from <strong>Marunouchi Naka-dori</strong> to <strong>Ginza Chuo-dori</strong> starting 15:45 to catch the <strong>16:00 Champagne Gold LED light-up</strong>.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 Marunouchi Naka-dori</a></div>` },
+            { time: "18:00 - 19:30｜🍢 Dinner: Torikizoku Sugamo (Tablet-Order Yakitori)", html: `<div class="item-content"><div class="std-transit"><strong>Outbound:</strong> Walk to "Hibiya Sta.", take <strong>Toei Mita Line</strong> direct to "Sugamo Sta." (~17 min, ¥220).</div><div class="food-box"><strong>Highlights:</strong> Flat-rate yakitori with multilingual tabletop touchscreens (Kizokuyaki skewers, chicken meatballs, kamameshi rice).<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 Torikizoku Sugamo</a></div><div class="std-transit" style="margin-top:8px;"><strong>Return:</strong> 9 min on Toei Mita Line direct to "Motohasunuma Sta." (¥220).</div><div class="taxi-box"><strong>🚕 Taxi Alternative (Sugamo ➔ Itabashi Airbnb):</strong><br>10-min ride from Sugamo North Exit (~¥1,500–¥1,800, <strong>~¥750–¥900 per person</strong>).</div></div>` }
           ]
         },
         {
           id: "day7",
-          title: "🗓️ Day 7｜Nov 30 (Mon・🚨 Locked Reservation Day) Katsu Midori ➔ Shibuya LOFT ➔ Keio Tax-Free & Packing ➔ Ebisu Baccarat ➔ Uoshin",
-          sub: "Relaxed Morning・Owala Bottle・Domohorn Wrinkle/CPB/DECORTÉ Tax-Free Packing (≤24.5kg)",
+          title: "🗓️ Day 7｜2026/11/30 (Mon・🚨Booked) Keio Tax-Free ➔ Shimbashi Locker ➔ 16:30 Ginza Happo Crab ➔ Pack",
+          sub: "Sleep in・Domohorn/CPB/DECORTÉ tax-free・Shimbashi Suica locker・Ginza Happo (H7ZUX993DA)・≤24.5kg",
           items: [
-            { time: "08:30 - 12:15｜🍣 Sleep In ➔ Shibuya Crossing ➔ Mawashizushi Katsu Midori", html: `<div class="item-content"><span class="std-transit">09:45-10:25 Toei Mita Line &amp; JR Yamanote Line to "Shibuya Sta." Photo stop at Hachiko Scramble Crossing.</span><div class="food-box"><strong>11:00-12:15 Seibu Shibuya Bldg A 8F:</strong> Grab queue ticket at 10:50 for 11:00 first seating. Must-order: whole seared conger eel (anago), overflowing uni gunkan, seared engawa &amp; botan shrimp.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=回し寿司+活+西武渋谷店" target="_blank">📍 Google Maps Katsu Midori Shibuya</a></div></div>` },
-            { time: "12:15 - 12:40｜🛍️ Bottle Stop #1: Shibuya LOFT Flagship", html: `<div class="shop-box">2-min walk from Seibu to Shibuya LOFT to pick up an <strong>Owala Insulated Bottle</strong> (tax-free available).<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=渋谷ロフト" target="_blank">📍 Google Maps Shibuya LOFT</a></div>` },
-            { time: "13:15 - 14:45｜🛍️ 🚨 Keio Dept. Store Shinjuku: Reservation Pickup, Cosmetics & Tax Refund", html: `<div class="item-content"><span class="std-transit">12:45-13:00 JR Yamanote Line 3 stops (6 min) to Shinjuku Sta., underground direct to Keio Dept. Store.</span><div class="shop-box"><ul><li><strong>1F Cosmetics:</strong> <strong>Clé de Peau Beauté</strong> Correcting Cream Veil (40g × 2 tubes); <strong>DECORTÉ</strong> AQ Eye Cream (15g × 2 jars).</li><li><strong>4F Domohorn Wrinkle (Core Mission):</strong> Present reservation confirmation to pick up your wife's full skincare set.</li><li><strong>2F Foreign Customer Tax Refund Counter:</strong> Combine all 1F &amp; 4F receipts with passports for one-stop tax refund.</li><li><em>(Backup: If desired Owala color wasn't in Shibuya, check Alpen TOKYO 5F camping floor at Shinjuku East Exit)</em></li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=京王百貨店+新宿店" target="_blank">📍 Keio Dept. Store Shinjuku</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alpen+TOKYO" target="_blank">📍 Backup: Alpen TOKYO</a></div></div>` },
-            { time: "15:15 - 16:00｜🚨 Escort Haul Home & Final Packing (Taxi Plan A)", html: `<div class="item-content"><div class="taxi-box"><strong>🚕 Plan A (Shinjuku Yamanote Line to Sugamo ➔ Taxi to Airbnb):</strong><br>Board taxi at Sugamo North Exit direct to Motohasunuma Airbnb (~¥1,500–¥1,800 / <strong>~¥750–¥900 per person</strong>)—safe for glass bottles and zero fatigue.</div><strong>🚨 Packing &amp; Scale Protocol:</strong> Wrap all glass skincare bottles and tumbler in UNIQLO Extra Warm clothing at the center of the 28″ suitcase. Weigh with digital luggage scale to ensure <strong>strictly 24.0–24.5 kg (under the 25kg limit)</strong>, then zip and lock!</div>` },
-            { time: "16:30 - 20:00｜✨ Ebisu Garden Place Baccarat Lights ➔ 🐟 Uoshin Ebisu", html: `<div class="item-content"><span class="std-transit">16:30-17:15 Mita &amp; Yamanote Lines to "Ebisu Sta.", take Ebisu Skywalk to Garden Place.</span><br><strong>17:15-18:00 (Early Dusk Photos):</strong> Admire the world's largest <strong>Baccarat Chandelier</strong> and Christmas tree before peak dinner crowds.<div class="food-box"><strong>18:15-20:00 Uoshin Ebisu:</strong> Step into a warm seafood izakaya right as first-seating tables open up. Must-order: fresh sashimi platter, salt-grilled kinmedai collar, uni-ikura hand rolls &amp; warm sake. Return to Airbnb around 20:15.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=魚真+恵比寿店" target="_blank">📍 Google Maps Uoshin Ebisu</a></div></div>` }
+            { time: "09:30 - 12:30｜☕ Sleep In ➔ Light Brunch ➔ Head to Shinjuku", html: `<div class="item-content">Relaxed morning with a light sandwich/coffee to save room for the king crab feast.<div class="std-transit" style="margin-top:6px;"><strong>Transit (~30 min, ¥390 Suica):</strong> Mita Line to "Sugamo Sta." (9 min), transfer to JR Yamanote Line direct to "Shinjuku Sta." (15 min), West Exit underground direct to Keio Dept. Store.</div></div>` },
+            { time: "13:15 - 14:45｜🛍️ 🚨 Keio Dept. Store Shinjuku Pickup, Cosmetics & Tax-Free (Fixed)", html: `<div class="item-content"><div class="shop-box"><ul><li><strong>1F Cosmetics:</strong> Clé de Peau <code>Voile Crème Correcteur n</code> (JP 40g) × 2 + DECORTÉ <code>AQ Absolute Eye Cream</code> (15g) × 2 (bring receipts to 4F).</li><li><strong>4F Domohorn Wrinkle Pickup:</strong> Present <strong>Ms. Cheng Yun-Chia's original passport</strong> &amp; the Japanese staff card below (Total ¥89,100 incl. tax, card/cash).</li><li><strong>2F Foreign Tax-Free Counter:</strong> Combine 1F &amp; 4F receipts and seal tax-free bags.</li><li><em>(Backup: If Owala not bought on Sat, visit Shinjuku East Exit Alpen TOKYO 5F at 14:45)</em></li></ul></div><div class="taxi-box"><strong>📱 4F Domohorn Wrinkle Staff Card (Show to Staff):</strong><br>こんにちは。事前予約した商品を受け取りに来ました。<br>・お名前：<strong>鄭 云嘉（テイ ウンカ）様</strong><br>・日本会員番号：<strong>19363373</strong>（台湾：00979731）<br>・受取日：2026/11/30｜合計：<strong>89,100円（税込）</strong><br>・商品：4.保湿液×3、5.美活肌エキス×2、6.クリーム20×2、7.保護乳液×4<br>・ポイント交換品：基本4点(3日分)×2、保湿リップ×1</div><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=京王百貨店+新宿店" target="_blank">📍 Keio Shinjuku</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Alpen+TOKYO" target="_blank">📍 Backup: Alpen TOKYO</a></div>` },
+            { time: "14:50 - 15:40｜🔐 Shinjuku ➔ Shimbashi Sta. (Suica Coin Locker Drop)", html: `<div class="item-content"><div class="std-transit"><strong>Subway (~24 min, ¥210 Suica):</strong> Marunouchi Line from Shinjuku to "Akasaka-mitsuke", same-platform transfer to Ginza Line direct to "Shimbashi Sta."</div><div class="taxi-box"><strong>🚕 Taxi Alternative (Keio Shinjuku ➔ Ginza Nine):</strong><br>Direct ride if bags feel heavy (~20–25 min, ¥3,500–¥4,000, <strong>~¥1,750–¥2,000 per person</strong>).</div>Lock sealed tax-free bags in a Shimbashi Sta. Suica locker (Ginza Exit / outside Ginza Line gates, ¥400–¥500 — <strong>snap a photo of the locker #</strong>), then walk 3 min hands-free.</div>` },
+            { time: "16:30 - 18:30｜🦀 Finale Feast: Seafood Buffet Ginza Happo (Confirmed)", html: `<div class="food-box"><strong>Booking #: <code>H7ZUX993DA</code> (2 Guests・16:30 Check-in)</strong><br><strong>Location:</strong> Ginza Nine Bldg 3 B1F (3-min walk from Shimbashi Sta.)<br><strong>Plan:</strong> 120-min King Crab &amp; 150+ seafood/Japanese/Western/Chinese dishes + all-you-can-drink alcohol (¥13,000 incl. tax/person).<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=海鮮ブッフェダイニング+銀座八芳" target="_blank">📍 Google Maps Ginza Happo</a></div>` },
+            { time: "18:30 - 20:00｜🚨 Retrieve Bags ➔ Return to Airbnb & Pack ≤ 24.5kg", html: `<div class="item-content"><div class="std-transit"><strong>Direct Subway (~35 min, ¥280 Suica):</strong> Collect bags at Shimbashi, walk 4 min to <strong>Toei Mita Line "Uchisaiwaicho Sta."</strong>, direct train to "Motohasunuma Sta."</div><div class="taxi-box"><strong>🚕 Taxi Escort (Shimbashi ➔ Itabashi Airbnb):</strong><br>Safe ride home with fragile skincare bottles (~25–30 min, ¥4,500–¥5,200, <strong>~¥2,250–¥2,600 per person</strong>).</div>Wrap all glass bottles in clothes at the center of the 28″ suitcase; verify weight is <strong>≤ 24.0–24.5 kg</strong> with digital scale and lock!</div>` }
           ]
         },
         {
@@ -1473,7 +1216,7 @@
       photos: [],
       svg: `<svg viewBox="0 0 120 120" style="width:110px;height:110px;margin:auto;"><rect x="30" y="24" width="60" height="72" rx="6" fill="#f5f5f4" stroke="#78716c" stroke-width="2.5"/><rect x="30" y="24" width="60" height="16" rx="4" fill="#292524"/><text x="60" y="35" text-anchor="middle" font-size="8" font-weight="bold" fill="#fafaf9">久原本家</text><text x="60" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#1c1917">茅乃舎だし</text><text x="60" y="78" text-anchor="middle" font-size="8.5" fill="#57534e">柴魚 / 野菜高湯包</text></svg>`,
       specs: {
-        zh: ["<strong>採購品項：</strong>經典柴魚高湯包（茅乃舎だし）、鮮甜野菜高湯包（野菜だし）、特選調味醬汁包", "<strong>移動動線：</strong>Day 6 逛完 KITTE 後從 B1 順指標「JR 丸の内地下中央口」步行 2 分鐘即達（改札外免進站）"],
+        zh: ["<strong>採購品項：</strong>經典柴魚高湯包（茅乃舎だし）、鮮甜野菜高湯包（野菜だし）、特選調味醬汁包", "<strong>移動動線：</strong>Day 5 逛完東京站一番街後從 B1 順指標「JR 丸の内地下中央口」步行 2 分鐘即達（改札外免進站）"],
         ja: ["<strong>購入品目：</strong>茅乃舎だし、野菜だし、特選だしつゆ", "<strong>アクセス：</strong>Day 6 KITTE B1から「JR丸の内地下中央口」案内表示に沿って徒歩2分（改札外）"],
         en: ["<strong>Items:</strong> Classic Kayanoya Dashi, Vegetable Dashi &amp; Special Soup Base", "<strong>Route:</strong> Day 6 from KITTE B1, follow signs to 'JR Marunouchi Underground Central Exit' (2 min, outside ticket gates)"]
       },
@@ -1496,18 +1239,18 @@
         { src: PHOTOS.owala, cap: { zh: "日本賣場陳列色系參考（隨緣挑色）", ja: "店頭陳列カラー参考（好みの色を選択）", en: "In-store color lineup reference" } }
       ],
       specs: {
-        zh: ["<strong>採購品項：</strong>Owala FreeSip 不鏽鋼保溫水壺（現場挑選心儀容量與配色）", "<strong>順路時機：</strong>Day 7 中午 12:15 吃完澀谷活美登利後順路購買，15:15 帶回民宿包覆進大行李箱"],
+        zh: ["<strong>採購品項：</strong>Owala FreeSip 不鏽鋼保溫水壺（現場挑選心儀容量與配色）", "<strong>順路時機：</strong>Day 5 下午逛完東京站後順路至銀座 LOFT 挑選；若無心儀顏色，Day 7 京王退稅後去新宿東口 Alpen TOKYO 5F 補買"],
         ja: ["<strong>購入品目：</strong>Owala FreeSip ステンレス保温ボトル（店頭で好みのサイズ・カラーを選択）", "<strong>タイミング：</strong>Day 7 12:15 渋谷ランチ後に購入し、15:15 宿へ持ち帰りスーツケースへ梱包"],
         en: ["<strong>Item:</strong> Owala FreeSip Stainless Steel Insulated Bottle (pick preferred size &amp; color)", "<strong>Timing:</strong> Day 7 at 12:15 after Shibuya sushi lunch; pack into suitcase back at Airbnb at 15:15"]
       },
       store: {
-        zh: "<strong>首選店家：</strong>澀谷 LOFT 旗艦店（西武百貨旁步行 2 分鐘，享免稅）<br><strong>備案（色號最齊）：</strong>新宿東口 Alpen TOKYO 5F 露營區",
+        zh: "<strong>首選店家：</strong>銀座 LOFT（銀座ベルビア館 1F–5F，享免稅）<br><strong>備案（色號最齊）：</strong>新宿東口 Alpen TOKYO 5F 露營區",
         ja: "<strong>第一候補：</strong>渋谷ロフト（西武渋谷店すぐ隣 徒歩2分・免税対応）<br><strong>予備候補：</strong>新宿東口 Alpen TOKYO 5F キャンプ売場",
         en: "<strong>Primary Store:</strong> Shibuya LOFT Flagship (2-min walk from Seibu, tax-free)<br><strong>Backup (Widest Colors):</strong> Alpen TOKYO 5F Camping Floor (Shinjuku East Exit)"
       },
       copyCode: "Owala FreeSip ウォーターボトル",
       officialUrl: "",
-      mapUrl: "https://www.google.com/maps/search/?api=1&query=渋谷ロフト"
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=銀座ロフト"
     },
     keio_1f: {
       title: {
@@ -1542,7 +1285,7 @@
       photos: [],
       svg: `<svg viewBox="0 0 120 120" style="width:110px;height:110px;margin:auto;"><rect x="24" y="34" width="72" height="54" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5"/><circle cx="42" cy="61" r="10" fill="#f59e0b"/><circle cx="60" cy="61" r="10" fill="#fbbf24"/><circle cx="78" cy="61" r="10" fill="#d97706"/><text x="60" y="25" text-anchor="middle" font-size="8.5" font-weight="bold" fill="#92400e">Domohorn Wrinkle</text><text x="60" y="103" text-anchor="middle" font-size="8" font-weight="bold" fill="#b91c1c">嚴禁手提・託運 ≤ 24.5kg</text></svg>`,
       specs: {
-        zh: ["<strong>核心任務：</strong>憑預約憑證至 4 樓朵茉麗蔻專櫃領取太太全套精油保養品實物（嚴格鎖定不可異動）", "<strong>退稅與裝箱：</strong>與 1 樓發票至 <strong>2 樓合併退稅</strong>；下午 15:15 搭計程車回民宿，用厚衣物包覆玻璃瓶放 28 吋箱正中心，電子秤實測 <strong>24.0～24.5kg</strong> 內封箱！"],
+        zh: ["<strong>預約明細：</strong>訂購人 鄭云嘉（日本會員 19363373 / 台灣 00979731），總金額 ¥89,100 含稅（4號×3、5號×2、6號×2、7號×4＋點數禮：基本4點3日份×2、護唇膏×1），需持鄭小姐本人護照正本", "<strong>退稅、寄物與裝箱：</strong>與 1 樓發票至 <strong>2 樓合併退稅</strong> ➔ 15:15 新橋站 Suica 置物櫃寄物 ➔ 16:30 銀座八芳（#H7ZUX993DA）➔ 18:30 領貨回民宿封箱，電子秤實測 <strong>24.0～24.5kg</strong> 內上鎖！"],
         ja: ["<strong>ミッション：</strong>予約確認画面を提示し、4Fドモホルンリンクル店舗にて基礎化粧品セット一式を受領", "<strong>免税・梱包：</strong>1Fのレシートと合算して<strong>2F免税カウンター</strong>へ。15:15宿へ戻り衣類で厳重に包み、携帯スケールで<strong>24.0〜24.5kg以内</strong>を確認して施錠"],
         en: ["<strong>Core Task:</strong> Show reservation voucher at 4F Domohorn Wrinkle counter to collect your wife's full skincare set", "<strong>Tax Refund &amp; Packing:</strong> Combine with 1F receipts at <strong>2F Tax Refund Counter</strong>. Return to Airbnb at 15:15, cushion glass bottles in clothes inside 28″ suitcase, and verify weight is <strong>≤ 24.0–24.5 kg</strong>"]
       },
@@ -1580,7 +1323,7 @@
   };
 
   let currentLang = localStorage.getItem('tokyo_2026_lang') || 'zh';
-  const STORAGE_KEY = 'tokyo_2026_checklist_v11';
+  const STORAGE_KEY = 'tokyo_2026_checklist_v10';
 
   function setLang(lang) {
     if (!I18N[lang]) lang = 'zh';
@@ -1751,490 +1494,6 @@
   window.addEventListener('online', updateOnlineStatus);
   window.addEventListener('offline', updateOnlineStatus);
   updateOnlineStatus();
-
-  // ===== v11: Weather, Traffic, Tax-Free & AI Receipt Scanner =====
-  const V11_I18N = {"zh": {"trafficBtn": "🚦 路況", "taxBtn": "🧾 退稅/收據", "wLocs": {"itabashi": "板橋民宿", "shinjuku": "新宿/澀谷", "hadano": "秦野(D2)"}, "wRefresh": "🔄 更新", "wLoading": "正在載入東京即時天氣...", "wOffline": "離線顯示快取天氣", "wUpdated": "更新：", "wFeels": "體感", "wRain": "降雨", "wTipCold": "🧥 氣溫低於 10°C，建議加穿 UNIQLO 極暖發熱衣與防風外套。", "wTipCool": "🧣 深秋微涼（10–16°C），洋蔥式穿搭＋輕便圍巾最舒適。", "wTipMild": "🌤️ 氣候溫和舒適，適合長時間銀杏散步！", "wTipRain": "☔ 今日降雨機率較高，出門記得帶摺疊傘。", "wCodes": {"0": "☀️ 晴朗", "1": "🌤️ 晴時多雲", "2": "⛅ 多雲", "3": "☁️ 陰天", "45": "🌫️ 霧", "51": "🌦️ 毛毛雨", "61": "🌧️ 小雨", "63": "🌧️ 中雨", "65": "🌧️ 大雨", "80": "🌦️ 陣雨", "95": "⛈️ 雷雨"}, "tTitle": "🚦 東京即時路況與鐵路運行狀態", "tRailTitle": "🚃 4 條主力鐵路官方即時運行狀態（點選直達）", "tTaxiTitle": "🚕 行程關鍵計程車路線（點開看 Google Maps 即時車流）", "tNote": "💡 離線時無法查詢即時路況，建議出門前連 Wi-Fi 或行動網路點開確認。", "xTitle": "🧾 2026/11 新制退稅計算 ＆ 收據掃描", "xCalcTitle": "🧮 結帳前免稅試算器（2026/11 新制：全品項合併未稅滿 ¥5,000）", "xAmountPh": "輸入含稅金額 (¥)", "xRateLbl": "匯率(TWD)", "xFeeLbl": "手續費(%)", "xNeedMore": "還差 ¥{diff}（未稅）達免稅門檻！", "xEligible": "✅ 已達免稅門檻！預估退稅 ¥{ref}（約 NT$ {refTwd}）｜實付約 ¥{net}（NT$ {netTwd}）", "xScanTitle": "📷 AI 掃描收據 / 手動記帳（僅存文字，不佔手機空間）", "xKeyPh": "貼上 Gemini API Key（僅存於本機，不上傳 GitHub）", "xSaveKey": "儲存 Key", "xKeySaved": "已儲存 ✓", "xScanBtn": "📸 拍照或選取收據（gemini-flash-latest 自動解析）", "xScanning": "⏳ AI 正在辨識收據內容...", "xNoKeyWarn": "尚未設定 Gemini API Key 或目前離線，可直接於下方手動輸入。", "xManualAdd": "➕ 手動新增收據", "xStorePh": "店名（如：UNIQLO 御徒町）", "xItemsPh": "品項摘要（如：極暖發熱衣×4）", "xPlatformPh": "退稅平台/備註（如：京王2F / J-TaxRefund）", "xAddBtn": "加入清單", "xSumSpent": "總花費", "xSumRefund": "預估總退稅", "xSumReg": "已登錄", "xRegOn": "✅ 已登錄退稅", "xRegOff": "⬜ 未登錄退稅", "xBagCheck": "🧳 託運大箱", "xBagCarry": "🎒 隨身手提", "xEmpty": "尚無收據紀錄。買完東西拍一張或手動輸入，Day 8 成田海關核銷一秒對帳！"}, "ja": {"trafficBtn": "🚦 運行・渋滞", "taxBtn": "🧾 免税・領収書", "wLocs": {"itabashi": "板橋(宿)", "shinjuku": "新宿/渋谷", "hadano": "秦野(D2)"}, "wRefresh": "🔄 更新", "wLoading": "東京の天気を取得中...", "wOffline": "オフライン（キャッシュ表示）", "wUpdated": "更新：", "wFeels": "体感", "wRain": "降水", "wTipCold": "🧥 10°C未満の冷え込み。極暖インナーと防風アウター推奨。", "wTipCool": "🧣 晩秋らしい肌寒さ（10–16°C）。重ね着が快適です。", "wTipMild": "🌤️ 過ごしやすい気候でいちょう散策に最適です！", "wTipRain": "☔ 降水確率が高めです。折りたたみ傘をお持ちください。", "wCodes": {"0": "☀️ 快晴", "1": "🌤️ 晴れ", "2": "⛅ 一部曇り", "3": "☁️ 曇り", "45": "🌫️ 霧", "51": "🌦️ 霧雨", "61": "🌧️ 小雨", "63": "🌧️ 雨", "65": "🌧️ 大雨", "80": "🌦️ にわか雨", "95": "⛈️ 雷雨"}, "tTitle": "🚦 鉄道運行情報 ＆ 道路渋滞ナビ", "tRailTitle": "🚃 利用4路線の公式運行状況", "tTaxiTitle": "🚕 タクシー移動ルートのリアルタイム渋滞（Googleマップ）", "tNote": "💡 オフライン時は確認できません。出発前にオンラインでご確認ください。", "xTitle": "🧾 2026年11月新制度 免税計算 ＆ レシート管理", "xCalcTitle": "🧮 免税シミュレーター（合算・税抜 ¥5,000以上）", "xAmountPh": "税込金額を入力 (¥)", "xRateLbl": "為替(TWD)", "xFeeLbl": "手数料(%)", "xNeedMore": "免税まであと ¥{diff}（税抜）不足しています", "xEligible": "✅ 免税対象！還付目安 ¥{ref}（約 NT$ {refTwd}）｜実質 ¥{net}（NT$ {netTwd}）", "xScanTitle": "📷 AIレシート読取 / 手動記録（テキストのみ保存）", "xKeyPh": "Gemini APIキー（端末のlocalStorageのみに保存）", "xSaveKey": "保存", "xKeySaved": "保存済 ✓", "xScanBtn": "📸 レシート撮影・選択（AI自動解析）", "xScanning": "⏳ AIがレシートを解析中...", "xNoKeyWarn": "APIキー未設定またはオフラインのため、手動入力をご利用ください。", "xManualAdd": "➕ 手動でレシート追加", "xStorePh": "店舗名（例：ユニクロ 御徒町）", "xItemsPh": "購入品メモ（例：極暖ヒートテック×4）", "xPlatformPh": "免税手続き場所・メモ（例：京王2F）", "xAddBtn": "リストに追加", "xSumSpent": "合計金額", "xSumRefund": "還付見込", "xSumReg": "登録済", "xRegOn": "✅ 免税登録済", "xRegOff": "⬜ 未登録", "xBagCheck": "🧳 預けスーツケース", "xBagCarry": "🎒 機内持込", "xEmpty": "レシート記録はまだありません。成田税関KIOSK確認用に記録しましょう。"}, "en": {"trafficBtn": "🚦 Traffic", "taxBtn": "🧾 Tax/Receipts", "wLocs": {"itabashi": "Itabashi", "shinjuku": "Shinjuku", "hadano": "Hadano(D2)"}, "wRefresh": "🔄 Refresh", "wLoading": "Loading Tokyo weather...", "wOffline": "Offline (Cached Weather)", "wUpdated": "Updated: ", "wFeels": "Feels", "wRain": "Rain", "wTipCold": "🧥 Under 10°C — wear UNIQLO Extra Warm HEATTECH & windproof coat.", "wTipCool": "🧣 Crisp autumn weather (10–16°C) — layers & light scarf recommended.", "wTipMild": "🌤️ Mild and pleasant — ideal for ginkgo foliage walks!", "wTipRain": "☔ High chance of rain today — pack a folding umbrella.", "wCodes": {"0": "☀️ Clear", "1": "🌤️ Mainly Clear", "2": "⛅ Partly Cloudy", "3": "☁️ Overcast", "45": "🌫️ Fog", "51": "🌦️ Drizzle", "61": "🌧️ Light Rain", "63": "🌧️ Rain", "65": "🌧️ Heavy Rain", "80": "🌦️ Showers", "95": "⛈️ Thunderstorm"}, "tTitle": "🚦 Live Transit Status & Taxi Traffic", "tRailTitle": "🚃 4 Key Railway Lines Official Live Status", "tTaxiTitle": "🚕 Key Taxi Routes (Live Traffic on Google Maps)", "tNote": "💡 Requires internet connection. Check right before heading out.", "xTitle": "🧾 Nov 2026 Tax-Free Calculator & Receipt Scanner", "xCalcTitle": "🧮 Tax-Free Estimator (Nov 2026 Rules: Combined ¥5,000+ ex-tax)", "xAmountPh": "Tax-incl. amount (¥)", "xRateLbl": "FX (TWD)", "xFeeLbl": "Fee (%)", "xNeedMore": "Need ¥{diff} more (ex-tax) to qualify for tax-free!", "xEligible": "✅ Eligible! Est. Refund ¥{ref} (~NT$ {refTwd}) | Net ¥{net} (NT$ {netTwd})", "xScanTitle": "📷 AI Receipt Scan / Manual Ledger (Text-only storage)", "xKeyPh": "Gemini API Key (saved locally on device only)", "xSaveKey": "Save Key", "xKeySaved": "Saved ✓", "xScanBtn": "📸 Scan / Upload Receipt (gemini-flash-latest)", "xScanning": "⏳ AI is reading the receipt...", "xNoKeyWarn": "No API Key or offline — use manual entry below.", "xManualAdd": "➕ Add Receipt Manually", "xStorePh": "Store (e.g. UNIQLO Okachimachi)", "xItemsPh": "Items summary (e.g. HEATTECH ×4)", "xPlatformPh": "Tax-free platform / note (e.g. Keio 2F)", "xAddBtn": "Add to List", "xSumSpent": "Total Spent", "xSumRefund": "Est. Refund", "xSumReg": "Registered", "xRegOn": "✅ Registered", "xRegOff": "⬜ Not Reg.", "xBagCheck": "🧳 Checked Bag", "xBagCarry": "🎒 Carry-on", "xEmpty": "No receipts yet. Scan or add receipts for fast Narita Customs verification!"}};
-  const WEATHER_LOCS = {
-    itabashi: { lat: 35.7640, lon: 139.7010 },
-    shinjuku: { lat: 35.6895, lon: 139.6917 },
-    hadano:   { lat: 35.3744, lon: 139.2244 }
-  };
-  const TRIP_DATES = {
-    day1: '2026-11-24', day2: '2026-11-25', day3: '2026-11-26', day4: '2026-11-27',
-    day5: '2026-11-28', day6: '2026-11-29', day7: '2026-11-30', day8: '2026-12-01'
-  };
-  let currentWLoc = localStorage.getItem('tokyo_2026_wloc') || 'itabashi';
-  let weatherCache = null;
-  try { weatherCache = JSON.parse(localStorage.getItem('tokyo_2026_weather_v11') || 'null'); } catch(e) {}
-
-  function mapWmoCode(code) {
-    const map = V11_I18N[currentLang].wCodes;
-    if (code === 0) return map['0'];
-    if (code === 1) return map['1'];
-    if (code === 2) return map['2'];
-    if (code === 3) return map['3'];
-    if (code >= 45 && code <= 48) return map['45'];
-    if (code >= 51 && code <= 57) return map['51'];
-    if (code === 61 || code === 66) return map['61'];
-    if (code === 63) return map['63'];
-    if (code === 65 || code === 67) return map['65'];
-    if (code >= 80 && code <= 82) return map['80'];
-    if (code >= 95) return map['95'];
-    return map['2'];
-  }
-
-  async function fetchWeather(force) {
-    const loc = WEATHER_LOCS[currentWLoc] || WEATHER_LOCS.itabashi;
-    const now = Date.now();
-    if (!force && weatherCache && weatherCache.loc === currentWLoc && (now - weatherCache.ts) < 1800000) {
-      renderWeather();
-      injectDayWeatherBadges();
-      return;
-    }
-    if (!navigator.onLine) {
-      renderWeather();
-      injectDayWeatherBadges();
-      return;
-    }
-    try {
-      const url = `https://api.open-meteo.com/v1/forecast?latitude=${loc.lat}&longitude=${loc.lon}&current=temperature_2m,apparent_temperature,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=10`;
-      const res = await fetch(url);
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      weatherCache = { loc: currentWLoc, ts: now, data };
-      localStorage.setItem('tokyo_2026_weather_v11', JSON.stringify(weatherCache));
-    } catch (e) {
-      console.log('Weather fetch fallback:', e);
-    }
-    renderWeather();
-    injectDayWeatherBadges();
-  }
-
-  function setWeatherLoc(loc) {
-    currentWLoc = loc;
-    localStorage.setItem('tokyo_2026_wloc', loc);
-    fetchWeather(true);
-  }
-
-  function renderWeather() {
-    const el = document.getElementById('weatherArea');
-    if (!el) return;
-    const w = V11_I18N[currentLang];
-    const locBtns = ['itabashi', 'shinjuku', 'hadano'].map(k =>
-      `<button type="button" class="w-loc-btn ${currentWLoc === k ? 'active' : ''}" onclick="setWeatherLoc('${k}')">${w.wLocs[k]}</button>`
-    ).join('');
-
-    if (!weatherCache || !weatherCache.data || !weatherCache.data.current) {
-      el.innerHTML = `<div class="weather-card"><div class="weather-top"><div class="weather-locs">${locBtns}</div><button type="button" class="w-refresh-btn" onclick="fetchWeather(true)">${w.wRefresh}</button></div><div class="weather-meta">${w.wLoading}</div></div>`;
-      return;
-    }
-    const cur = weatherCache.data.current;
-    const daily = weatherCache.data.daily;
-    const temp = Math.round(cur.temperature_2m);
-    const feels = Math.round(cur.apparent_temperature);
-    const rain0 = daily && daily.precipitation_probability_max ? daily.precipitation_probability_max[0] : 0;
-    const tMin0 = daily ? Math.round(daily.temperature_2m_min[0]) : temp;
-    const tMax0 = daily ? Math.round(daily.temperature_2m_max[0]) : temp;
-    const dt = new Date(weatherCache.ts);
-    const timeStr = `${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
-    let tip = temp < 10 ? w.wTipCold : (temp <= 16 ? w.wTipCool : w.wTipMild);
-    if (rain0 >= 40) tip = w.wTipRain;
-
-    el.innerHTML = `
-      <div class="weather-card">
-        <div class="weather-top">
-          <div class="weather-locs">${locBtns}</div>
-          <button type="button" class="w-refresh-btn" onclick="fetchWeather(true)">${w.wRefresh} ${timeStr}</button>
-        </div>
-        <div class="weather-now">
-          <div>
-            <span class="weather-main-temp">${mapWmoCode(cur.weather_code)} ${temp}°C</span>
-          </div>
-          <div class="weather-meta">
-            ${w.wFeels} ${feels}°C ｜ ${tMin0}°–${tMax0}°C ｜ 💧${w.wRain} ${rain0}%
-          </div>
-        </div>
-        <div class="weather-tip">${tip}</div>
-      </div>`;
-  }
-
-  function injectDayWeatherBadges() {
-    if (!weatherCache || !weatherCache.data || !weatherCache.data.daily) return;
-    const daily = weatherCache.data.daily;
-    const times = daily.time || [];
-    Object.keys(TRIP_DATES).forEach(dayId => {
-      const card = document.getElementById(dayId);
-      if (!card) return;
-      const sub = card.querySelector('.day-sub');
-      if (!sub) return;
-      const old = card.querySelector('.day-weather-badge');
-      if (old) old.remove();
-      const idx = times.indexOf(TRIP_DATES[dayId]);
-      if (idx !== -1) {
-        const icon = mapWmoCode(daily.weather_code[idx]);
-        const lo = Math.round(daily.temperature_2m_min[idx]);
-        const hi = Math.round(daily.temperature_2m_max[idx]);
-        const rain = daily.precipitation_probability_max[idx];
-        const badge = document.createElement('div');
-        badge.className = 'day-weather-badge';
-        badge.textContent = `${icon} ${lo}°–${hi}°C · 💧${rain}%`;
-        sub.insertAdjacentElement('afterend', badge);
-      }
-    });
-  }
-
-  // --- Traffic Modal ---
-  function openTrafficModal() {
-    const w = V11_I18N[currentLang];
-    document.getElementById('tModalTitle').textContent = w.tTitle;
-    document.getElementById('trafficModalBody').innerHTML = `
-      <div class="section-box">
-        <h4>${w.tRailTitle}</h4>
-        <div class="traffic-grid">
-          <a class="traffic-link" href="https://www.kotsu.metro.tokyo.jp/subway/schedule/index.html" target="_blank">🚇 都營地鐵（三田/大江戶）</a>
-          <a class="traffic-link" href="https://traininfo.jreast.co.jp/train_info/kanto.aspx" target="_blank">🚆 JR 東日本（山手線）</a>
-          <a class="traffic-link" href="https://www.odakyu.jp/cgi-bin/user/emg/emergency_bbs.pl" target="_blank">🚄 小田急線（D2 秦野）</a>
-          <a class="traffic-link" href="https://www.keisei.co.jp/keisei/tetudou/unkou/unkou.php" target="_blank">✈️ 京成 Skyliner（D8）</a>
-        </div>
-      </div>
-      <div class="section-box">
-        <h4>${w.tTaxiTitle}</h4>
-        <div class="traffic-grid">
-          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=東京駅日本橋口&destination=本蓮沼駅&travelmode=driving" target="_blank">🚕 D1 東京站 ➔ 民宿</a>
-          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=巣鴨駅北口&destination=本蓮沼駅&travelmode=driving" target="_blank">🚕 D2/D7 巢鴨 ➔ 民宿</a>
-          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=表参道駅&destination=六本木ヒルズ森タワー&travelmode=driving" target="_blank">🚕 D3 表參道 ➔ 六本木</a>
-          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=東京大学赤門&destination=黒毛和牛すき焼き日本橋一厘&travelmode=driving" target="_blank">🚕 D4 赤門 ➔ 日本橋一厘</a>
-          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=大衆割烹田や十条&destination=本蓮沼駅&travelmode=driving" target="_blank">🚕 D6 十條田や ➔ 民宿</a>
-          <a class="traffic-link" href="https://www.google.com/maps/dir/?api=1&origin=本蓮沼駅&destination=日暮里駅東口&travelmode=driving" target="_blank">🚕 D8 民宿 ➔ 日暮里東口</a>
-        </div>
-      </div>
-      <div style="font-size:0.77rem;color:#6b7280;">${w.tNote}</div>
-    `;
-    document.getElementById('trafficModal').classList.add('open');
-  }
-  function closeTrafficModal() {
-    document.getElementById('trafficModal').classList.remove('open');
-  }
-
-  // --- Tax-Free Calculator & AI Receipt Scanner ---
-  const RECEIPT_KEY = 'tokyo_2026_receipts_v11';
-  const FX_KEY = 'tokyo_2026_fx_v11';
-  const GEMINI_KEY_STORAGE = 'tokyo_2026_gemini_key';
-
-  function getReceipts() {
-    try { return JSON.parse(localStorage.getItem(RECEIPT_KEY) || '[]'); } catch(e) { return []; }
-  }
-  function saveReceipts(list) {
-    localStorage.setItem(RECEIPT_KEY, JSON.stringify(list));
-  }
-  function getFx() {
-    return parseFloat(localStorage.getItem(FX_KEY) || '0.215') || 0.215;
-  }
-
-  function openTaxModal() {
-    const w = V11_I18N[currentLang];
-    const fx = getFx();
-    const apiKey = localStorage.getItem(GEMINI_KEY_STORAGE) || '';
-    document.getElementById('xModalTitle').textContent = w.xTitle;
-    document.getElementById('taxModalBody').innerHTML = `
-      <div class="section-box">
-        <h4>${w.xCalcTitle}</h4>
-        <div class="form-row">
-          <input type="number" id="calcAmt" class="form-input" placeholder="${w.xAmountPh}" oninput="updateTaxCalc()">
-          <select id="calcTaxRate" class="form-select" style="flex:0 0 92px;" onchange="updateTaxCalc()">
-            <option value="10">10%</option>
-            <option value="8">8%</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <label style="font-size:0.76rem;color:#4b5563;">${w.xFeeLbl}</label>
-          <input type="number" id="calcFee" class="form-input" value="0" step="0.05" style="flex:0 0 72px;" oninput="updateTaxCalc()">
-          <button type="button" class="tag-btn" onclick="document.getElementById('calcFee').value='0';updateTaxCalc()">0%</button>
-          <button type="button" class="tag-btn" onclick="document.getElementById('calcFee').value='1.55';updateTaxCalc()">1.55%</button>
-          <label style="font-size:0.76rem;color:#4b5563;margin-left:auto;">${w.xRateLbl}</label>
-          <input type="number" id="calcFx" class="form-input" value="${fx}" step="0.001" style="flex:0 0 74px;" onchange="localStorage.setItem(FX_KEY,this.value);updateTaxCalc();renderReceipts();">
-        </div>
-        <div id="calcOutput"></div>
-      </div>
-
-      <div class="section-box">
-        <h4>${w.xScanTitle}</h4>
-        <div class="form-row">
-          <input type="password" id="geminiApiKey" class="form-input" value="${apiKey}" placeholder="${w.xKeyPh}">
-          <button type="button" class="copy-btn" onclick="saveGeminiKey(this)">${w.xSaveKey}</button>
-        </div>
-        <label class="scan-btn-label">
-          <span id="scanBtnText">${w.xScanBtn}</span>
-          <input type="file" id="receiptFileInput" accept="image/*" capture="environment" style="display:none;" onchange="handleReceiptScan(this)">
-        </label>
-        <div id="scanStatus" style="font-size:0.78rem;color:#92400e;margin-bottom:6px;"></div>
-
-        <details id="manualReceiptBox" style="margin-top:4px;">
-          <summary style="cursor:pointer;font-weight:700;color:#9a3412;font-size:0.81rem;margin-bottom:6px;">${w.xManualAdd}</summary>
-          <div class="form-row">
-            <input type="text" id="rStore" class="form-input" placeholder="${w.xStorePh}">
-            <input type="number" id="rTotal" class="form-input" style="flex:0 0 110px;" placeholder="¥">
-          </div>
-          <div class="form-row">
-            <input type="text" id="rItems" class="form-input" placeholder="${w.xItemsPh}">
-            <select id="rTax" class="form-select" style="flex:0 0 80px;"><option value="10">10%</option><option value="8">8%</option></select>
-          </div>
-          <div class="form-row">
-            <input type="text" id="rPlatform" class="form-input" placeholder="${w.xPlatformPh}">
-            <button type="button" class="copy-btn" onclick="addManualReceipt()">${w.xAddBtn}</button>
-          </div>
-        </details>
-      </div>
-
-      <div id="receiptSummary"></div>
-      <div id="receiptList"></div>
-    `;
-    updateTaxCalc();
-    renderReceipts();
-    document.getElementById('taxModal').classList.add('open');
-  }
-
-  function closeTaxModal() {
-    document.getElementById('taxModal').classList.remove('open');
-  }
-
-  function saveGeminiKey(btn) {
-    const val = (document.getElementById('geminiApiKey').value || '').trim();
-    localStorage.setItem(GEMINI_KEY_STORAGE, val);
-    const w = V11_I18N[currentLang];
-    btn.textContent = w.xKeySaved;
-    btn.classList.add('copied');
-    setTimeout(() => { btn.textContent = w.xSaveKey; btn.classList.remove('copied'); }, 1500);
-  }
-
-  function calcTaxNumbers(totalJpy, taxRate, feePct) {
-    const exTax = totalJpy / (1 + taxRate / 100);
-    const rawTax = totalJpy - exTax;
-    const fee = exTax * (feePct / 100);
-    const refund = Math.max(0, Math.round(rawTax - fee));
-    const eligible = exTax >= 5000;
-    const diff = Math.max(0, Math.ceil(5000 - exTax));
-    return { exTax: Math.round(exTax), refund, eligible, diff, net: totalJpy - refund };
-  }
-
-  function updateTaxCalc() {
-    const out = document.getElementById('calcOutput');
-    if (!out) return;
-    const amt = parseFloat(document.getElementById('calcAmt').value || '0');
-    if (!amt || amt <= 0) { out.innerHTML = ''; return; }
-    const taxRate = parseFloat(document.getElementById('calcTaxRate').value || '10');
-    const feePct = parseFloat(document.getElementById('calcFee').value || '0') || 0;
-    const fx = parseFloat(document.getElementById('calcFx').value || getFx()) || 0.215;
-    const r = calcTaxNumbers(amt, taxRate, feePct);
-    const w = V11_I18N[currentLang];
-    if (!r.eligible) {
-      out.innerHTML = `<div class="calc-result warn">${w.xNeedMore.replace('{diff}', r.diff.toLocaleString())}</div>`;
-    } else {
-      const msg = w.xEligible
-        .replace('{ref}', r.refund.toLocaleString())
-        .replace('{refTwd}', Math.round(r.refund * fx).toLocaleString())
-        .replace('{net}', r.net.toLocaleString())
-        .replace('{netTwd}', Math.round(r.net * fx).toLocaleString());
-      out.innerHTML = `<div class="calc-result">${msg}</div>`;
-    }
-  }
-
-  function compressImageToBase64(file) {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const img = new Image();
-        img.onload = () => {
-          const maxDim = 1024;
-          let w = img.width, h = img.height;
-          if (w > maxDim || h > maxDim) {
-            if (w > h) { h = Math.round(h * maxDim / w); w = maxDim; }
-            else { w = Math.round(w * maxDim / h); h = maxDim; }
-          }
-          const canvas = document.createElement('canvas');
-          canvas.width = w; canvas.height = h;
-          canvas.getContext('2d').drawImage(img, 0, 0, w, h);
-          const dataUrl = canvas.toDataURL('image/jpeg', 0.78);
-          resolve(dataUrl.split(',')[1]);
-        };
-        img.onerror = reject;
-        img.src = e.target.result;
-      };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  }
-
-  async function handleReceiptScan(input) {
-    const file = input.files && input.files[0];
-    if (!file) return;
-    const w = V11_I18N[currentLang];
-    const statusEl = document.getElementById('scanStatus');
-    const apiKey = (localStorage.getItem(GEMINI_KEY_STORAGE) || '').trim();
-    if (!apiKey || !navigator.onLine) {
-      statusEl.textContent = w.xNoKeyWarn;
-      document.getElementById('manualReceiptBox').open = true;
-      input.value = '';
-      return;
-    }
-    statusEl.textContent = w.xScanning;
-    try {
-      const b64 = await compressImageToBase64(file);
-      const prompt = 'Extract this Japanese shopping receipt into strict JSON only (no markdown): {"store":"string","date":"YYYY-MM-DD","items":"short summary","total_jpy":number,"tax_rate":10 or 8,"platform":"tax-free note if any or empty string"}.';
-      const models = ['gemini-flash-latest', 'gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-2.0-flash'];
-      let json = null;
-      let lastErr = '';
-      for (const m of models) {
-        try {
-          const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent?key=${encodeURIComponent(apiKey)}`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: 'image/jpeg', data: b64 } }] }],
-              generationConfig: { responseMimeType: 'application/json' }
-            })
-          });
-          if (res.ok) {
-            json = await res.json();
-            break;
-          }
-          lastErr = `${m} HTTP ${res.status}`;
-          if (res.status !== 503 && res.status !== 429 && res.status !== 404) break;
-        } catch (netErr) {
-          lastErr = netErr.message;
-        }
-      }
-      if (!json) throw new Error(lastErr || 'API Error');
-      const rawText = json.candidates?.[0]?.content?.parts?.[0]?.text || '';
-      const parsed = JSON.parse(rawText.replace(/```json|```/g, '').trim());
-      const total = parseInt(parsed.total_jpy, 10) || 0;
-      const taxRate = parsed.tax_rate === 8 ? 8 : 10;
-      const list = getReceipts();
-      list.unshift({
-        id: Date.now(),
-        store: parsed.store || 'Tokyo Store',
-        date: parsed.date || new Date().toISOString().slice(0,10),
-        items: parsed.items || '',
-        total,
-        taxRate,
-        platform: parsed.platform || '',
-        registered: false,
-        bag: 'checked'
-      });
-      saveReceipts(list);
-      statusEl.textContent = '✅ ' + (parsed.store || 'OK') + ' ¥' + total.toLocaleString();
-      renderReceipts();
-    } catch (err) {
-      statusEl.textContent = '⚠️ ' + err.message + '（伺服器暫時忙碌，可稍後重試或手動輸入）';
-      document.getElementById('manualReceiptBox').open = true;
-    }
-    input.value = '';
-  }
-
-  function addManualReceipt() {
-    const store = (document.getElementById('rStore').value || '').trim();
-    const total = parseInt(document.getElementById('rTotal').value || '0', 10);
-    if (!store || !total) return;
-    const items = (document.getElementById('rItems').value || '').trim();
-    const taxRate = parseInt(document.getElementById('rTax').value || '10', 10);
-    const platform = (document.getElementById('rPlatform').value || '').trim();
-    const list = getReceipts();
-    list.unshift({
-      id: Date.now(),
-      store,
-      date: new Date().toISOString().slice(0,10),
-      items,
-      total,
-      taxRate,
-      platform,
-      registered: false,
-      bag: 'checked'
-    });
-    saveReceipts(list);
-    document.getElementById('rStore').value = '';
-    document.getElementById('rTotal').value = '';
-    document.getElementById('rItems').value = '';
-    document.getElementById('rPlatform').value = '';
-    renderReceipts();
-  }
-
-  function toggleReceiptReg(id) {
-    const list = getReceipts();
-    const it = list.find(x => x.id === id);
-    if (it) { it.registered = !it.registered; saveReceipts(list); renderReceipts(); }
-  }
-  function toggleReceiptBag(id) {
-    const list = getReceipts();
-    const it = list.find(x => x.id === id);
-    if (it) { it.bag = it.bag === 'checked' ? 'carry' : 'checked'; saveReceipts(list); renderReceipts(); }
-  }
-  function deleteReceipt(id) {
-    const list = getReceipts().filter(x => x.id !== id);
-    saveReceipts(list);
-    renderReceipts();
-  }
-
-  function renderReceipts() {
-    const listEl = document.getElementById('receiptList');
-    const sumEl = document.getElementById('receiptSummary');
-    if (!listEl || !sumEl) return;
-    const w = V11_I18N[currentLang];
-    const fx = getFx();
-    const feePct = parseFloat(document.getElementById('calcFee')?.value || '0') || 0;
-    const list = getReceipts();
-
-    let sumTotal = 0, sumRefund = 0, regCount = 0;
-    list.forEach(r => {
-      sumTotal += r.total;
-      const calc = calcTaxNumbers(r.total, r.taxRate, feePct);
-      if (calc.eligible) sumRefund += calc.refund;
-      if (r.registered) regCount++;
-    });
-    sumEl.innerHTML = `<div class="summary-bar">
-      <span>${w.xSumSpent}: ¥${sumTotal.toLocaleString()} (NT$${Math.round(sumTotal*fx).toLocaleString()})</span>
-      <span>${w.xSumRefund}: ¥${sumRefund.toLocaleString()}</span>
-      <span>${w.xSumReg}: ${regCount}/${list.length}</span>
-    </div>`;
-
-    if (list.length === 0) {
-      listEl.innerHTML = `<div style="font-size:0.8rem;color:#6b7280;text-align:center;padding:10px;">${w.xEmpty}</div>`;
-      return;
-    }
-    listEl.innerHTML = list.map(r => {
-      const calc = calcTaxNumbers(r.total, r.taxRate, feePct);
-      const refBadge = calc.eligible ? `💰 退 ¥${calc.refund.toLocaleString()}` : `⚠️ <¥5,000`;
-      return `<div class="receipt-item">
-        <div class="receipt-head">
-          <strong>${r.store}</strong>
-          <span><strong>¥${r.total.toLocaleString()}</strong> (${r.taxRate}%)</span>
-        </div>
-        <div style="color:#4b5563;font-size:0.77rem;">${r.date} ${r.items ? '· ' + r.items : ''} ${r.platform ? '· ' + r.platform : ''} · ${refBadge}</div>
-        <div class="receipt-tags">
-          <button type="button" class="tag-btn ${r.registered ? 'on' : ''}" onclick="toggleReceiptReg(${r.id})">${r.registered ? w.xRegOn : w.xRegOff}</button>
-          <button type="button" class="tag-btn bag" onclick="toggleReceiptBag(${r.id})">${r.bag === 'checked' ? w.xBagCheck : w.xBagCarry}</button>
-          <button type="button" class="tag-btn del" onclick="deleteReceipt(${r.id})">🗑️</button>
-        </div>
-      </div>`;
-    }).join('');
-  }
-
-  // Hook v11 into setLang
-  const _origSetLang = setLang;
-  setLang = function(lang) {
-    _origSetLang(lang);
-    const w = V11_I18N[currentLang];
-    const bt = document.getElementById('btnTraffic');
-    const bx = document.getElementById('btnTax');
-    if (bt) bt.textContent = w.trafficBtn;
-    if (bx) bx.textContent = w.taxBtn;
-    renderWeather();
-    injectDayWeatherBadges();
-  };
-
-  // Initial v11 boot
-  setLang(currentLang);
-  fetchWeather(false);
-
 </script>
 </body>
 </html>
