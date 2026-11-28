@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v16 最終定案版)</title>
+<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v17 最終定案版)</title>
 <meta name="theme-color" content="#9a3412">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -241,6 +241,7 @@
     justify-content: space-between;
     gap: 8px;
   }
+  .checklist-card { scroll-margin-top: 148px; }
   .checklist-card.collapsed .checklist-header { margin-bottom: 0; }
   .checklist-card.collapsed .checklist-body { display: none; }
   .checklist-card .toggle-icon { color: #15803d; flex-shrink: 0; }
@@ -540,6 +541,7 @@
     <button class="btn-pill" id="btnTaxiFilter" onclick="toggleTaxiOnly()">🚕 只看計程車替代</button>
     <button class="btn-pill" id="btnExpandAll" onclick="toggleAllDays(false)">📂 全部展開</button>
     <button class="btn-pill" id="btnCollapseAll" onclick="toggleAllDays(true)">📁 全部收合</button>
+    <button class="btn-pill" id="btnShoppingList" onclick="openShoppingList()">🛍️ 購物清單</button>
   </div>
 </header>
 
@@ -608,13 +610,14 @@
 
   const I18N = {
     zh: {
-      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v16 最終定案版)",
+      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v17 最終定案版)",
       offline: "📴 目前為離線模式（已從手機快取載入完整行程與車站導航）",
       title: "🍁 2026 東京深秋・8天7夜隨身手冊",
       subtitle: "11/24(二) – 12/01(二)｜減法美學・清澄藏前・銀座八芳帝王蟹・京王履約退稅",
       taxiBtn: "🚕 只看計程車替代",
       expandBtn: "📂 全部展開",
       collapseBtn: "📁 全部收合",
+      shopBtn: "🛍️ 購物清單",
       navInfo: "📌 速查",
       copyBtn: "複製",
       copiedBtn: "已複製 ✓",
@@ -751,13 +754,14 @@
       ]
     },
     ja: {
-      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v16 最終定案版)",
+      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v17 最終定案版)",
       offline: "📴 オフラインモード中（端末キャッシュから全日程・駅ナビを表示しています）",
       title: "🍁 2026 東京晩秋・7泊8日旅のしおり",
       subtitle: "11/24(火) – 12/01(火)｜引き算の美学・九品仏の禅・蔵前リバーサイド・丸の内〜銀座",
       taxiBtn: "🚕 タクシー移動のみ",
       expandBtn: "📂 すべて展開",
       collapseBtn: "📁 すべて折りたたむ",
+      shopBtn: "🛍️ 買い物リスト",
       navInfo: "📌 基本情報",
       copyBtn: "コピー",
       copiedBtn: "コピー完了 ✓",
@@ -894,13 +898,14 @@
       ]
     },
     en: {
-      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v16 Final)",
+      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v17 Final)",
       offline: "📴 Offline Mode Active (Full itinerary & station maps loaded from device cache)",
       title: "🍁 2026 Autumn in Tokyo・8D7N Guide",
       subtitle: "Nov 24 (Tue) – Dec 01 (Tue)｜Minimalist Aesthetics・Kuhonbutsu・Kuramae・Marunouchi to Ginza",
       taxiBtn: "🚕 Taxi Alternatives Only",
       expandBtn: "📂 Expand All",
       collapseBtn: "📁 Collapse All",
+      shopBtn: "🛍️ Shopping List",
       navInfo: "📌 Quick Info",
       copyBtn: "Copy",
       copiedBtn: "Copied ✓",
@@ -1374,6 +1379,7 @@
     document.getElementById('btnTaxiFilter').textContent = t.taxiBtn;
     document.getElementById('btnExpandAll').textContent = t.expandBtn;
     document.getElementById('btnCollapseAll').textContent = t.collapseBtn;
+    document.getElementById('btnShoppingList').textContent = t.shopBtn;
     document.getElementById('navInfo').textContent = t.navInfo;
 
     renderContent();
@@ -1488,6 +1494,14 @@
     if (!card) return;
     const collapsed = card.classList.toggle('collapsed');
     try { localStorage.setItem('tokyo2026_checklist_collapsed', collapsed ? '1' : '0'); } catch (e) {}
+  }
+
+  function openShoppingList() {
+    const card = document.getElementById('checklistCard');
+    if (!card) return;
+    card.classList.remove('collapsed');
+    try { localStorage.setItem('tokyo2026_checklist_collapsed', '0'); } catch (e) {}
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function copyAddr(btn, text) {
