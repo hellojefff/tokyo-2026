@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v17 最終定案版)</title>
+<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v18 幕張Outlet更新版)</title>
 <meta name="theme-color" content="#9a3412">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -529,7 +529,7 @@
   <div class="header-top">
     <div>
       <h1 id="uiTitle">🍁 2026 東京深秋・8天7夜隨身手冊</h1>
-      <p id="uiSubtitle">11/24(二) – 12/01(二)｜減法美學・清澄藏前・銀座八芳帝王蟹・京王履約退稅</p>
+      <p id="uiSubtitle">11/24(二) – 12/01(二)｜減法美學・幕張Outlet・銀座八芳帝王蟹・京王履約退稅</p>
     </div>
     <div class="lang-switcher" role="group" aria-label="Language switcher">
       <button type="button" class="lang-btn active" data-lang="zh" onclick="setLang('zh')">繁中</button>
@@ -610,10 +610,10 @@
 
   const I18N = {
     zh: {
-      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v17 最終定案版)",
+      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v18 幕張Outlet更新版)",
       offline: "📴 目前為離線模式（已從手機快取載入完整行程與車站導航）",
       title: "🍁 2026 東京深秋・8天7夜隨身手冊",
-      subtitle: "11/24(二) – 12/01(二)｜減法美學・清澄藏前・銀座八芳帝王蟹・京王履約退稅",
+      subtitle: "11/24(二) – 12/01(二)｜減法美學・幕張Outlet・銀座八芳帝王蟹・京王履約退稅",
       taxiBtn: "🚕 只看計程車替代",
       expandBtn: "📂 全部展開",
       collapseBtn: "📁 全部收合",
@@ -720,13 +720,15 @@
         },
         {
           id: "day6",
-          title: "🗓️ Day 6｜2026/11/29（日）清澄庭園 ➔ 藏前水岸 ➔ 東京站烤牛舌 ➔ 丸之內至銀座燈海 ➔ 鳥貴族",
-          sub: "雙手淨空日・池泉楓紅・隅田川遠眺晴空塔・喜助烤牛舌・16:00香檳金燈海・中文平板燒鳥",
+          title: "🗓️ Day 6｜2026/11/29（日）三井 OUTLET PARK 幕張悠閒採購 ➔ 巢鴨鳥貴族",
+          sub: "全程電車不塞車・休閒鞋與日系服飾・老婆＆大二女兒穿搭・筆電包與龍角散・中文平板燒鳥",
           items: [
-            { time: "09:30 - 12:00｜🍁 清澄庭園賞楓 ＋ 藏前職人水岸（補回 Day 5 精華）", html: `<div class="item-content"><div class="std-transit"><strong>都營省錢順轉（約 35 分鐘，刷 Suica 280 日圓）：</strong>本蓮沼站搭 <strong>都營三田線</strong> 至「春日站」（15 分鐘），站內轉乘 <strong>都營大江戶線</strong> 直達「清澄白河站」（15 分鐘）。</div><ul><li><strong>清澄庭園（門票 150 日圓）：</strong>池泉回遊式名石庭園賞 11 月底楓紅，順訪藍瓶咖啡旗艦店。</li><li><strong>藏前水岸：</strong><span class="std-transit">搭 <strong>都營大江戶線</strong> 僅 2 站（4 分鐘，180 日圓）至「藏前站」。</span>漫步手作雜貨街區，走上 <strong>隅田川水岸步道</strong> 遠眺東京晴空塔。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 清澄庭園</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 藏前水岸</a></div>` },
-            { time: "12:15 - 13:30｜🥩 午餐：味の牛たん 喜助（東京站八重洲地下街）", html: `<div class="item-content"><div class="std-transit"><strong>交通：</strong>藏前站搭 <strong>都營淺草線</strong> 至「日本橋站」（約 7 分鐘，180 日圓），步行 6 分鐘進東京站八重洲地下街。</div><div class="food-box"><strong>炭火烤牛舌定食：</strong>厚切純瘦極上牛舌定食，佐香蔥麥飯、山藥泥與牛尾熱湯，套餐制看圖點餐極方便。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 喜助東京站</a></div></div>` },
-            { time: "13:45 - 17:30｜🌟 行幸通銀杏 ➔「丸之內 ➔ 銀座」黃金慢步路線", html: `<div class="item-content">拍攝東京站前 <strong>行幸通り銀杏並木</strong>；15:45 自 <strong>丸之內仲通り</strong> 往 <strong>銀座中央通</strong> 慢步，迎接 <strong>16:00 香檳金 LED 燈海亮燈</strong> 與奢華聖誕櫥窗。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 丸之內仲通り</a></div>` },
-            { time: "18:00 - 19:30｜🍢 晚餐：鳥貴族 巢鴨店（中文平板點餐連鎖燒鳥）", html: `<div class="item-content"><div class="std-transit"><strong>去程：</strong>自銀座漫步至「日比谷站」，搭 <strong>都營三田線</strong> 直達「巢鴨站」（約 17 分鐘，220 日圓），出口旁即達。</div><div class="food-box"><strong>特色：</strong>全品項均一價、桌上中文觸控平板看圖點餐零壓力（必點：鹽烤／醬燒貴族燒、雞肉丸、釜飯）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 鳥貴族 巢鴨店</a></div><div class="std-transit" style="margin-top:8px;"><strong>回程：</strong>吃完下樓搭 <strong>都營三田線</strong> 9 分鐘直達「本蓮沼站」（220 日圓）。</div><div class="taxi-box"><strong>🚕 計程車替代（巢鴨鳥貴族 ➔ 本蓮沼民宿）：</strong><br>若吃飽微醺想直接回家，巢鴨站北口搭計程車 10 分鐘直達民宿（車資約 1,500～1,800 日圓，<strong>兩人平分每人約 750～900 日圓</strong>）。</div></div>` }
+            { time: "09:30 - 11:00｜🚃 睡飽出發：本蓮沼 ➔ 海濱幕張（約 1 小時 18 分鐘）", html: `<div class="item-content"><div class="std-transit"><strong>全程電車不塞車：</strong>本蓮沼站搭 <strong>都營三田線</strong> ➔ 轉 <strong>有樂町線</strong> ➔ 轉 <strong>JR 京葉線</strong> 至「海濱幕張站」，南口出站步行約 2 分鐘即達園區。</div><ul><li><strong>出門提醒：</strong>記得帶<strong>護照正本</strong>（滿 5,000 日圓未稅可辦免稅）；穿乾爽好穿脫的襪子方便試鞋。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Mitsui+Outlet+Park+Makuhari" target="_blank">📍 三井 OUTLET PARK 幕張</a><a class="map-link" href="https://www.google.com/maps/dir/?api=1&origin=本蓮沼站&destination=Mitsui+Outlet+Park+Makuhari&travelmode=transit" target="_blank">🚆 去程轉乘路線</a></div>` },
+            { time: "11:00 - 13:00｜👟 上半場採購：A 區 ＋ B 區（先買鞋與筆電包）", html: `<div class="item-content"><div class="shop-box"><strong>採購目標：</strong>我的休閒鞋・休閒褲＆服飾・老婆＆大二女兒日系服飾・筆電包・龍角散</div><ul><li><strong>A-SITE（1F–2F）日系男女裝：</strong>你的休閒褲／服飾 ＋ 老婆質感日系穿搭（<strong>BEAMS</strong>、<strong>ÉDIFICE / IÉNA</strong>、<strong>TOMORROWLAND</strong>、<strong>23区</strong>）。</li><li><strong>B-SITE（1F）大二女兒日系首選：</strong><strong>SNIDEL / gelato pique / Mila Owen</strong>（女兒與老婆一次挑）、<strong>NICE CLAUP OUTLET</strong>。</li><li><strong>B-SITE（2F）筆電包 ＋ 第一波挑鞋：</strong>筆電包看 <strong>TUMI</strong>、<strong>ACE Bags &amp; Luggage</strong>、<strong>ZERO HALLIBURTON</strong>（確認筆電與外接螢幕收納尺寸）；鞋款與褲裝看 <strong>NIKE</strong>、<strong>Onitsuka Tiger</strong>、<strong>Clarks</strong>、<strong>Levi's</strong>。</li></ul></div>` },
+            { time: "13:00 - 14:00｜🍽️ 午餐：D-SITE 3 樓餐廳歇腳", html: `<div class="item-content"><div class="food-box"><strong>D 區 3 樓餐廳（幕張無大型美食街，直接上樓坐著休息）：</strong><ul><li><strong>和ごはんとカフェ chawan：</strong>日式定食（白飯、味噌湯可續）。</li><li><strong>The MeatLocker STEAK &amp; CAFE：</strong>牛排與漢堡。</li><li><strong>PIZZERIA 32：</strong>義式窯烤披薩。</li></ul></div></div>` },
+            { time: "14:00 - 17:00｜🛍️ 下半場採購：C 區 ＋ D 區（日系選物 ＋ 緩震鞋 ＋ 龍角散）", html: `<div class="item-content"><ul><li><strong>C-SITE（1F）日系選物一條龍：</strong><strong>UNITED ARROWS</strong>、<strong>SHIPS</strong>、<strong>JOURNAL STANDARD</strong>、<strong>nano・universe</strong>（男女裝百搭款最齊）。</li><li><strong>C-SITE（2F）緩震休閒鞋與褲裝：</strong><strong>New Balance</strong>、<strong>PUMA</strong>、<strong>EDWIN</strong>。</li><li><strong>D-SITE（2F）防潑水與好走鞋款：</strong><strong>ASICS</strong>、<strong>adidas</strong>、<strong>THE NORTH FACE</strong>、<strong>mont-bell</strong>、<strong>Timberland</strong>。</li><li><strong>D-SITE（1F）女兒帥氣風 ＋ 老婆極簡風 ＋ 藥妝：</strong><strong>shel'tter</strong>（moussy / SLY）、<strong>MARGARET HOWELL A.G.O.</strong>、<strong>松本清 OUTLET</strong>（先找<strong>龍角散</strong>，若缺特定口味或鐵罐款，回程車站周邊一般藥妝店補買即可）。</li></ul></div>` },
+            { time: "17:00 - 18:15｜🚃 搭車返回市區：海濱幕張 ➔ 巢鴨站", html: `<div class="item-content"><div class="std-transit"><strong>回程交通：</strong>海濱幕張站搭 <strong>JR 京葉線</strong> 至「東京站」➔ 步行至「大手町站」轉搭 <strong>都營三田線</strong>（往西高島平方向）直達「巢鴨站」，出口旁即達。</div><a class="map-link" href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Outlet+Park+Makuhari&destination=鳥貴族+巣鴨店&travelmode=transit" target="_blank">🚆 回程往巢鴨路線</a></div>` },
+            { time: "18:30 - 20:00｜🍢 晚餐：鳥貴族 巢鴨店（中文平板點餐連鎖燒鳥）", html: `<div class="item-content"><div class="food-box"><strong>特色：</strong>全品項均一價、桌上中文觸控平板看圖點餐零壓力（必點：鹽烤／醬燒貴族燒、雞肉丸、釜飯）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 鳥貴族 巢鴨店</a></div><div class="std-transit" style="margin-top:8px;"><strong>回程：</strong>吃完下樓搭 <strong>都營三田線</strong> 9 分鐘直達「本蓮沼站」（220 日圓）。</div><div class="taxi-box"><strong>🚕 計程車替代（巢鴨鳥貴族 ➔ 本蓮沼民宿）：</strong><br>若吃飽微醺或提著戰利品想直接回家，巢鴨站北口搭計程車 10 分鐘直達民宿（車資約 1,500～1,800 日圓，<strong>兩人平分每人約 750～900 日圓</strong>）。</div></div>` }
           ]
         },
         {
@@ -754,10 +756,10 @@
       ]
     },
     ja: {
-      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v17 最終定案版)",
+      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v18 幕張Outlet更新版)",
       offline: "📴 オフラインモード中（端末キャッシュから全日程・駅ナビを表示しています）",
       title: "🍁 2026 東京晩秋・7泊8日旅のしおり",
-      subtitle: "11/24(火) – 12/01(火)｜引き算の美学・九品仏の禅・蔵前リバーサイド・丸の内〜銀座",
+      subtitle: "11/24(火) – 12/01(火)｜引き算の美学・九品仏の禅・幕張アウトレット・銀座八芳",
       taxiBtn: "🚕 タクシー移動のみ",
       expandBtn: "📂 すべて展開",
       collapseBtn: "📁 すべて折りたたむ",
@@ -864,13 +866,15 @@
         },
         {
           id: "day6",
-          title: "🗓️ Day 6｜2026/11/29（日）清澄庭園 ➔ 蔵前水辺 ➔ 東京駅牛たん ➔ 丸の内〜銀座イルミ ➔ 鳥貴族",
-          sub: "手ぶら散策日・紅葉庭園・隅田川スカイツリー眺望・喜助牛たん・16:00シャンパンゴールド・巣鴨焼鳥",
+          title: "🗓️ Day 6｜2026/11/29（日）三井アウトレットパーク 幕張 ➔ 巣鴨 鳥貴族",
+          sub: "電車直結で渋滞なし・スニーカー＆日系ファッション・PCバッグ＆龍角散・巣鴨焼鳥",
           items: [
-            { time: "09:30 - 12:00｜🍁 清澄庭園の紅葉 ＋ 蔵前リバーサイド散策", html: `<div class="item-content"><div class="std-transit"><strong>都営乗り継ぎ（約35分・Suica 280円）：</strong>本蓮沼駅から三田線で「春日駅」（15分）、大江戸線に乗換えて「清澄白河駅」（15分）。</div><ul><li><strong>清澄庭園（入園150円）：</strong>池泉回遊式庭園で晩秋の紅葉を鑑賞、ブルーボトルコーヒー清澄白河店へ。</li><li><strong>蔵前エリア：</strong><span class="std-transit">大江戸線で2駅（4分・180円）「蔵前駅」へ。</span>クラフト雑貨街と<strong>隅田川テラス</strong>からスカイツリーを遠望。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 清澄庭園</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 蔵前水辺</a></div>` },
-            { time: "12:15 - 13:30｜🥩 ランチ：味の牛たん 喜助（東京駅八重洲地下街）", html: `<div class="item-content"><div class="std-transit"><strong>アクセス：</strong>蔵前駅から都営浅草線で「日本橋駅」（約7分・180円）、徒歩6分で八重洲地下街へ。</div><div class="food-box"><strong>炭火焼牛たん定食：</strong>厚切り牛たん・麦飯・とろろ・テールスープの王道定食。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 喜助東京駅</a></div></div>` },
-            { time: "13:45 - 17:30｜🌟 行幸通りイチョウ ➔「丸の内 ➔ 銀座」黄金イルミ散歩", html: `<div class="item-content">東京駅前の<strong>行幸通りイチョウ並木</strong>を撮影後、15:45から<strong>丸の内仲通り</strong>〜<strong>銀座中央通り</strong>を散策し、<strong>16:00のイルミネーション点灯</strong>を満喫。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 丸の内仲通り</a></div>` },
-            { time: "18:00 - 19:30｜🍢 夕食：鳥貴族 巣鴨店（タッチパネル注文）", html: `<div class="item-content"><div class="std-transit"><strong>往路：</strong>銀座から「日比谷駅」へ歩き、<strong>都営三田線</strong>で「巣鴨駅」へ直通（約17分・220円）。</div><div class="food-box"><strong>特徴：</strong>全品均一価格・多言語タッチパネルで注文ラクラク（貴族焼・つくね・釜飯）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 鳥貴族 巣鴨店</a></div><div class="std-transit" style="margin-top:8px;"><strong>帰路：</strong>都営三田線で9分、「本蓮沼駅」へ直通（220円）。</div><div class="taxi-box"><strong>🚕 タクシー代替（巣鴨 ➔ 本蓮沼民泊）：</strong><br>巣鴨駅北口から約10分（約1,500〜1,800円・2人割勘で1人約750〜900円）。</div></div>` }
+            { time: "09:30 - 11:00｜🚃 ゆったり出発：本蓮沼 ➔ 海浜幕張（約1時間18分）", html: `<div class="item-content"><div class="std-transit"><strong>往路アクセス：</strong>本蓮沼駅から<strong>都営三田線</strong> ➔ <strong>有楽町線</strong> ➔ <strong>JR京葉線</strong>で「海浜幕張駅」下車、南口より徒歩約2分。</div><ul><li><strong>持ち物：</strong>免税手続き用の<strong>パスポート原本</strong>（税抜5,000円〜）、試着しやすい靴下。</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Mitsui+Outlet+Park+Makuhari" target="_blank">📍 三井アウトレットパーク 幕張</a><a class="map-link" href="https://www.google.com/maps/dir/?api=1&origin=本蓮沼駅&destination=Mitsui+Outlet+Park+Makuhari&travelmode=transit" target="_blank">🚆 往路乗換ルート</a></div>` },
+            { time: "11:00 - 13:00｜👟 前半ショッピング：A-SITE ＋ B-SITE（靴＆PCバッグ優先）", html: `<div class="item-content"><div class="shop-box"><strong>買物リスト：</strong>カジュアル靴・パンツ＆服・妻＆大学2年の娘の服・PCバッグ・龍角散</div><ul><li><strong>A-SITE（1F–2F）日系セレクト：</strong><strong>BEAMS</strong>、<strong>ÉDIFICE / IÉNA</strong>、<strong>TOMORROWLAND</strong>、<strong>23区</strong>。</li><li><strong>B-SITE（1F）娘さん向け人気店：</strong><strong>SNIDEL / gelato pique / Mila Owen</strong>、<strong>NICE CLAUP OUTLET</strong>。</li><li><strong>B-SITE（2F）PCバッグ＆靴：</strong><strong>TUMI</strong>、<strong>ACE Bags &amp; Luggage</strong>、<strong>ZERO HALLIBURTON</strong>／靴＆パンツ：<strong>NIKE</strong>、<strong>Onitsuka Tiger</strong>、<strong>Clarks</strong>、<strong>Levi's</strong>。</li></ul></div>` },
+            { time: "13:00 - 14:00｜🍽️ ランチ：D-SITE 3F レストランで休憩", html: `<div class="item-content"><div class="food-box"><strong>D-SITE 3階レストラン：</strong><ul><li><strong>和ごはんとカフェ chawan：</strong>和定食（ごはん・味噌汁おかわり自由）。</li><li><strong>The MeatLocker STEAK &amp; CAFE：</strong>ステーキ＆バーガー。</li><li><strong>PIZZERIA 32：</strong>窯焼きピッツァ。</li></ul></div></div>` },
+            { time: "14:00 - 17:00｜🛍️ 後半ショッピング：C-SITE ＋ D-SITE（セレクト・靴・薬局）", html: `<div class="item-content"><ul><li><strong>C-SITE（1F）セレクト勢揃い：</strong><strong>UNITED ARROWS</strong>、<strong>SHIPS</strong>、<strong>JOURNAL STANDARD</strong>、<strong>nano・universe</strong>。</li><li><strong>C-SITE（2F）シューズ＆パンツ：</strong><strong>New Balance</strong>、<strong>PUMA</strong>、<strong>EDWIN</strong>。</li><li><strong>D-SITE（2F）撥水・歩きやすい靴：</strong><strong>ASICS</strong>、<strong>adidas</strong>、<strong>THE NORTH FACE</strong>、<strong>mont-bell</strong>、<strong>Timberland</strong>。</li><li><strong>D-SITE（1F）服＆ドラッグストア：</strong><strong>shel'tter</strong>（moussy / SLY）、<strong>MARGARET HOWELL A.G.O.</strong>、<strong>マツモトキヨシ OUTLET</strong>（龍角散を確認、欠品時は帰路の一般薬局で補充）。</li></ul></div>` },
+            { time: "17:00 - 18:15｜🚃 都内へ戻る：海浜幕張 ➔ 巣鴨駅", html: `<div class="item-content"><div class="std-transit"><strong>帰路アクセス：</strong>海浜幕張駅から<strong>JR京葉線</strong>で「東京駅」➔ 徒歩で「大手町駅」へ移動し、<strong>都営三田線</strong>（西高島平方面）で「巣鴨駅」へ直通。</div><a class="map-link" href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Outlet+Park+Makuhari&destination=鳥貴族+巣鴨店&travelmode=transit" target="_blank">🚆 巣鴨へのルート</a></div>` },
+            { time: "18:30 - 20:00｜🍢 夕食：鳥貴族 巣鴨店（タッチパネル注文）", html: `<div class="item-content"><div class="food-box"><strong>特徴：</strong>全品均一価格・多言語タッチパネルで注文ラクラク（貴族焼・つくね・釜飯）。<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 鳥貴族 巣鴨店</a></div><div class="std-transit" style="margin-top:8px;"><strong>帰路：</strong>都営三田線で9分、「本蓮沼駅」へ直通（220円）。</div><div class="taxi-box"><strong>🚕 タクシー代替（巣鴨 ➔ 本蓮沼民泊）：</strong><br>荷物が多い時や食後は巣鴨駅北口から約10分（約1,500〜1,800円・2人割勘で1人約750〜900円）。</div></div>` }
           ]
         },
         {
@@ -898,10 +902,10 @@
       ]
     },
     en: {
-      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v17 Final)",
+      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v18 Makuhari Outlet)",
       offline: "📴 Offline Mode Active (Full itinerary & station maps loaded from device cache)",
       title: "🍁 2026 Autumn in Tokyo・8D7N Guide",
-      subtitle: "Nov 24 (Tue) – Dec 01 (Tue)｜Minimalist Aesthetics・Kuhonbutsu・Kuramae・Marunouchi to Ginza",
+      subtitle: "Nov 24 (Tue) – Dec 01 (Tue)｜Minimalist Aesthetics・Kuhonbutsu・Makuhari Outlet・Ginza Happo",
       taxiBtn: "🚕 Taxi Alternatives Only",
       expandBtn: "📂 Expand All",
       collapseBtn: "📁 Collapse All",
@@ -1008,13 +1012,15 @@
         },
         {
           id: "day6",
-          title: "🗓️ Day 6｜2026/11/29 (Sun) Kiyosumi Garden ➔ Kuramae ➔ Beef Tongue ➔ Marunouchi–Ginza Lights ➔ Torikizoku",
-          sub: "Hands-free day・Autumn foliage・Sumida River Skytree view・Kisuke Beef Tongue・16:00 Illumination・Yakitori",
+          title: "🗓️ Day 6｜2026/11/29 (Sun) Mitsui Outlet Park Makuhari ➔ Torikizoku Sugamo",
+          sub: "All-rail zero traffic・Casual shoes &amp; Japanese fashion・Laptop bag &amp; Ryukakusan・Yakitori",
           items: [
-            { time: "09:30 - 12:00｜🍁 Kiyosumi Garden Foliage + Kuramae Riverside", html: `<div class="item-content"><div class="std-transit"><strong>Toei Subway Transfer (~35 min, ¥280 Suica):</strong> Mita Line from Motohasunuma to "Kasuga Sta." (15 min), transfer to Oedo Line direct to "Kiyosumi-shirakawa Sta." (15 min).</div><ul><li><strong>Kiyosumi Garden (¥150):</strong> Stroll the pond garden for late-Nov maple foliage; stop by Blue Bottle Coffee Flagship.</li><li><strong>Kuramae Riverside:</strong> <span class="std-transit">Oedo Line 2 stops (4 min, ¥180) to "Kuramae Sta."</span> Explore craft shops &amp; <strong>Sumida River Terrace</strong> for Tokyo Skytree views.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=清澄庭園" target="_blank">📍 Kiyosumi Garden</a><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=蔵前+隅田川テラス" target="_blank">📍 Kuramae Terrace</a></div>` },
-            { time: "12:15 - 13:30｜🥩 Lunch: Aji no Gyutan Kisuke (Tokyo Sta. Yaesu Underground)", html: `<div class="item-content"><div class="std-transit"><strong>Transit:</strong> Toei Asakusa Line from Kuramae to "Nihombashi Sta." (~7 min, ¥180), 6-min walk to Yaesu Underground Mall.</div><div class="food-box"><strong>Charcoal-Grilled Beef Tongue Set:</strong> Thick-cut beef tongue with barley rice, grated yam &amp; oxtail soup. Easy picture set menu.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=味の牛たん+喜助+東京駅" target="_blank">📍 Kisuke Tokyo Sta.</a></div></div>` },
-            { time: "13:45 - 17:30｜🌟 Gyoko-dori Ginkgo ➔ Marunouchi to Ginza Illumination Walk", html: `<div class="item-content">Photograph <strong>Gyoko-dori Ginkgo Avenue</strong>, then stroll from <strong>Marunouchi Naka-dori</strong> to <strong>Ginza Chuo-dori</strong> starting 15:45 to catch the <strong>16:00 Champagne Gold LED light-up</strong>.<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=丸の内仲通り" target="_blank">📍 Marunouchi Naka-dori</a></div>` },
-            { time: "18:00 - 19:30｜🍢 Dinner: Torikizoku Sugamo (Tablet-Order Yakitori)", html: `<div class="item-content"><div class="std-transit"><strong>Outbound:</strong> Walk to "Hibiya Sta.", take <strong>Toei Mita Line</strong> direct to "Sugamo Sta." (~17 min, ¥220).</div><div class="food-box"><strong>Highlights:</strong> Flat-rate yakitori with multilingual tabletop touchscreens (Kizokuyaki skewers, chicken meatballs, kamameshi rice).<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 Torikizoku Sugamo</a></div><div class="std-transit" style="margin-top:8px;"><strong>Return:</strong> 9 min on Toei Mita Line direct to "Motohasunuma Sta." (¥220).</div><div class="taxi-box"><strong>🚕 Taxi Alternative (Sugamo ➔ Itabashi Airbnb):</strong><br>10-min ride from Sugamo North Exit (~¥1,500–¥1,800, <strong>~¥750–¥900 per person</strong>).</div></div>` }
+            { time: "09:30 - 11:00｜🚃 Relaxed Departure: Motohasunuma ➔ Kaihin-Makuhari (~1h 18m)", html: `<div class="item-content"><div class="std-transit"><strong>All-Rail Route (No Sunday Traffic):</strong> Take <strong>Toei Mita Line</strong> from Motohasunuma ➔ transfer to <strong>Yurakucho Line</strong> ➔ transfer to <strong>JR Keiyo Line</strong> to "Kaihin-Makuhari Sta." (2-min walk from South Exit).</div><ul><li><strong>Reminders:</strong> Bring your <strong>original passport</strong> for tax-free shopping (¥5,000+ pre-tax) and comfortable socks for trying on shoes.</li></ul><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Mitsui+Outlet+Park+Makuhari" target="_blank">📍 Mitsui Outlet Park Makuhari</a><a class="map-link" href="https://www.google.com/maps/dir/?api=1&origin=Motohasunuma+Station&destination=Mitsui+Outlet+Park+Makuhari&travelmode=transit" target="_blank">🚆 Outbound Transit</a></div>` },
+            { time: "11:00 - 13:00｜👟 Part 1 Shopping: A-SITE + B-SITE (Shoes &amp; Laptop Bag First)", html: `<div class="item-content"><div class="shop-box"><strong>Target List:</strong> Men's casual shoes &amp; pants・Japanese fashion for wife &amp; college-sophomore daughter・Laptop bag・Ryukakusan</div><ul><li><strong>A-SITE (1F–2F) Japanese Select Shops:</strong> Men's pants/apparel + refined women's wear (<strong>BEAMS</strong>, <strong>ÉDIFICE / IÉNA</strong>, <strong>TOMORROWLAND</strong>, <strong>23区</strong>).</li><li><strong>B-SITE (1F) Top Picks for College Daughter:</strong> <strong>SNIDEL / gelato pique / Mila Owen</strong>, <strong>NICE CLAUP OUTLET</strong>.</li><li><strong>B-SITE (2F) Laptop Bags &amp; First Shoe Stop:</strong> Laptop bags at <strong>TUMI</strong>, <strong>ACE Bags &amp; Luggage</strong>, <strong>ZERO HALLIBURTON</strong> (check fit for MacBook Pro + portable monitor); shoes &amp; denim at <strong>NIKE</strong>, <strong>Onitsuka Tiger</strong>, <strong>Clarks</strong>, <strong>Levi's</strong>.</li></ul></div>` },
+            { time: "13:00 - 14:00｜🍽️ Lunch: D-SITE 3F Restaurants", html: `<div class="item-content"><div class="food-box"><strong>Sit-down lunch on D-SITE 3F (no large food court at Makuhari):</strong><ul><li><strong>chawan:</strong> Japanese set meals (free rice &amp; miso soup refills).</li><li><strong>The MeatLocker STEAK &amp; CAFE:</strong> Steaks &amp; burgers.</li><li><strong>PIZZERIA 32:</strong> Wood-fired pizza.</li></ul></div></div>` },
+            { time: "14:00 - 17:00｜🛍️ Part 2 Shopping: C-SITE + D-SITE (Select Shops, Walking Shoes &amp; Drugstore)", html: `<div class="item-content"><ul><li><strong>C-SITE (1F) Japanese Select Lineup:</strong> <strong>UNITED ARROWS</strong>, <strong>SHIPS</strong>, <strong>JOURNAL STANDARD</strong>, <strong>nano・universe</strong>.</li><li><strong>C-SITE (2F) Cushioned Shoes &amp; Pants:</strong> <strong>New Balance</strong>, <strong>PUMA</strong>, <strong>EDWIN</strong>.</li><li><strong>D-SITE (2F) Water-Repellent &amp; Walking Shoes:</strong> <strong>ASICS</strong>, <strong>adidas</strong>, <strong>THE NORTH FACE</strong>, <strong>mont-bell</strong>, <strong>Timberland</strong>.</li><li><strong>D-SITE (1F) Apparel &amp; Drugstore:</strong> <strong>shel'tter</strong> (moussy / SLY), <strong>MARGARET HOWELL A.G.O.</strong>, <strong>Matsumoto Kiyoshi OUTLET</strong> (check for <strong>Ryukakusan</strong>; grab at any city drugstore on return if a specific tin/flavor is out).</li></ul></div>` },
+            { time: "17:00 - 18:15｜🚃 Return to Tokyo: Kaihin-Makuhari ➔ Sugamo Sta.", html: `<div class="item-content"><div class="std-transit"><strong>Return Transit:</strong> Take <strong>JR Keiyo Line</strong> to "Tokyo Sta." ➔ walk to "Otemachi Sta." and ride <strong>Toei Mita Line</strong> (toward Nishi-Takashimadaira) direct to "Sugamo Sta."</div><a class="map-link" href="https://www.google.com/maps/dir/?api=1&origin=Mitsui+Outlet+Park+Makuhari&destination=鳥貴族+巣鴨店&travelmode=transit" target="_blank">🚆 Return to Sugamo</a></div>` },
+            { time: "18:30 - 20:00｜🍢 Dinner: Torikizoku Sugamo (Tablet-Order Yakitori)", html: `<div class="item-content"><div class="food-box"><strong>Highlights:</strong> Flat-rate yakitori with multilingual tabletop touchscreens (Kizokuyaki skewers, chicken meatballs, kamameshi rice).<br><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=鳥貴族+巣鴨店" target="_blank">📍 Torikizoku Sugamo</a></div><div class="std-transit" style="margin-top:8px;"><strong>Return:</strong> 9 min on Toei Mita Line direct to "Motohasunuma Sta." (¥220).</div><div class="taxi-box"><strong>🚕 Taxi Alternative (Sugamo ➔ Itabashi Airbnb):</strong><br>10-min ride from Sugamo North Exit with shopping bags (~¥1,500–¥1,800, <strong>~¥750–¥900 per person</strong>).</div></div>` }
           ]
         },
         {
