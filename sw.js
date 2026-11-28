@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tokyo-2026-pwa-v12';
+const CACHE_NAME = 'tokyo-2026-pwa-v13';
 const ASSETS = [
   './index.html',
   './manifest.json',
