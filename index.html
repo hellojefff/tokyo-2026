@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v15 最終定案版)</title>
+<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v16 最終定案版)</title>
 <meta name="theme-color" content="#9a3412">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -608,7 +608,7 @@
 
   const I18N = {
     zh: {
-      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v15 最終定案版)",
+      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v16 最終定案版)",
       offline: "📴 目前為離線模式（已從手機快取載入完整行程與車站導航）",
       title: "🍁 2026 東京深秋・8天7夜隨身手冊",
       subtitle: "11/24(二) – 12/01(二)｜減法美學・清澄藏前・銀座八芳帝王蟹・京王履約退稅",
@@ -751,7 +751,7 @@
       ]
     },
     ja: {
-      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v15 最終定案版)",
+      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v16 最終定案版)",
       offline: "📴 オフラインモード中（端末キャッシュから全日程・駅ナビを表示しています）",
       title: "🍁 2026 東京晩秋・7泊8日旅のしおり",
       subtitle: "11/24(火) – 12/01(火)｜引き算の美学・九品仏の禅・蔵前リバーサイド・丸の内〜銀座",
@@ -894,7 +894,7 @@
       ]
     },
     en: {
-      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v15 Final)",
+      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v16 Final)",
       offline: "📴 Offline Mode Active (Full itinerary & station maps loaded from device cache)",
       title: "🍁 2026 Autumn in Tokyo・8D7N Guide",
       subtitle: "Nov 24 (Tue) – Dec 01 (Tue)｜Minimalist Aesthetics・Kuhonbutsu・Kuramae・Marunouchi to Ginza",
@@ -1392,8 +1392,8 @@
     }).join('');
     const totalChecks = t.checklist.length;
     const doneChecks = t.checklist.filter((_, idx) => !!saved[idx]).length;
-    let isChecklistCollapsed = false;
-    try { isChecklistCollapsed = localStorage.getItem('tokyo2026_checklist_collapsed') === '1'; } catch (e) {}
+    const existingChecklist = document.getElementById('checklistCard');
+    const isChecklistCollapsed = existingChecklist ? existingChecklist.classList.contains('collapsed') : true;
     document.getElementById('checklistArea').innerHTML = `
       <div class="quick-info checklist-card ${isChecklistCollapsed ? 'collapsed' : ''}" id="checklistCard" style="border-left-color:#16a34a;">
         <h3 class="checklist-header" style="color:#15803d;" onclick="toggleChecklist()">
@@ -1406,10 +1406,15 @@
         </div>
       </div>`;
 
-    // Preserve collapsed day cards if re-rendered
+    // Preserve collapsed day cards if re-rendered; on initial open, expand only today's itinerary
+    const existingCards = document.querySelectorAll('.day-card');
+    const isFirstRender = existingCards.length === 0;
+    const todayDayId = getTodayDayId();
     const collapsedIds = new Set(Array.from(document.querySelectorAll('.day-card.collapsed')).map(el => el.id));
     const daysHtml = t.days.map(d => {
-      const isCol = collapsedIds.has(d.id) ? 'collapsed' : '';
+      const isCol = isFirstRender
+        ? (d.id === todayDayId ? '' : 'collapsed')
+        : (collapsedIds.has(d.id) ? 'collapsed' : '');
       const itemsHtml = d.items.map(it => `
         <div class="timeline-item">
           <span class="time-badge">${it.time}</span>
@@ -1500,6 +1505,31 @@
     });
   }
 
+  function getTodayDayId() {
+    const tripDates = {
+      '2026-11-24': 'day1',
+      '2026-11-25': 'day2',
+      '2026-11-26': 'day3',
+      '2026-11-27': 'day4',
+      '2026-11-28': 'day5',
+      '2026-11-29': 'day6',
+      '2026-11-30': 'day7',
+      '2026-12-01': 'day8'
+    };
+    let dateStr = '';
+    try {
+      dateStr = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Tokyo' }).format(new Date());
+    } catch (e) {
+      const now = new Date();
+      const y = now.getFullYear();
+      const m = String(now.getMonth() + 1).padStart(2, '0');
+      const d = String(now.getDate()).padStart(2, '0');
+      dateStr = `${y}-${m}-${d}`;
+    }
+    if (tripDates[dateStr]) return tripDates[dateStr];
+    return dateStr > '2026-12-01' ? 'day8' : 'day1';
+  }
+
   function toggleDay(header) {
     header.closest('.day-card').classList.toggle('collapsed');
   }
@@ -1532,8 +1562,22 @@
     });
   }, { passive: true });
 
+  document.querySelectorAll('.day-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const targetId = tab.getAttribute('href')?.replace('#', '');
+      if (targetId && targetId.startsWith('day')) {
+        const card = document.getElementById(targetId);
+        if (card) card.classList.remove('collapsed');
+      }
+    });
+  });
+
   try {
     setLang(currentLang);
+    const todayCard = document.getElementById(getTodayDayId());
+    if (todayCard) {
+      setTimeout(() => todayCard.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+    }
   } catch (err) {
     console.error(err);
     document.getElementById('itineraryArea').innerHTML = '<div class="alert-box">載入錯誤：' + err.message + '</div>';
