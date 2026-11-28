@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v13 最終定案版)</title>
+<title>🍁 2026 東京深秋・8天7夜隨身手冊 (v14 最終定案版)</title>
 <meta name="theme-color" content="#9a3412">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -233,6 +233,28 @@
   }
   .day-card.collapsed .day-body { display: none; }
   .day-card.collapsed .toggle-icon { transform: rotate(-90deg); }
+  .checklist-header {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .checklist-card.collapsed .checklist-header { margin-bottom: 0; }
+  .checklist-card.collapsed .checklist-body { display: none; }
+  .checklist-card .toggle-icon { color: #15803d; flex-shrink: 0; }
+  .checklist-card.collapsed .toggle-icon { transform: rotate(-90deg); }
+  .checklist-progress {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #15803d;
+    background: #dcfce7;
+    padding: 2px 7px;
+    border-radius: 12px;
+    margin-left: auto;
+    flex-shrink: 0;
+  }
   .day-body {
     padding: 14px 16px;
   }
@@ -586,7 +608,7 @@
 
   const I18N = {
     zh: {
-      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v13 最終定案版)",
+      pageTitle: "🍁 2026 東京深秋・8天7夜隨身手冊 (v14 最終定案版)",
       offline: "📴 目前為離線模式（已從手機快取載入完整行程與車站導航）",
       title: "🍁 2026 東京深秋・8天7夜隨身手冊",
       subtitle: "11/24(二) – 12/01(二)｜減法美學・清澄藏前・銀座八芳帝王蟹・京王履約退稅",
@@ -729,7 +751,7 @@
       ]
     },
     ja: {
-      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v13 最終定案版)",
+      pageTitle: "🍁 2026 東京晩秋・7泊8日モバイル旅のしおり (v14 最終定案版)",
       offline: "📴 オフラインモード中（端末キャッシュから全日程・駅ナビを表示しています）",
       title: "🍁 2026 東京晩秋・7泊8日旅のしおり",
       subtitle: "11/24(火) – 12/01(火)｜引き算の美学・九品仏の禅・蔵前リバーサイド・丸の内〜銀座",
@@ -872,7 +894,7 @@
       ]
     },
     en: {
-      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v13 Final)",
+      pageTitle: "🍁 2026 Autumn in Tokyo・8D7N Mobile Field Guide (v14 Final)",
       offline: "📴 Offline Mode Active (Full itinerary & station maps loaded from device cache)",
       title: "🍁 2026 Autumn in Tokyo・8D7N Guide",
       subtitle: "Nov 24 (Tue) – Dec 01 (Tue)｜Minimalist Aesthetics・Kuhonbutsu・Kuramae・Marunouchi to Ginza",
@@ -1368,10 +1390,20 @@
       const isDone = !!saved[idx];
       return `<label class="checklist-item ${isDone ? 'done' : ''}"><input type="checkbox" ${isDone ? 'checked' : ''} onchange="toggleCheck(this)"><span>${c.text}</span><button type="button" class="item-detail-btn" onclick="openItemModal('${c.key}', event)">${c.btn}</button></label>`;
     }).join('');
+    const totalChecks = t.checklist.length;
+    const doneChecks = savedChecks.filter(Boolean).length;
+    let isChecklistCollapsed = false;
+    try { isChecklistCollapsed = localStorage.getItem('tokyo2026_checklist_collapsed') === '1'; } catch (e) {}
     document.getElementById('checklistArea').innerHTML = `
-      <div class="quick-info" style="border-left-color:#16a34a;">
-        <h3 style="color:#15803d;">${t.checklistTitle}</h3>
-        ${checksHtml}
+      <div class="quick-info checklist-card ${isChecklistCollapsed ? 'collapsed' : ''}" id="checklistCard" style="border-left-color:#16a34a;">
+        <h3 class="checklist-header" style="color:#15803d;" onclick="toggleChecklist()">
+          <span>${t.checklistTitle}</span>
+          <span class="checklist-progress" id="checklistProgress">${doneChecks}/${totalChecks}</span>
+          <span class="toggle-icon">▼</span>
+        </h3>
+        <div class="checklist-body">
+          ${checksHtml}
+        </div>
       </div>`;
 
     // Preserve collapsed day cards if re-rendered
@@ -1437,10 +1469,20 @@
 
   function toggleCheck(el) {
     el.closest('.checklist-item').classList.toggle('done', el.checked);
+    const boxes = Array.from(document.querySelectorAll('.checklist-item input[type="checkbox"]'));
+    const done = boxes.filter(b => b.checked).length;
+    const prog = document.getElementById('checklistProgress');
+    if (prog) prog.textContent = `${done}/${boxes.length}`;
     try {
-      const boxes = Array.from(document.querySelectorAll('.checklist-item input[type="checkbox"]'));
       localStorage.setItem(STORAGE_KEY, JSON.stringify(boxes.map(b => b.checked)));
     } catch (e) {}
+  }
+
+  function toggleChecklist() {
+    const card = document.getElementById('checklistCard');
+    if (!card) return;
+    const collapsed = card.classList.toggle('collapsed');
+    try { localStorage.setItem('tokyo2026_checklist_collapsed', collapsed ? '1' : '0'); } catch (e) {}
   }
 
   function copyAddr(btn, text) {
@@ -1465,6 +1507,11 @@
     document.querySelectorAll('.day-card').forEach(c => {
       c.classList.toggle('collapsed', collapse);
     });
+    const card = document.getElementById('checklistCard');
+    if (card) {
+      card.classList.toggle('collapsed', collapse);
+      try { localStorage.setItem('tokyo2026_checklist_collapsed', collapse ? '1' : '0'); } catch (e) {}
+    }
   }
   function toggleTaxiOnly() {
     document.body.classList.toggle('taxi-only');
